@@ -1,0 +1,396 @@
+\clearpage
+
+
+
+这里的情形与研究线性空间$V$与$\mathbb{K}^n$的关系十分类似.
+任意数域$\mathbb{K}$上的$n$维线性空间与$\mathbb{K}^n$同构，
+不仅说明用坐标代替向量进行运算是合理的，
+也深刻地说明所有数域$\mathbb{K}$上的$n$维线性空间都同构.
+对于线性映射和矩阵的关系，
+我们希望能做到同样的事情.
+
+设$V$与$W$分别是数域$\mathbb{K}$上的$n$维与$m$维线性空间，
+用$\text{Hom}(V,W)$表示全体$V \to W$的线性映射构成的集合.
+用$M_{m \times n} (\mathbb{K})$表示全体数域$\mathbb{K}$上
+$m \times n$矩阵构成的集合.
+我们想要证明$\text{Hom}(V,W) \cong M_{m \times n} (\mathbb{K})$.
+证明思路如下：\vspace{0.5em}
+
+\textit{(1)~~证明$\mathrm{Hom}(V,W)$是$mn$维线性空间.}
+
+\textit{(2)~~证明$M_{m \times n} (\mathbb{K})$是$mn$维线性空间.}\vspace{0.5em}
+
+这样就已经证明了$\text{Hom}(V,W) \cong M_{m \times n} (\mathbb{K})$，
+因为我们知道相同数域上相同维数的线性空间是同构的.
+但是从实用角度讲，我们最好能给出一个同构映射.
+事实上早已给出过了——
+把线性映射按给定的基写成矩阵的方法可以形式化地看成$\mathrm{Hom}(V,W) \to M_{m \times n} (\mathbb{K})$的映射
+（其作用如同$V \to \mathbb{K}^n$的坐标映射）.
+把这个映射记作$T$.
+要证明$T$是同构映射，
+只需按定义完成以下步骤：\vspace{0.5em}
+
+\textit{(3)~~证明$T: \mathrm{Hom}(V,W) \to M_{m \times n} (\mathbb{K})$是线性映射.}
+
+\textit{(4)~~证明$T$是双射（单射+满射）.}
+
+更一般地，
+\textbf{线性空间$V$上的基变换$\psi$带来的坐标变换效果，
+等同于对$V$施加它的逆变换$\varphi = \psi^{-1}$.}
+它们可以用同一个矩阵方程$\bm{Y} = B \bm{X}$表示（$\bm{X},\bm{Y} \in \mathbb{K}^n$）.
+其中基变换$\psi$对应的坐标变换矩阵$B$（同时也是$\varphi$的表示矩阵）
+应为过渡矩阵$A$之逆.
+
+但现在我们来证明这个结论.
+
+根据上文的设置，
+同一个向量$\bm{x}$可以分别用基$\{\bm{e}_i\}$和$\{\bm{f}_i\}$展开，
+得到（采用形式写法）：
+
+\begin{eq1}
+    (\bm{e}_1, \bm{e}_2, \cdots \bm{e}_n)
+    \begin{pmatrix}
+        x_1 \\[2pt]
+        x_2 \\[2pt]
+        \vdots \\[2pt]
+        x_n
+    \end{pmatrix}
+    =
+    (\bm{f}_1, \bm{f}_2, \cdots \bm{f}_n)
+    \begin{pmatrix}
+        y_1 \\[2pt]
+        y_2 \\[2pt]
+        \vdots \\[2pt]
+        y_n
+    \end{pmatrix} \\[12pt]
+\end{eq1}
+
+引入过渡矩阵$A$来替换等式右侧的$(\bm{f}_1, \bm{f}_2, \cdots \bm{f}_n)$：
+
+\begin{eq1}
+    (\bm{e}_1, \bm{e}_2, \cdots \bm{e}_n)
+    \begin{pmatrix}
+        x_1 \\[2pt]
+        x_2 \\[2pt]
+        \vdots \\[2pt]
+        x_n
+    \end{pmatrix}
+    &=
+    (\bm{e}_1 , \bm{e}_2 , \cdots , \bm{e}_n)
+    \begin{pmatrix}
+        a_{11} & a_{12} & \cdots & a_{1n} \\[2pt]
+        a_{21} & a_{22} & \cdots & a_{2n} \\[2pt]
+        \vdots & \vdots & \ddots & \vdots \\[2pt]
+        a_{n1} & a_{n2} & \cdots & a_{nn}
+    \end{pmatrix} 
+    \begin{pmatrix}
+        y_1 \\[2pt]
+        y_2 \\[2pt]
+        \vdots \\[2pt]
+        y_n
+    \end{pmatrix} \\[12pt]
+    &=
+    (\bm{e}_1 , \bm{e}_2 , \cdots , \bm{e}_n)
+    A
+    \begin{pmatrix}
+        y_1 \\[2pt]
+        y_2 \\[2pt]
+        \vdots \\[2pt]
+        y_n
+    \end{pmatrix} \\[12pt]
+\end{eq1}
+
+$\{ \bm{e}_1 , \bm{e}_2 , \cdots , \bm{e}_n \}$
+是一组基，
+其线性表示其他任一向量的系数组是唯一的.
+因此有：
+
+\begin{eq1}
+    \begin{pmatrix}
+        x_1 \\[2pt]
+        x_2 \\[2pt]
+        \vdots \\[2pt]
+        x_n
+    \end{pmatrix}
+    =
+    A
+    \begin{pmatrix}
+        y_1 \\[2pt]
+        y_2 \\[2pt]
+        \vdots \\[2pt]
+        y_n
+    \end{pmatrix} \\[12pt]
+\end{eq1}
+
+即：
+
+\begin{eq1}
+    \begin{pmatrix}
+        y_1 \\[2pt]
+        y_2 \\[2pt]
+        \vdots \\[2pt]
+        y_n
+    \end{pmatrix}
+    =
+    A^{-1}
+     \begin{pmatrix}
+        x_1 \\[2pt]
+        x_2 \\[2pt]
+        \vdots \\[2pt]
+        x_n
+    \end{pmatrix}\\[12pt]
+\end{eq1}
+
+这说明$A^{-1}$就是坐标变换矩阵$B$
+
+
+\subsubsection{*商空间、第一同构定理}
+
+(Q1)~~商集$\mathbb{K}^n / \operatorname{Ker}A$是由$\operatorname{Ker}A$的陪集构成的集合，
+并不是$\mathbb{K}^n$的子空间. 
+如何谈论它的维数？
+
+(Q2)~~如何证明$n = \dim\operatorname{Ker}A + \dim\mathbb{K}^n / \operatorname{Ker}A$？
+
+(Q3)~~$\mathbb{K}^n / \operatorname{Ker}A$与$\operatorname{Im}A$之间虽然有双射，
+但它们的维数一定相同吗？
+
+回顾本章开篇的“线性结构”之论.
+现在商集$\mathbb{K}^n / \operatorname{Ker}A$只是一个由陪集组成的集合，
+但我们希望它具有类似于向量空间的结构，
+从而能够以此为工具回答更多问题，
+例如现在我们所面对的(Q1)、(Q2)和(Q3).
+这正是把集合做成\textbf{线性空间}的原初想法.
+我们规定一种陪集之间的加法和数乘运算，
+保证它在商集中封闭，
+且满足$8$条运算规则，
+商集就能升级成一个线性空间，
+该叫它\textbf{商空间}了.
+它的线性结构将与某个向量空间完全一样.
+
+商空间中的加法和数乘是什么样的？
+我们做出如下规定：
+
+
+\begin{eq1}
+    (\bm{\gamma}_1 + \operatorname{Ker}A)
+    +
+    (\bm{\gamma}_2 + \operatorname{Ker}A) 
+    &= (\bm{\gamma}_1 + \bm{\gamma}_2) + \operatorname{Ker}A  \\[6pt]
+    k (\bm{\gamma}+\operatorname{Ker}A) &= (k\bm{\gamma}) + \operatorname{Ker}A \\[12pt]
+\end{eq1}
+
+
+
+
+由于$\bm{0} \in \operatorname{Ker}A$，
+对任意的$\bm{x} \in \mathbb{K}^n$，
+有$\bm{x} \in \bm{x} + \operatorname{Ker}A$，
+因此$\bm{x}$总可以作为陪集$\bm{x} + \operatorname{Ker}A$的代表元.
+我们以符号$\overline{\bm{x}}$来简记以$\bm{x}$为代表元的陪集.
+
+于是上述规定可以写成：
+
+\begin{eq1}
+    \overline{\bm{\gamma}_1} + \overline{\bm{\gamma}_2} &= \overline{\bm{\gamma}_1 + \bm{\gamma}_2} \\[6pt]
+    k \overline{\bm{\gamma}} &= \overline{k\bm{\gamma}}  
+    \\[12pt]  
+\end{eq1}
+
+按这种记号，
+陪集的加法和数乘运算与其代表元的加法和数乘运算是一致的.
+有个细节问题是，
+陪集代表元的选择不是唯一的，
+这会导致陪集的加法或数乘结果不唯一吗？
+答案是不会.
+假设$\overline{\bm{\alpha}_1} = \overline{\bm{\gamma}_1}$，
+$\overline{\bm{\alpha}_2} = \overline{\bm{\gamma}_2} $，
+我们可以证明$\overline{\bm{\gamma}_1 + \bm{\gamma}_2} = \overline{\bm{\alpha}_1+\bm{\alpha}_2}$
+以及$\overline{k\bm{\gamma}_1} = \overline{k\bm{\alpha}_1} $.
+这是因为，
+由假设可知$\bm{\alpha}_1 - \bm{\gamma}_1 \in \operatorname{Ker}A$，
+$\bm{\alpha}_2 - \bm{\gamma}_2 \in \operatorname{Ker}A$.
+于是：
+
+\begin{eq1}
+    (\bm{\alpha}_1+\bm{\alpha}_2) - (\bm{\gamma}_1 + \bm{\gamma}_2) 
+    &= (\bm{\alpha}_1 - \bm{\gamma}_1) + (\bm{\alpha}_2 - \bm{\gamma}_2)
+    \in \operatorname{Ker}A \\[6pt]
+    k \bm{\alpha}_1 - k \bm{\gamma}_1 &= k (\bm{\alpha}_1 - \bm{\gamma}_1) \in \operatorname{Ker}A \\[12pt]
+\end{eq1}
+
+这表明我们对陪集加法和数乘运算的规定是合理的.
+
+按照这个规定，
+$\operatorname{Ker}A$的陪集做加法和数乘仍是$\operatorname{Ker}A$的陪集，
+因此商集$\mathbb{K}^n / \operatorname{Ker}A$对陪集和加法和数乘运算封闭.
+容易验证有以下$8$条运算性质成立：\medskip
+
+
+(1)~\textbf{加法单位元：}\textit{$\mathbb{K}^n / \operatorname{Ker}A$中存在唯一的零元素$\overline{\bm{0}} = \operatorname{Ker}A$，
+使得对任意$\overline{\bm{\alpha}} \in \mathbb{K}^n / \operatorname{Ker}A$，$\overline{\bm{0}} + \overline{\bm{\alpha}} = \overline{\bm{\alpha}}$. }
+
+(2)~\textbf{加法结合律：}\textit{$\overline{\bm{\alpha}_1} +( \overline{\bm{\alpha}_2} + \overline{\bm{\alpha}_3}) = (\overline{\bm{\alpha}_1} + \overline{\bm{\alpha}_2}) + \overline{\bm{\alpha}_3}$，
+$\forall \overline{\bm{\alpha}_1},\overline{\bm{\alpha}_2}, \overline{\bm{\alpha}_3} \in \mathbb{K}^n / \operatorname{Ker}A$.}
+
+(3)~\textbf{加法的逆：}\textit{$\forall \overline{\bm{\alpha}}\in \mathbb{K}^n / \operatorname{Ker}A$，
+存在一个它的“负元素”$\overline{-\bm{\alpha}}$，使得$\overline{\bm{\alpha}}+(\overline{-\bm{\alpha}}) = \overline{\bm{0}}$.}
+
+(4)~\textbf{加法交换律：}\textit{$\overline{\bm{\alpha}_1} + \overline{\bm{\alpha}_2} = \overline{\bm{\alpha}_2} + \overline{\bm{\alpha}_1}$，$\forall \overline{\bm{\alpha}_1},\overline{\bm{\alpha}_2} \in \mathbb{K}^n / \operatorname{Ker}A$.}
+
+(5)~\textbf{数乘单位：}\textit{$1 \cdot \overline{\bm{\alpha}} = \overline{\bm{\alpha}}$，$\forall \overline{\bm{\alpha}} \in \mathbb{K}^n / \operatorname{Ker}A$.}
+
+(6)~\textbf{数乘结合律：}\textit{$k(l \overline{\bm{\alpha}}) = (k l)\overline{\bm{\alpha}}$，$\forall k,l \in \mathbb{K}$，$\overline{\bm{\alpha}} \in \mathbb{K}^n / \operatorname{Ker}A$.}
+
+(7)~\textbf{数乘分配律I：}\textit{$k (\overline{\bm{\alpha}_1} + \overline{\bm{\alpha}_2}) = k \overline{\bm{\alpha}_1} + k \overline{\bm{\alpha}_2}$，$\forall k \in \mathbb{K}$，$\overline{\bm{\alpha}_1},\overline{\bm{\alpha}_2} \in \mathbb{K}^n / \operatorname{Ker}A$.}
+
+(8)~\textbf{数乘分配律II：}\textit{$(k + l)\overline{\bm{\alpha}} = k \overline{\bm{\alpha}} + l \overline{\bm{\alpha}}$，$\forall k,l \in \mathbb{K}$，$\overline{\bm{\alpha} }\in \mathbb{K}^n / \operatorname{Ker}A$.}\medskip
+
+这使得商集$\mathbb{K}^n / \operatorname{Ker}A$升级为商空间.
+它是线性空间的一个特例.
+线性空间的线性结构与向量空间完全相同，
+只需要把线性空间的元素也看作“向量”，
+就能套用此前在向量空间中得到的一切结论.
+在商空间中，
+陪集就是“向量”，
+陪集之间亦有线性相关和线性无关的概念.
+$\dim\mathbb{K}^n / \operatorname{Ker}A$自然是指
+商空间的一组基的向量个数.
+这便回答了(Q1).\medskip
+
+接着回答(Q2).
+设$\operatorname{Ker}A$有一组基（即$A \bm{x} = \bm{0}$的一个基础解系）
+$\bm{\eta}_1 , \bm{\eta}_2 , \cdots , \bm{\eta}_s$.
+往里面继续添加$r = n-s$个线性无关的向量$\bm{\gamma}_1, \bm{\gamma}_2 , \cdots , \bm{\gamma}_r$，
+可以使其扩展成$\mathbb{K}^n$的一组基.
+根据(Q2)所猜想的公式，
+并考虑到商空间的加法和数乘运算与陪集代表元的加法和数乘运算一致，
+猜测额外添加的这组向量$\bm{\gamma}_1, \bm{\gamma}_2 , \cdots , \bm{\gamma}_r$
+对应于商空间$\mathbb{K}^n / \operatorname{Ker}A$的一组基$\overline{\bm{\gamma}_1}, \overline{\bm{\gamma}_2 }, \cdots , \overline{\bm{\gamma}_r}$.
+
+现在证明上述$r$个商空间中的“向量”（陪集）的确是商空间的一组基，
+从而商空间的维数就是$n - \dim  ~\operatorname{Ker}A$.
+按照基的定义，
+需要做两部分的工作.
+
+第一，证明$\overline{\bm{\gamma}_1}, \overline{\bm{\gamma}_2 }, \cdots , \overline{\bm{\gamma}_r}$是线性无关的.
+我们已知$\bm{\gamma}_1, \bm{\gamma}_2 , \cdots , \bm{\gamma}_r$线性无关，
+即存在一组不全为$0$的数$k_1,k_2 , \cdots , k_r$，
+使得以下等式成立：
+
+\begin{eq1}
+    k_1 \bm{\gamma}_1+ k_2 \bm{\gamma}_2 + \cdots + k_r \bm{\gamma}_r = \bm{0} \\[12pt]
+\end{eq1}
+
+根据陪集的加法和数乘规则，
+将这个等式左右两边头顶上加一横，
+变成陪集运算的等式，仍然成立：
+
+\begin{eq1}
+    k_1 \overline{\bm{\gamma}_1}+ k_2 \overline{\bm{\gamma}_2 }+ \cdots + k_r \overline{\bm{\gamma}_r} =\overline{ \bm{0} } \\[12pt]
+\end{eq1}
+
+于是线性无关性得证.
+第二，证明$\mathbb{K}^n / \operatorname{Ker}A$中的每个元素都能由$\overline{\bm{\gamma}_1}, \overline{\bm{\gamma}_2 }, \cdots , \overline{\bm{\gamma}_r}$线性表示.
+我们已知$\bm{\eta}_1 , \bm{\eta}_2 , \cdots , \bm{\eta}_s, \bm{\gamma}_1, \bm{\gamma}_2 , \cdots , \bm{\gamma}_r$是$\mathbb{K}^n$的一组基，
+因此任意的$\bm{x} \in \mathbb{K}^n$都能由它线性表示：
+
+\begin{eq1}
+    l_1 \bm{\eta}_1 + l_2 \bm{\eta}_2 + \cdots + l_s \bm{\eta}_s + l_{s+1} \bm{\gamma}_1+ l_{s+2} \bm{\gamma}_2 + \cdots + l_{n} \bm{\gamma}_r = \bm{x}\\[12pt]
+\end{eq1}
+
+将这个等式左右两边头顶上加一横，仍然成立：
+
+\begin{eq1}
+    l_1 \overline{\bm{\eta}_1} + l_2 \overline{\bm{\eta}_2} + \cdots + l_s \overline{\bm{\eta}_s} + l_{s+1} \overline{\bm{\gamma}_1}+ l_{s+2} \overline{\bm{\gamma}_2} + \cdots + l_{n} \overline{\bm{\gamma}_r }= \overline{\bm{x}}\\[12pt]
+\end{eq1}
+
+但注意$\bm{\eta}_1 , \bm{\eta}_2 , \cdots , \bm{\eta}_s$是$\operatorname{Ker}A$的一组基，
+它们都是$\operatorname{Ker}A$中的元素，
+故以它们为代表元的陪集其实都是$\operatorname{Ker}A = \overline{\bm{0}}$.
+上式的前$s$项就可以直接划掉了：
+
+\begin{eq1}
+    l_{s+1} \overline{\bm{\gamma}_1}+ l_{s+2} \overline{\bm{\gamma}_2} + \cdots + l_{n} \overline{\bm{\gamma}_r }= \overline{\bm{x}}\\[12pt]
+\end{eq1}
+
+由$\bm{x}$的任意性，
+$\overline{\bm{x}}$是$\mathbb{K}^n / \operatorname{Ker}A$中的任意元素.
+因此这就证明了$\mathbb{K}^n / \operatorname{Ker}A$中的任意元素都能由$\overline{\bm{\gamma}_1}, \overline{\bm{\gamma}_2 }, \cdots , \overline{\bm{\gamma}_r}$线性表示.
+
+综上所述，
+$\overline{\bm{\gamma}_1}, \overline{\bm{\gamma}_2 }, \cdots , \overline{\bm{\gamma}_r}$
+是$\mathbb{K}^n / \operatorname{Ker}A$的一组基，
+因此$\dim  ~\mathbb{K}^n / \operatorname{Ker}A = r = n-s$.
+这就证明了商空间的维数公式：
+
+\begin{eq1}
+    n = \dim\operatorname{Ker}A + \dim\mathbb{K}^n / \operatorname{Ker}A \\[12pt]
+\end{eq1}
+
+要得到更早提出的维数公式，
+还需要证明$\dim\mathbb{K}^n / \operatorname{Ker}A = \dim\operatorname{Im}A$.
+这就是(Q3)所问的.
+这不仅要求在$\mathbb{K}^n / \operatorname{Ker}A$与$\operatorname{Im}A$之间建立一一对应（双射），
+而且这一一对应必须保持两个空间中的线性运算.
+我们早已叙述过$\mathbb{K}^n / \operatorname{Ker}A$与$\operatorname{Im}A$之间为什么能建立双射.
+实际上它们都唯一确定了线性方程组$A\bm{x} = \bm{\beta}$，
+只不过前者是以解集来确定，
+后者是以像$\bm{\beta}$来确定.
+把这个想法具体地写下来就是：
+有一个$\mathbb{K}^n / \operatorname{Ker}A \to \operatorname{Im}A$的双射$\phi$，
+其对应关系为$\phi (\overline{\bm{x}}) = A \bm{x}$.
+根据陪集的运算性质和线性映射$A$的运算性质，
+很容易证明以下两个式子：
+
+\begin{eq1}
+    \phi(\overline{\bm{x}_1}) + \phi(\overline{\bm{x}_2}) &= \phi(\overline{\bm{x}_1+\bm{x}_2}) \\[6pt]
+    k \phi(\overline{\bm{x}_1})  &=  \phi(k \overline{\bm{x}_1}) \\[12pt]
+\end{eq1}
+
+这式子是否眼熟？
+实际上它说明了\textbf{$\phi$是}$\mathbb{K}^n / \operatorname{Ker}A \to \operatorname{Im}A$\textbf{的线性映射}！
+既然是线性映射，
+我们第一时间就想找到它的核空间$\operatorname{Ker}\phi$和像空间$\operatorname{Im}\phi$.
+这并不难，
+因为已经知道$\phi$是双射，
+也就是即单又满的映射.
+$\phi$是单射说明$\operatorname{Ker}\phi = \left\{ \overline{\bm{0}} \right\}$，
+$\phi$是满射说明$\operatorname{Im}\phi = \operatorname{Im}A$.
+
+如果从一个空间到另一个空间的线性映射还是双射，
+称它为\textbf{线性同构映射}，或简称\textbf{线性同构}，
+并说这两个线性空间是\textbf{线性同构}的，
+用符号“$\cong$”表示.
+$\phi$就是$\mathbb{K}^n / \operatorname{Ker}A \to \operatorname{Im}A$的线性同构.
+即有如下同构等式：
+
+\begin{eq1}
+    \mathbb{K}^n / \operatorname{Ker}A \cong \operatorname{Im}A \\[12pt]
+\end{eq1}
+
+由于$\phi$是双射，
+因此它有逆映射$\phi^{-1}$.
+不难验证$\phi^{-1}$也是线性映射.
+因此，两个空间线性同构实际上就是在说
+两个空间存在一个可逆的线性映射，
+而且逆映射也是线性映射.
+这表示两个空间若线性同构，
+其线性结构是毫无区别的.
+例如，
+若你把“$\mathbb{K}^n / \operatorname{Ker}A$中的向量是陪集”，
+“$\operatorname{Im}A$是$\mathbb{K}^m$的子集”这种向量的具体表现形式忽略掉，
+只考虑其中的线性结构，
+将再也不能说出这两个空间的任何区别.
+这个同构等式从本质上说清楚了$\operatorname{Ker}A$与$\operatorname{Im}A$的关系，
+是维数公式的上位替代.
+
+对于线性同构$\phi$一个简单的看法是，
+$\phi$将$\mathbb{K}^n / \operatorname{Ker}A$的任何一组基一一对应地映为$\operatorname{Im}A$的一组基.
+因此$\mathbb{K}^n / \operatorname{Ker}A$与$\operatorname{Im}A$的基包含的向量个数相同，
+即$\dim\mathbb{K}^n / \operatorname{Ker}A = \dim\operatorname{Im}A$.
+这样就回到了最初的维数公式：
+
+\begin{eq1}
+    n = \dim\operatorname{Ker}A + \dim\operatorname{Im}A \\[12pt]
+\end{eq1}

@@ -1,0 +1,112 @@
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+
+\usepackage{graphicx}      % 插入图片支持，提供\includegraphics等命令
+\numberwithin{figure}{section}
+\usepackage{amsthm}        % 定理环境设置，用于定义和排版数学定理
+\usepackage{fontspec}      % 字体选择包，用于XeLaTeX和LuaLaTeX中自定义字体
+\usepackage{setspace}      % 行距设置包，提供\singlespacing、\doublespacing等命令
+\usepackage{geometry}      % 页面布局设置，可轻松调整页边距、纸张大小等
+\usepackage{tikz}          % 创建矢量图形的强大工具，用于绘制图表、流程图等
+\usetikzlibrary{shapes, backgrounds}
+\usepackage{tikz-3dplot}   % 三维坐标系支持，扩展tikz的三维绘图能力
+\usepackage{pgfplots}      % 高质量科学绘图工具，基于tikz的绘图库
+\usepackage{extarrows}     % 扩展箭头符号，提供更长的箭头和特殊箭头
+\usepackage{bm}            % 粗体数学符号支持，提供\bm命令用于数学环境中的粗体
+\usepackage{float}         % 改进浮动体控制，提供[H]等位置选项
+\usepackage{subfigure}     % 子图支持
+\usepackage{ulem}          % 下划线、删除线等文本装饰功能
+\usepackage{amsfonts}      % 美国数学学会字体集合，提供各种数学符号
+\usepackage{soul, color, xcolor} % 文本高亮和颜色支持（soul用于文本装饰，color/xcolor用于颜色定义）
+\usepackage{framed}        % 创建带框环境，用于突出显示文本内容
+\usepackage{esint}         % 扩展积分符号，提供更多积分符号变体
+\usepackage{xparse}        % 扩展的命令定义功能，支持更复杂的参数处理
+\usepackage{caption}       % 图表标题定制，提供更灵活的标题格式控制
+\usepackage{varwidth}      % 可变宽度盒子环境，用于创建自适应宽度的内容框
+\usepackage{hyperref}      % 超链接支持，为文档中的引用、目录等添加可点击链接（通常应最后加载）
+% 用于自动宽度框
+\usepackage{amssymb} %空集符号在这儿
+\usepackage{venndiagram} % 韦恩图
+\usepackage{cleveref} % 智能引用宏包
+\usepackage{nicematrix} %矩阵
+\usepackage{mathtools}
+\usepackage{arydshln}
+\usepackage{braket}
+\usepackage{mathrsfs}
+\usepackage{comment}
+
+\allowdisplaybreaks[4] %align*环境中公式自动换行，高优先级
+
+\setstretch{1.75}
+
+%公式默认恢复环境
+\everydisplay{\linespread{1}\selectfont}
+\everymath{\linespread{1}\selectfont}
+
+
+%封面页设置
+\pagestyle{plain}
+\author{虹箭}
+\title{线性代数辅导讲义}
+
+\geometry{left=3cm, right=3cm,top =2cm, bottom=2cm} %设置页边距
+
+\everymath{\displaystyle}
+
+\def\acb{\bm{a}\times\bm{b}}
+
+
+%行间公式环境1
+\newenvironment{eq1}{\begin{equation}
+    \setlength\abovedisplayskip{6pt}
+    \setlength\belowdisplayskip{6pt}
+    \begin{aligned}
+        \nonumber
+}{\end{aligned}
+    \end{equation}}
+
+%行间公式环境2
+\newenvironment{eq2}{\begin{equation}
+    \setlength\abovedisplayskip{12pt}
+    \setlength\belowdisplayskip{12pt}
+    \begin{aligned}
+        \nonumber
+}{\end{aligned}
+    \end{equation}}
+
+\newcommand{\centeredcaption}[2]{%
+  \captionof*{figure}{%
+    \begin{varwidth}{\linewidth}%
+      \centering%
+      #1\\[1.25ex]% 第一行
+      #2% 第二行
+    \end{varwidth}%
+  }%
+}
+
+\pgfplotsset{
+  every axis/.append style={
+    axis on top=false, % 将坐标轴放在底层
+    set layers=standard, % 设置标准图层顺序
+    axis line style={line width=0.5pt} % 减细坐标轴线条
+  }
+}
+
+
+\def\d{\mathrm{d}}
+
+\newtheorem{example}{例}[section]
+\newtheorem{theorem}{定义}[section]
+
+\theoremstyle{definition}
+\newtheorem*{solution}{解答}
+\newtheorem*{remark}{分析}
+\newtheorem*{pf}{证明}
+
+\definecolor{softred}{RGB}{220,10,50}    % 柔和的红色
+\definecolor{softblue}{RGB}{100,100,200}   % 柔和的蓝色
+\definecolor{lightgray}{RGB}{180,180,180}  % 浅灰色
+\definecolor{barnowl}{RGB}{224, 144, 60}  % 浅灰色
+\definecolor{SHred}{RGB}{157, 41, 50}  % 浅灰色
