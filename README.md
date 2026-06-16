@@ -1,2 +1,2 @@
 # Linear-Algebra-Notes
-Fall 2025 - Spring 2026
+2025秋至2026春线性代数讲义（更新到第七章）
