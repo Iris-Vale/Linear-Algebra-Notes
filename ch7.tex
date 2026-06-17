@@ -976,12 +976,24 @@ $C$可以看成对$A$进行了一系列初等列变换，
 \begin{example}
     思考：
     
-    (1)~对于$n$阶实对称矩阵，
-
+    (1)~$n$阶实对称矩阵，
     有多少个合同等价类？
     
     (2)~对于复对称矩阵而言，“惯性指数”是什么？
 \end{example}
+
+\begin{solution}
+    ~
+
+    (1)~问题等同于$n$阶实对称矩阵有几种不同的规范型.
+    秩为$r$的规范型有$r+1$种.
+    因此不同的规范型共有$1+2+\cdots + n + (n+1) = \frac{(n+1)(n+2)}{2}$.
+
+    \medskip
+
+    (2)~复对称矩阵不必区分正负惯性指数，
+    秩就是完全的合同不变量.
+\end{solution}
 
 \bigskip
 
@@ -994,26 +1006,278 @@ $C$可以看成对$A$进行了一系列初等列变换，
     (2)~$f(x_1, x_2, x_3) = x_1 x_2 + x_1 x_3 + x_2 x_3$.
 \end{example}
 
+\begin{solution}（I. 直接配方法）
+    ~
+
+    (1)~
+    \begin{eq1}
+        f(x_1 , x_2, x_3) 
+        &= x_1^2 + x_1 (x_2 + x_3) + x_2^2 + x_3^2 + x_2 x_3 \\[2pt]
+        &= ( x_1 + \frac{1}{2} x_2 + \frac{1}{2} x_3 )^2 - \frac{1}{4}(x_2 + x_3)^2 + x_2^2 + x_3^2 + x_2 x_3 \\[2pt]
+        &= ( x_1 + \frac{1}{2} x_2 + \frac{1}{2} x_3 )^2 + \frac{3}{4}x_2^2 + \frac{3}{4}x_3^2 + \frac{1}{2}x_2 x_3 \\[2pt]
+        &= ( x_1 + \frac{1}{2} x_2 + \frac{1}{2} x_3 )^2 + \frac{3}{4}(x_2 + \frac{1}{3}x_3)^2 + \frac{2}{3}x_3^2
+    \end{eq1}
+
+    做非退化线性替换：
+    \[
+    \begin{cases}
+        y_1 = x_1 + \frac{1}{2} x_2 + \frac{1}{2} x_3 \\[8pt]
+        y_2 = x_2 + \frac{1}{3}x_3 \\[6pt]
+        y_3 = x_3
+    \end{cases}
+    \]
+
+    就将二次型化成了标准型$g(y_1 , y_2, y_3) = y_1^2 + \frac{3}{4}y_2^2 + \frac{2}{3}y_3^2$.
+
+    \medskip
+
+    (2)~为了找平方项，先做非退化线性替换：
+    \[
+    \begin{cases}
+        y_1 = x_1 + x_2 \\[2pt]
+        y_2 = x_1 - x_2 \\[2pt]
+        y_3 = x_3
+    \end{cases}
+    \]
+
+    代入，二次型化为$g(y_1 , y_2, y_3) = \frac{1}{4}y_1^2 - \frac{1}{4}y_2^2 + y_3y_1$.
+    再进行配方：
+    \[
+    g(y_1 , y_2, y_3) = \frac{1}{4}y_1^2 - \frac{1}{4}y_2^2 + y_3y_1 = 
+    (\frac{1}{2}y_1 + y_3)^2 - \frac{1}{4}y_2^2 - y_3^2 
+    \]
+
+    再做非退化线性替换：
+    \[
+    \begin{cases}
+        z_1 = \frac{1}{2}y_1 + y_3 \\[6pt]
+        z_2 = y_2 \\[2pt]
+        z_3 = y_3
+    \end{cases}
+    \]
+
+    就将二次型化成了标准型$h(z_1 , z_2 , z_3) = z_1^2 - \frac{1}{4}z_2^2 - z_3^2$.
+    所做的总的非退化线性替换为：
+    \[
+    \begin{cases}
+        z_1 = \frac{1}{2}x_1 + \frac{1}{2}x_2 + x_3  \\[6pt]
+        z_2 = x_1 - x_2 \\[2pt]
+        z_3 = x_3
+    \end{cases}
+    \] 
+\end{solution}
+
+\begin{solution}（II. 成对初等变换法）
+    ~
+
+    (1)~
+    \[
+    \left(
+    \begin{array}{ccc}
+    1 & 1/2 & 1/2 \\[2pt]
+    1/2 & 1 & 1/2 \\[2pt]
+    1/2 & 1/2 & 1 \\[4pt] \hdashline
+    1 & 0 & 0 \\[2pt]
+    0 & 1 & 0 \\[2pt]
+    0 & 0 & 1
+    \end{array}
+    \right)
+    \xlongrightarrow[r_2 - 1/2 \cdot r_1]{c_2 - 1/2 \cdot c_1}
+    \left(
+    \begin{array}{ccc}
+    1 & 0 & 1/2 \\[2pt]
+    0 & 3/4 & 1/4 \\[2pt]
+    1/2 & 1/4 & 1 \\[4pt] \hdashline
+    1 & -1/2 & 0 \\[2pt]
+    0 & 1 & 0 \\[2pt]
+    0 & 0 & 1
+    \end{array}
+    \right)
+    \xlongrightarrow[r_3 - 1/2 \cdot r_1]{c_3 - 1/2 \cdot c_1}
+    \left(
+    \begin{array}{ccc}
+    1 & 0 & 0 \\[2pt]
+    0 & 3/4 & 1/4 \\[2pt]
+    0 & 1/4 & 3/4 \\[4pt] \hdashline
+    1 & -1/2 & -1/2 \\[2pt]
+    0 & 1 & 0 \\[2pt]
+    0 & 0 & 1
+    \end{array}
+    \right)
+    \]
+    \[
+     \xlongrightarrow[r_3 - 1/3 \cdot r_2]{c_3 - 1/3 \cdot c_2}
+    \left(
+    \begin{array}{ccc}
+    1 & 0 & 0 \\[2pt]
+    0 & 3/4 & 0 \\[2pt]
+    0 & 0 & 3/4 \\[4pt] \hdashline
+    1 & -1/2 & -1/3 \\[2pt]
+    0 & 1 & -1/3 \\[2pt]
+    0 & 0 & 1
+    \end{array}
+    \right)
+    \]
+
+    做非退化线性替换$\bm{X} = C\bm{Y}$，
+    能使二次型化为标准型$g(y_1 , y_2, y_3) = y_1^2 + \frac{3}{4}y_2^2 + \frac{2}{3}y_3^2$.
+    其中：
+    \[ C =
+    \begin{pmatrix}
+        1 & -1/2 & -1/3 \\[2pt]
+        0 & 1 & -1/3 \\[2pt]
+        0 & 0 & 1
+    \end{pmatrix}
+    \]
+
+
+    \bigskip
+
+
+    (2)~
+    \[
+    \left(
+    \begin{array}{ccc}
+    0 & 1/2 & 1/2 \\[2pt]
+    1/2 & 0 & 1/2 \\[2pt]
+    1/2 & 1/2 & 0 \\[4pt] \hdashline
+    1 & 0 & 0 \\[2pt]
+    0 & 1 & 0 \\[2pt]
+    0 & 0 & 1
+    \end{array}
+    \right)
+    \xlongrightarrow[r_2 - r_1]{c_2 - c_1}
+   \left(
+    \begin{array}{ccc}
+    0 & 1/2 & 1/2 \\[2pt]
+    1/2 & -1 & 0 \\[2pt]
+    1/2 & 0 & 0 \\[4pt] \hdashline
+    1 & -1 & 0 \\[2pt]
+    0 & 1 & 0 \\[2pt]
+    0 & 0 & 1
+    \end{array}
+    \right)
+    \xlongrightarrow[r_1 \leftrightarrow r_2]{c_1 \leftrightarrow c_2}
+    \left(
+    \begin{array}{ccc}
+    -1 & 1/2 & 0 \\[2pt]
+    1/2 & 0 & 1/2 \\[2pt]
+    0 & 1/2 & 0 \\[4pt] \hdashline
+    -1 & 1 & 0 \\[2pt]
+    1 & 0 & 0 \\[2pt]
+    0 & 0 & 1
+    \end{array}
+    \right)
+    \]
+    \[
+    \xlongrightarrow[r_2 + 1/2 \cdot r_2]{c_2 + 1/2 \cdot c_1}
+    \left(
+    \begin{array}{ccc}
+    -1 & 0 & 0 \\[2pt]
+    0 & 1/4 & 1/2 \\[2pt]
+    0 & 1/2 & 0 \\[4pt] \hdashline
+    -1 & 1/2 & 0 \\[2pt]
+    1 & 1/2 & 0 \\[2pt]
+    0 & 0 & 1
+    \end{array}
+    \right)
+    \xlongrightarrow[r_3 - 2 \cdot r_2]{c_3 - 2 \cdot c_2}
+    \left(
+    \begin{array}{ccc}
+    -1 & 0 & 0 \\[2pt]
+    0 & 1/4 & 0 \\[2pt]
+    0 & 0 & -1 \\[4pt] \hdashline
+    -1 & 1/2 & -1 \\[2pt]
+    1 & 1/2 & -1 \\[2pt]
+    0 & 0 & 1
+    \end{array}
+    \right)
+    \]
+
+    做非退化线性替换$\bm{X} = C\bm{Y}$，
+    能使二次型化为标准型$g(y_1 , y_2, y_3) = -y_1^2 + \frac{1}{4}y_2^2 - y_3^2$.
+    其中：
+    \[ C =
+    \begin{pmatrix}
+        -1 & 1/2 & -1 \\[2pt]
+        1 & 1/2 & -1 \\[2pt]
+        0 & 0 & 1
+    \end{pmatrix}
+    \]
+\end{solution}
+
+
+
 \bigskip
 
 \begin{example}
     设实二次型
     \[
-    f(X)=f(x_1,x_2,x_3)
+    f(\bm{X})=f(x_1,x_2,x_3)
     =x_1^2+x_2^2+x_3^2+2ax_1x_2+2ax_1x_3+2ax_2x_3,
     \quad a\in\mathbb{R}\text{为参数}
     \]
-    可用非退化线性替换 \(X=CY\) 化成二次型
+    可用非退化线性替换 \(\bm{X}=C\bm{Y}\) 化成二次型
     \[
-    g(Y)=g(y_1,y_2,y_3)
+    g(\bm{Y})=g(y_1,y_2,y_3)
     =y_1^2+y_2^2+4y_3^2+2y_1y_2
     \]
+
+    (1)~求参数 \(a\) 的值.
+
+    (2)~求把 \(f(\bm{X})\) 化成 \(g(\bm{Y})\) 的非退化线性替换中的可逆矩阵 \(C\).
 \end{example}
 
+\begin{solution}
+    ~
 
-（1）求参数 \(a\) 的值.
+    (1)~写出$f(\bm{X})$和$g(\bm{Y})$的二次型矩阵：
+    \[
+    A  = 
+    \begin{pmatrix}
+        1 & a & a \\[2pt]
+        a & 1 & a \\[2pt]
+        a & a & 1
+    \end{pmatrix}
+    ~~~
+    B = 
+    \begin{pmatrix}
+        1 & 1 & 0 \\[2pt]
+        1 & 1 & 0 \\[2pt]
+        0 & 0 & 4
+    \end{pmatrix}
+    \]
 
-（2）求把 \(f(X)\) 化成 \(g(Y)\) 的非退化线性替换中的可逆矩阵 \(C\).
+    计算可逆矩阵$C$，
+    将$B$化为规范型:
+    \[
+    \begin{pmatrix}
+        1 & 0 & 0 \\[2pt]
+        0 & 0 & 1/2 \\[2pt]
+        -1 & 1 & 0
+    \end{pmatrix}
+    \begin{pmatrix}
+        1 & 1 & 0 \\[2pt]
+        1 & 1 & 0 \\[2pt]
+        0 & 0 & 4
+    \end{pmatrix}
+    \begin{pmatrix}
+        1 & 0 & -1 \\[2pt]
+        0 & 0 & 1 \\[2pt]
+        0 & 1/2= & 0
+    \end{pmatrix}
+    = 
+    \begin{pmatrix}
+        1 & 0 & 0 \\[2pt]
+        0 & 4 & 0 \\[2pt]
+        0 & 0 & 0
+    \end{pmatrix}
+    \]
+
+\end{solution}
+
+
+
 
 \subsubsection{正定二次型}
 
@@ -1023,7 +1287,7 @@ $C$可以看成对$A$进行了一系列初等列变换，
 
 
 \begin{example}
-    判断$I_n + J_n$是否为正定矩阵
+    判断$I_n + J_n$是否为正定矩阵.
 \end{example}
 
 \begin{remark}
@@ -1031,8 +1295,61 @@ $C$可以看成对$A$进行了一系列初等列变换，
     但是更快的方法是去证$n$个特征值都为正.
 \end{remark}
 
-\begin{proof}（顺序主子式）
+\begin{proof}（I. ~顺序主子式）
+    ~
+
+    $I_n + J_n$的顺序主子式都形如$|I_k + J_k|$，其中$1 \leq k \leq n$.
+    用初等变换法化简之：
+    \[
+    \begin{vmatrix}
+        2 & 1 & 1  & \cdots &  1 \\[2pt]
+        1 & 2 & 1 & \cdots & 1 \\[2pt]
+        1 & 1 & 2 & \cdots & 1 \\[2pt]
+        \vdots  & \vdots & \vdots & \ddots & \vdots \\[2pt]
+        1 & 1 & 1 & \cdots & 2 \\[2pt]
+    \end{vmatrix}
+    =
+    \begin{vmatrix}
+        2 & 1 & 1  & \cdots &  1 \\[2pt]
+        -1 & 1 & 0 & \cdots & 0 \\[2pt]
+        -1 & 0 & 1 & \cdots & 0 \\[2pt]
+        \vdots  & \vdots & \vdots & \ddots & \vdots \\[2pt]
+        -1 & 0 & 0 & \cdots & 1 \\[2pt]
+    \end{vmatrix}
+    =
+    \begin{vmatrix}
+        n-1 & 1 & 1  & \cdots &  1 \\[2pt]
+        0 & 1 & 0 & \cdots & 0 \\[2pt]
+        0 & 0 & 1 & \cdots & 0 \\[2pt]
+        \vdots  & \vdots & \vdots & \ddots & \vdots \\[2pt]
+        0 & 0 & 0 & \cdots & 1 \\[2pt]
+    \end{vmatrix}
+    = n-1 > 0
+    \]
+
+    所有顺序主子式都大于$0$，
+    因此$I_n + J_n$是正定的.
+    \qed
+\end{proof}
+
+\begin{proof}（II. ~特征值）
     
+    $J_n$的秩为$1$，
+    因此$0$是$J_n$的$n-1$重特征值.
+    而$J_n$的迹为$n$，
+    因此$n$也是特征值.
+    由此知道$J_n$的特征多项式
+    $|\lambda I_n - J_n| = \lambda^{n-1} (\lambda - n)$.
+
+    考虑$I_n + J_n$的特征多项式：
+    $|\lambda I_n - (I_n + J_n)| = |(\lambda - 1) I_n - J_n|$.
+    与$|\lambda I_n - J_n|$比较，
+    无非是将$\lambda$替换为了$\lambda -1$.
+    因此 $|\lambda I_n - (I_n + J_n)| = (\lambda - 1)^{n-1} (\lambda - n - 1)$.
+    $\lambda = 1$是$n-1$重特征值，
+    $\lambda = n+1$是$1$重特征值，
+    它们全都是正数，
+    因此$I_n + J_n$是正定矩阵. \qed
 \end{proof}
 
 \bigskip
@@ -1063,12 +1380,68 @@ $C$可以看成对$A$进行了一系列初等列变换，
     请注意第(2)问已经是一个半正定的二次型.
 \end{remark}
 
+\begin{solution}~
+
+    (1)~二次型矩阵：
+    \[
+    \begin{pmatrix}
+        2 & 1 & 0 \\[2pt]
+        1 & 1 & t/2 \\[2pt]
+        0 & t/2 & 1 
+    \end{pmatrix}
+    \]
+    其$1$阶和$2$阶顺序主子式显然都是正数.
+    而$3$阶顺序主子式（即它自身的行列式）：
+    \[
+    \Delta_3 = 
+    \begin{vmatrix}
+        2 & 1 & 0 \\[2pt]
+        1 & 1 & t/2 \\[2pt]
+        0 & t/2 & 1 
+    \end{vmatrix}
+    = 1 - \frac{t^2}{2}
+    \]
+    
+    则该二次型正定当且仅当$\Delta_3 > 0$，
+    即$t \in (-\sqrt{2} , \sqrt{2})$.
+
+    \medskip
+
+    (2)~注意这已经是一个半正定二次型.
+    它等于$0$当且仅当每一项都为$0$.
+    因此，
+    如果这个二次型是正定的，
+    那么要求它每一项都为$0$当且仅当$x_1 = x_2 = \cdots = x_n = 0$，
+    即下列线性方程组只有零解：
+    \[
+    \begin{cases}
+        x_1 + a_1 x_2 = 0 \\[2pt]
+        x_2 + a_2 x_3 = 0 \\[2pt]
+        \cdots \\[2pt]
+        x_n + a_n x_1 = 0 \\[2pt]
+    \end{cases}
+    \]
+
+    这就等同于说它的系数矩阵$A$行列式不为$0$.即：
+    \[
+    \det A 
+    = \begin{vmatrix}
+        1 & a_1 & 0 & \cdots & 0 \\[2pt]
+        0 & 1 & a_2 & \cdots & 0 \\[2pt]
+        0 & 0 & 1 & \cdots & 0 \\[2pt]
+        \cdots & \cdots & \cdots & \ddots & \cdots \\[2pt]
+        a_n & 0 & 0 & \cdots & 1 \\[2pt]
+    \end{vmatrix}
+    = 1 - (-1)^n a_1 a_2 \cdots a_n \ne 0 
+    \] \qed
+\end{solution}
+
 \bigskip
 
 
 \begin{example}
     设$A$是$\mathbb{R}$上的$n$阶正定矩阵，
-    任取列向量$\bm{\alpha} \in \mathbb{R}^n$，
+    任取非零列向量$\bm{\alpha} \in \mathbb{R}^n$，
     有：
     \[
     \begin{vmatrix}
@@ -1083,14 +1456,60 @@ $C$可以看成对$A$进行了一系列初等列变换，
     将其合同变换为分块对角矩阵.
 \end{remark}
 
+\begin{proof}
+    对矩阵做成对分块初等行列变换（在下式中用初等分块矩阵乘法表示），
+    化为分块对角矩阵：
+    \[
+    \begin{pmatrix}
+    I_{n} & 0 \\[2pt]
+    -\bm{\alpha}^T A^{-1} & 1
+    \end{pmatrix}
+    \begin{pmatrix}
+    A & \bm{\alpha} \\[2pt]
+    \bm{\alpha}^T & 0
+    \end{pmatrix}
+    \begin{pmatrix}
+    I_{n} & -A^{-1}\bm{\alpha} \\[2pt]
+    0 & 1
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+    A & 0 \\[2pt]
+    0 & -\bm{\alpha}^T A^{-1} \bm{\alpha}
+    \end{pmatrix}
+    \]
+
+    这里因为$A$是正定矩阵，
+    所以$A$可逆.
+    又知道$A$的所有特征值都为正，
+    则$A^{-1}$的所有特征值也都为正，
+    所以$A^{-1}$也是正定矩阵.
+    因为$\bm{\alpha}$是非零向量，
+    根据正定矩阵的定义，
+    $-\bm{\alpha}^T A^{-1} \bm{\alpha} < 0$.
+    于是有：
+    \[
+    \begin{vmatrix}
+        A & \bm{\alpha} \\
+        \bm{\alpha}^T & 0
+    \end{vmatrix} =
+    \begin{vmatrix}
+    A & 0 \\[2pt]
+    0 & -\bm{\alpha}^T A^{-1} \bm{\alpha}
+    \end{vmatrix}
+    =
+    \det (A) \cdot \det (-\bm{\alpha}^T A^{-1} \bm{\alpha}) < 0
+    \] 
+\end{proof}
+
 \bigskip
 
 \begin{example}
     设矩阵$A$：
     \[
     \begin{pmatrix}
-        3 & -1 & 1 \\
-        -1 & 3 & 1 \\
+        3 & -1 & 1 \\[2pt]
+        -1 & 3 & 1 \\[2pt]
         1 & 1 & 3
     \end{pmatrix}
     \]
@@ -1110,6 +1529,106 @@ $C$可以看成对$A$进行了一系列初等列变换，
     现在$A$本身不是一个标准型，
     如何利用合同变换联系到标准型的分解？
 \end{remark}
+
+\begin{proof}
+    ~
+
+    (1)~计算顺序主子式：
+    \[
+    \Delta_1 = 3
+    \]
+    \[
+    \Delta_2 =
+    \begin{vmatrix}
+        3 & -1 \\[2pt]
+        -1 & 3 
+    \end{vmatrix}
+    = 8
+    \]
+    \[
+    \Delta_3 =
+    \begin{vmatrix}
+        3 & -1 & 1 \\[2pt]
+        -1 & 3 & 1 \\[2pt]
+        1 & 1 & 3
+    \end{vmatrix}
+    = 16 
+    \]
+
+    都是正数，因此$A$是正定矩阵.
+
+    \medskip
+
+    (2)~对于任意$n$阶的实对称正定矩阵$A$，
+    考虑$A$的相似标准型$D = \mathrm{diag}(\lambda_1 , \lambda_2 , \cdots , \lambda_n)$.
+    因为$A$是实对称矩阵，
+    所以存在正交矩阵$P$，
+    使得$A = PDP^{-1}$.
+    又因为$A$是正定矩阵，
+    所以$A$的全部特征值$\lambda_i>0$.
+    则$D$可以分解为$D = D_1^2$，
+    其中$D_1 = \mathrm{diag}(\sqrt{\lambda_1} , \sqrt{\lambda_2} , \cdots , \sqrt{\lambda_n})$.
+    于是$A$可以做如下分解：
+    \[
+    A = PDP^{-1}
+    = PD_1 D_1 P^{-1}
+    = (PD_1 P^{-1}) (P D_1 P^{-1})
+    \]
+
+    则$PD_1P^{-1}$就是符合题目要求的矩阵$C$.
+    注意$P$是正交矩阵，
+    $C = PD_1P^{T}$是正定实对称的.
+    计算$A$的相似对角化，
+    可知：
+    \[
+    D  = 
+    \begin{pmatrix}
+        1 & 0 & 0 \\[2pt]
+        0 & 4 & 0 \\[2pt]
+        0 & 0 & 4
+    \end{pmatrix}
+    ,
+    ~~~~
+    P  = 
+    \begin{pmatrix}
+        -\frac{1}{\sqrt{3}} & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{6}} \\[12pt]
+        -\frac{1}{\sqrt{3}} & 0 & -\frac{2}{\sqrt{6}} \\[12pt]
+        \frac{1}{\sqrt{3}} & \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{6}}
+    \end{pmatrix}
+    \]
+
+    题目要求的矩阵$C$为：
+    \[
+    C = P D_1 P^{T}
+    = 
+    \begin{pmatrix}
+    \frac{5}{3} & -\frac{1}{3} & \frac{1}{3} \\[10pt]
+    -\frac{1}{3} & \frac{5}{3} & \frac{1}{3} \\[10pt]
+    \frac{1}{3} & \frac{1}{3} & \frac{5}{3} 
+    \end{pmatrix} 
+    \]
+
+        \medskip
+
+    (3)~是充要条件.
+    必要性在(2)中已经证明了.
+    现在证明充分性.
+    已知存在正定实对称矩阵$C$，
+    使得$C^2 = A$.
+    则任取非零向量$\bm{X}$，
+    有：
+    \[
+    \bm{X}^T A \bm{X}
+    = \bm{X}^T C^2 \bm{X}
+    = (\bm{X}^T C^T)(C \bm{X})
+    = (C \bm{X})^T (C \bm{X})
+    \geq 0
+    \]
+
+    因此$A$是正定矩阵. 
+\end{proof}
+
+
 
 \bigskip
 
@@ -1134,6 +1653,102 @@ A = Q^{T}Q
     能否做出符合题意的分解？
 \end{remark}
 
+\begin{proof}
+    ~
+
+    (1)~$A$正定当且仅当存在可逆$n$阶矩阵$C$，
+    使得$C^T A C = I_n$.
+    而$I_n$可以按照题意做如下分解：
+    \[
+    I_n = 
+    \begin{pmatrix}
+        I_n & O^T
+    \end{pmatrix}_{n \times m}
+    \begin{pmatrix}
+        I_n \\[2pt]
+        O
+    \end{pmatrix}_{m \times n}
+    \]
+    其中$m \leq n$（否则$m \times n$矩阵不可能是列满秩的），$O$是$(n-m) \times n$阶零矩阵（若$m=n$，则不存在这个矩阵块）.
+    代入并整理，
+    得到：
+    \[
+    A = (C^T)^{-1} I_n C^{-1} = 
+    (C^T)^{-1} \begin{pmatrix}
+        I_n & O^T
+    \end{pmatrix}
+    \begin{pmatrix}
+        I_n \\[2pt]
+        O
+    \end{pmatrix} C^{-1}
+    \]
+
+    于是$A$就分解成了$A  = P^T P$，
+    其中$P$是$m \times n$列满秩矩阵：
+    \[
+    P = 
+    \begin{pmatrix}
+        I_n \\[2pt]
+        O
+    \end{pmatrix} C^{-1}
+    \]
+
+    \medskip
+
+     (2)~$A$半正定当且仅当存在可逆$n$阶矩阵$C$，
+    使得：
+    \[
+    C^T A C = 
+    \begin{pmatrix}
+        I_r & O \\[2pt]
+        O & O
+    \end{pmatrix}_{n \times n}
+    \]
+    
+    其中$r < n$.
+    而这个标准型可以按照题意做如下分解：
+    \[
+    \begin{pmatrix}
+        I_r & O \\[2pt]
+        O & O
+    \end{pmatrix}_{n \times n}= 
+    \begin{pmatrix}
+        I_r \\[2pt]
+        O^T
+    \end{pmatrix}_{n \times r}
+    \begin{pmatrix}
+        I_r & O
+    \end{pmatrix}_{r \times n}
+    \]
+    其中，
+    $O$是$r \times (n-r)$阶零矩阵.
+    代入并整理，
+    得到：
+    \[
+    A = (C^T)^{-1} \begin{pmatrix}
+        I_r & O \\[2pt]
+        O & O
+    \end{pmatrix}_{n \times n}
+     C^{-1} 
+     = 
+    (C^T)^{-1} \begin{pmatrix}
+        I_r \\[2pt]
+        O^T
+    \end{pmatrix}
+    \begin{pmatrix}
+        I_r & O
+    \end{pmatrix} C^{-1}
+    \]
+
+    于是$A$就分解成了$A  = Q^T Q$，
+    其中$Q$是$r \times n$列满秩矩阵：
+    \[
+    Q = 
+    \begin{pmatrix}
+        I_r & O
+    \end{pmatrix} C^{-1}
+    \]
+\end{proof}
 
 \subsubsection{数学归纳法}
 
@@ -1154,7 +1769,123 @@ A = Q^{T}Q
     证明：$n$阶实对称矩阵$A$正定的充要条件是$A$的所有顺序主子式都大于$0$.
 \end{example}
 
-（参考教材证明）
+\begin{proof}
+    (1)~“$\Longrightarrow$”：
+    已知$A$正定.
+    $|A_k|$是$A$的$k$阶顺序主子式，
+    即$A$可以分块为：
+    \[
+    A = 
+    \begin{pmatrix}
+        A_k & * \\[2pt]
+        * & *
+    \end{pmatrix}
+    \]
+    取$\binom{\bm{\delta}_k}{\bm{0}}$是后$n-k$个分量为$0$，前$k$个分量不全为$0$的列向量.
+    因为$A$正定，
+    所以：
+    \[
+    0 < 
+    \begin{pmatrix}
+        \bm{\delta}_k^T & \bm{0}^T
+    \end{pmatrix}
+    \begin{pmatrix}
+        A_k & * \\[2pt]
+        * & *
+    \end{pmatrix}
+    \begin{pmatrix}
+        \bm{\delta}_k \\[2pt]
+        \bm{0}
+    \end{pmatrix}
+    = \bm{\delta}_k^T A_k \bm{\delta}_k
+    \]
+    这表明$A_k$也是正定矩阵.
+    而正定矩阵的行列式为正数，
+    因此$A$的$k$阶顺序主子式$|A_k|$为正数.
+    由$k$的任意性可知，
+    $A$的全部顺序主子式都是正数.
+
+    \medskip
+
+    (2)~“$\Longleftarrow$”：
+    已知$A$的全部顺序主子式都是正数.
+    对矩阵$A$的阶数$n$做数学归纳法.
+
+    (i)~当$n=1$时，结论显然.
+
+    (ii)~当 $n>1$ 时，
+    假设结论对任意 $n-1$ 阶实对称矩阵都成立.
+    现有 $n$ 阶实对称矩阵 $A$，
+    满足全部顺序主子式都是正数.
+    把 $A$ 分块成：
+    \[
+    A=
+    \begin{pmatrix}
+    A_{n-1} & \bm{\alpha} \\[2pt]
+    \bm{\alpha}^T & a_{nn}
+    \end{pmatrix},
+    \]
+    其中 $A_{n-1}$ 是$n-1$阶实对称矩阵，
+    它的全部顺序主子式就是 $A$ 的前$n-1$个顺序主子式.
+    根据归纳假设，
+    $A_{n-1}$ 是正定矩阵.
+
+    对$A$做成对的分块初等行列变换
+    （在下式中用初等分块矩阵乘法表示），
+    化为分块对角矩阵：
+    \[
+    \begin{pmatrix}
+    I_{n-1} & 0 \\[2pt]
+    -\bm{\alpha}^T A_{n-1}^{-1} & 1
+    \end{pmatrix}
+    \begin{pmatrix}
+    A_{n-1} & \bm{\alpha} \\[2pt]
+    \bm{\alpha}^T & a_{nn}
+    \end{pmatrix}
+    \begin{pmatrix}
+    I_{n-1} & -A_{n-1}^{-1}\bm{\alpha} \\[2pt]
+    0 & 1
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+    A_{n-1} & 0 \\[2pt]
+    0 & b
+    \end{pmatrix}
+    \]
+    其中
+    $b = a_{nn} - \bm{\alpha}^T A_{n-1}^{-1}\bm{\alpha}$.
+    两边取行列式，得：
+    $|A| = |A_{n-1}|b$.
+    注意其中$|A|$和$|A_{n-1}|$都是正数，
+    因此$b>0$.
+
+    因为$A_{n-1}$正定，
+    所以存在$n-1$阶可逆矩阵$C_{n-1}$，
+    使得$C_{n-1}^T A_{n-1} C_{n-1} = I_{n-1}$.
+    因此有：
+    \[
+    \begin{pmatrix}
+        C_{n-1}^T & O \\[2pt]
+        O & \sqrt{b}
+    \end{pmatrix}
+    \begin{pmatrix}
+    A_{n-1} & 0 \\[2pt]
+    0 & b
+    \end{pmatrix}
+     \begin{pmatrix}
+        C_{n-1} & O \\[2pt]
+        O & \sqrt{b}
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+    I_{n-1} & 0 \\[2pt]
+    0 & 1
+    \end{pmatrix}
+    \]
+
+    这说明原来的矩阵$A$合同于$n$阶单位矩阵$I_n$，
+    因此$A$是正定矩阵.
+\end{proof}
 
 \bigskip
 
@@ -1293,7 +2024,7 @@ A = Q^{T}Q
 \bigskip
 
 \begin{example}
-    已知$n$阶实对称矩阵$A$的各阶顺序主子式$\Delta_1 , \Delta_2 , \cdot , \Delta_n$
+    已知$n$阶实对称矩阵$A$的各阶顺序主子式$\Delta_1 , \Delta_2 , \cdots , \Delta_n$
     都不为零.
     证明：
     二次型$f(\bm{X}) = \bm{X}^T A \bm{X}$可由非退化线性替换$\bm{X} = C \bm{Y}$化为下述标准型：
@@ -1303,6 +2034,92 @@ A = Q^{T}Q
 
     其中$\lambda_k = \frac{\Delta_k}{\Delta_{k-1}}$，$\Delta_0 = 1$.
 \end{example}
+
+\begin{proof}
+    等同于去证明存在$n$阶可逆矩阵$C$，
+    使得$C^T A C = \mathrm{diag}(\lambda_1 , \lambda_2 , \cdots , \lambda_n)$，
+    其中$\lambda_i$符合题目叙述.
+
+
+    对矩阵$A$的阶数$n$做数学归纳法：
+
+    (i)~当$n=1$时，结论显然.
+
+    (ii)~假设结论对$n-1$阶实对称矩阵成立.
+    现有$A$是$n$阶实对称矩阵，
+    其各阶顺序主子式都不为零.
+    对矩阵$A$分块：
+    \[
+    A = 
+    \begin{pmatrix}
+        A_{n-1} & \bm{\alpha} \\[2pt]
+        \bm{\alpha}^T & a_{nn}
+    \end{pmatrix}
+    \]
+
+    其中$A_{n-1}$是$n-1$阶实对称矩阵，
+    其顺序主子式$\Delta_1 , \Delta_2 , \cdots \Delta_{n-1}$都不为零.
+    根据归纳假设，
+    存在$n-1$阶矩阵$S$，
+    使得$S^T A_{n-1} S = D_{n-1}$.
+    其中$D_{n-1} = \mathrm{diag}(\lambda_1 , \lambda_2 , \cdots , \lambda_{n-1})$.
+    其中，$\lambda_k = \Delta_k / \Delta_{k-1},~\Delta_0 = 1$.
+
+    对$A$进行分块初等行列变换，
+    使之化为分块对角矩阵.
+    首先利用归纳假设把左上角的矩阵块处理成对角矩阵：
+    \[
+    \begin{pmatrix}
+        S^T & O \\[2pt]
+        O & 1 
+    \end{pmatrix}
+    \begin{pmatrix}
+        A_{n-1} & \bm{\alpha} \\[2pt]
+        \bm{\alpha}^T & a_{nn}
+    \end{pmatrix}
+    \begin{pmatrix}
+        S & O \\[2pt]
+        O & 1 
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        D_{n-1} & S^T \bm{\alpha} \\[2pt]
+        \bm{\alpha}^T S & a_{nn}
+    \end{pmatrix}
+    \]
+
+    接着去消除反对角线上的元素：
+    将第一行左乘$-\bm{\alpha}^T S D_{n-1}^{-1}$加到第二行上，
+    将第一列右乘$-D_{n-1}^{-1}S^T \bm{\alpha}$加到第二列上.
+    即：
+    \[
+    \begin{pmatrix}
+        I_{n-1} & O \\[2pt]
+        -\bm{\alpha}^T S D_{n-1}^{-1} & 1 
+    \end{pmatrix}
+    \begin{pmatrix}
+        D_{n-1} & S^T \bm{\alpha} \\[2pt]
+        \bm{\alpha}^T S & a_{nn}
+    \end{pmatrix}
+    \begin{pmatrix}
+        I_{n-1} & -D_{n-1}^{-1}S^T \bm{\alpha} \\[2pt]
+        O & 1 
+    \end{pmatrix}
+    = 
+    \begin{pmatrix}
+        D_{n-1} & O \\[2pt]
+        O & b
+    \end{pmatrix}
+    \]
+
+    其中$b = a_{nn} - \bm{\alpha}^T S D_{n-1}^{-1} S^T \bm{\alpha}$.
+    两边取行列式，得：
+    \[
+    1
+    \]
+
+
+\end{proof}
 
 
 
