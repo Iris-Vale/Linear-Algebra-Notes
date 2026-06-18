@@ -818,7 +818,9 @@ $(0,x,0,0)^T,(0,0,y,0)^T,(0,0,0,z)^T$长度的平方为正数，
 后面也会结合其他相关习题一起讲解.
 
 
-\subsection{*复内积空间（暂不全）}
+\subsection{*复内积空间}
+
+\subsubsection{复内积的定义及其矩阵表示}
 
 实内积是以$\mathbb{R}^n$上的标准内积为模板的，
 那么复内积应当是以$\mathbb{C}^n$上的标准内积为模板.
@@ -832,14 +834,11 @@ $\bm{\beta} = (b_1 , b_2 , \cdots , b_n)^T$
     (\bm{\alpha} , \bm{\beta}) = a_1 b_1 + a_2 b_2 + \cdots + a_n b_n
 \end{align*}
 
-但不妙的是这种定义将不会满足正定性.
-比如$(i,i) \cdot (i,i) = -2 ,~(i,1) \cdot (i,1) = 0$.
-这是不可接受的.
-我们希望内积满足正定性，
-是因为我们希望进一步地定义向量的长度为自身内积的平方根.
-一个向量与自身的内积若不是非负实数，
-在直观上是没意义的（果真如此吗？）.
-为此我们对标准内积的定义做一些调整，
+但不妙的是这种定义不仅不满足正定性，
+甚至一个向量与自身的内积都不一定是实数.
+例如向量$(1+i , 1+i)$.
+于是，
+我们对标准内积的定义做一些调整，
 牺牲一些别的性质来保护正定性.
 方法是在做内积时让某一个向量取复共轭，
 使得$(\bm{\alpha} , \bm{\alpha})$中辐角相互抵消.
@@ -852,7 +851,6 @@ $\mathbb{C}^n$中的标准内积定义为：
 
 这样定义的复标准内积就满足了正定性，
 但是牺牲了对称性.
-容易验证，
 取而代之的新性质是\textbf{共轭对称性}：
 $(\bm{\alpha} , \bm{\beta}) = \overline{(\bm{\beta},\bm{\alpha})}$.
 
@@ -929,6 +927,130 @@ $\bm{X}^T H \overline{\bm{X}} > 0$对于任意非零向量$\bm{X}$成立，
 
 由此看出，
 \textbf{酉空间中的复内积与正定Hermite矩阵之间存在一一对应.}
+
+考虑最简单的复标准内积矩阵$I$（单位矩阵）.
+如果一个酉空间中的线性变换（表示矩阵为$U$）保内积，
+模仿实内积中关于度规矩阵的讨论，
+我们知道$U^{T} I \overline{U} = I$，
+即$U^{-1} = U^{\dagger}$.
+这样的矩阵$U$称为\textbf{酉矩阵}.
+它相当于正交矩阵在酉空间中的推广，
+表示酉空间中复内积下的“刚体运动”.
+
+\subsubsection{自伴矩阵及其性质}
+
+在讨论广义实内积的时候，
+我们曾经给出了自伴算子的概念，
+并说自伴矩阵就是实对称矩阵.
+
+按照完全相同的讨论，
+我们也可以称Hermite矩阵对应的复线性变换是自伴算子，
+自伴矩阵就是Hermite矩阵.
+实对称矩阵只是$\mathbb{R}$上的矩阵看作$\mathbb{C}$上的矩阵的特殊情况.
+
+设$H$是自伴矩阵.
+则按照定义，
+对任意的$\bm{X},\bm{Y} \in \mathbb{C}^n$，
+有：
+
+\[
+(H \bm{X} , \bm{Y})
+= (\bm{X} , H \bm{Y})
+\]
+
+其中$(\cdot , \cdot )$表示$\mathbb{C}^n$上的标准内积.
+$H$作为自伴算子的表示矩阵，
+自然可以纳入上一章的课题来研究，
+即我们问\textbf{自伴矩阵是否一定可对角化？
+它在对角化的过程中有什么特殊的性质？}
+
+$H$作为一个复矩阵，
+根据代数基本定理
+（$n$次多项式一定有$n$个复根），
+它一定有$n$个复特征值$\lambda_i$.
+设$\bm{X}$是其中任意一个特征值$\lambda$的一个特征向量.
+考虑内积$(H\bm{X},\bm{Y})$.
+我们发现：
+
+\[
+(H\bm{X},\bm{Y}) = (\lambda\bm{X},\bm{Y}) = \lambda (\bm{X} , \bm{Y})
+\]
+
+另一方面，
+可以利用自伴矩阵的性质，
+把$H$转移到$2$号位上.
+注意运用复内积的共轭线性，得到：
+
+\[
+(H\bm{X},\bm{Y}) = (\bm{X},H \bm{Y}) = 
+(\bm{X},\lambda \bm{Y}) = \overline{\lambda} (\bm{X} , \bm{Y})
+\]
+
+两式比较，
+得到$\lambda = \overline{\lambda}$，
+即$\lambda$是实数.
+也就是说，
+\textbf{自伴矩阵一定有$n$个实特征值！}
+
+\medskip
+
+再来看特征向量的性质.
+设$\lambda_1, \lambda_2$是自伴矩阵$H$的两个不同的特征值，
+它们分别有特征向量$\bm{X}_1 , \bm{X}_2$.
+考虑内积$(H\bm{X}_1 , \bm{X}_2)$.
+我们发现：
+
+\[
+(H\bm{X}_1 , \bm{X}_2) = (\lambda_1 \bm{X}_1 , \bm{X}_2) = \lambda_1 (\bm{X}_1 , \bm{X}_2)
+\]
+
+另一方面，
+可以利用自伴矩阵的性质，
+把$H$转移到$2$号位上.
+注意运用复内积的共轭线性，
+得到：
+
+\[
+(H\bm{X}_1 , \bm{X}_2) = (\bm{X}_1 , H \bm{X}_2)
+=(\bm{X}_1 , \lambda_2 \bm{X}_2) 
+= \lambda_2 (\bm{X}_1 , \bm{X}_2)
+\]
+
+比较上下二式，
+发现$\lambda_1 (\bm{X}_1 , \bm{X}_2) = \lambda_2 (\bm{X}_1 , \bm{X}_2)$.
+但$\lambda_1 \ne \lambda_2$，
+因此只能是$(\bm{X}_1 , \bm{X}_2) = 0$，
+即$\bm{X}_1$与$\bm{X}_2$相互正交.
+也就是说，
+\textbf{自伴矩阵$H$的属于不同特征值的特征向量相互正交！}
+
+\medskip
+
+最后，
+\textbf{我们还能证明自伴矩阵$H$一定可以实对角化.}
+证明过程用到了复矩阵的一个重要定理：
+任何复矩阵$A$一定可以酉相似上三角化，
+即存在酉矩阵$U$和上三角矩阵$D$，
+使得$U^{-1} A U = D$.
+
+现在将这里的$A$设为自伴矩阵$H$.
+因为$U$是酉矩阵，
+所以$U^{\dagger} H  U = D$.
+对这个等式两边取共轭转置，
+得到$U^{\dagger} H^{\dagger} U = U^{\dagger} H U = D^{\dagger}$.
+比较两式，
+可知上三角矩阵$D = D^{\dagger}$.
+这表明$D$是对角矩阵.
+因此最初的等式$U^{-1}HU = D$表明\textbf{自伴矩阵$H$一定可以酉相似对角化}.
+
+\medskip
+
+从上述讨论中可以看出，
+自伴矩阵的特殊性质是来自于复内积的共轭线性.
+而“实对称矩阵一定可以正交对角化”的性质，
+其实是将实对称矩阵作为$\mathbb{C}$上的矩阵，
+也就是复的自伴矩阵看待的结果.
+
 
 \clearpage
 
@@ -1204,6 +1326,7 @@ $C$可以看成对$A$进行了一系列初等列变换，
         0 & 0 & 1
     \end{pmatrix}
     \]
+
 \end{solution}
 
 
@@ -1248,7 +1371,7 @@ $C$可以看成对$A$进行了一系列初等列变换，
     \end{pmatrix}
     \]
 
-    计算可逆矩阵$C$，
+    计算可逆矩阵$C_1$，
     将$B$化为规范型:
     \[
     \begin{pmatrix}
@@ -1264,19 +1387,75 @@ $C$可以看成对$A$进行了一系列初等列变换，
     \begin{pmatrix}
         1 & 0 & -1 \\[2pt]
         0 & 0 & 1 \\[2pt]
-        0 & 1/2= & 0
+        0 & 1/2 & 0
     \end{pmatrix}
     = 
     \begin{pmatrix}
         1 & 0 & 0 \\[2pt]
-        0 & 4 & 0 \\[2pt]
+        0 & 1 & 0 \\[2pt]
         0 & 0 & 0
     \end{pmatrix}
+    ~~~
+    \text{即}~ C_1^T B C_2 = \mathrm{diag}(1,1,0)
     \]
 
+    可以看出$B$的秩为$2$.
+    因此$A$的秩也应该为$2$.
+    计算$A$的行列式$|A| = (a-1)^2 (2a+1)$.
+    由$|A|$的行列式为$0$可知$a=1$或$a=-\frac{1}{2}$.
+    但是当$a=1$时$A$的秩显然为$1$，
+    $a$只能是$-\frac{1}{2}$.
+
+    \bigskip
+
+    (2)~再计算可逆矩阵$C_2$，
+    将$A$化为规范型：
+    \[ 
+    \begin{pmatrix}
+    \frac{1}{\sqrt{3}} & -\frac{1}{\sqrt{3}} & 0 \\[12pt]
+    \frac{1}{3} & \frac{1}{3} & -\frac{2}{3} \\[12pt]
+    \frac{1}{\sqrt{3}} & \frac{1}{\sqrt{3}} & \frac{1}{\sqrt{3}}
+    \end{pmatrix}
+    \begin{pmatrix}
+        1 & -\frac{1}{2} & -\frac{1}{2} \\[12pt]
+        -\frac{1}{2} & 1 & -\frac{1}{2} \\[12pt]
+        -\frac{1}{2} & -\frac{1}{2} & 1
+    \end{pmatrix}
+    \begin{pmatrix}
+    \frac{1}{\sqrt{3}} & \frac{1}{3} & \frac{1}{\sqrt{3}} \\[12pt]
+    -\frac{1}{\sqrt{3}} & \frac{1}{3} & \frac{1}{\sqrt{3}} \\[12pt]
+    0 & -\frac{2}{3} & \frac{1}{\sqrt{3}}
+    \end{pmatrix}
+    = 
+    \begin{pmatrix}
+        1 & 0 & 0 \\[4pt]
+        0 & 1 & 0 \\[4pt]
+        0 & 0 & 0
+    \end{pmatrix}
+    ~~
+    \text{即}~C_2^T A C_2 = \mathrm{diag}(1,1,0)
+    \]
+
+    于是我们有：
+    \[
+    C_1^T B C_1 = 
+    C_2^T A C_2 
+    ~~~~~
+    \text{即}~B = (C_1^T)^{-1} C_2^T A C_2 C_1^{-1}
+    \]
+
+    题目中要求的$C$为：
+    \[
+    C = C_2 C_1^{-1}
+    = \begin{pmatrix}
+    \frac{1}{\sqrt{3}} & \frac{2}{\sqrt{3}} & \frac{2}{3} \\[12pt]
+    -\frac{1}{\sqrt{3}} & 0 & \frac{2}{3} \\[12pt]
+    0 & \frac{1}{\sqrt{3}} & -\frac{4}{3}
+    \end{pmatrix}
+    \]
 \end{solution}
 
-
+\bigskip
 
 
 \subsubsection{正定二次型}
@@ -1329,7 +1508,6 @@ $C$可以看成对$A$进行了一系列初等列变换，
 
     所有顺序主子式都大于$0$，
     因此$I_n + J_n$是正定的.
-    \qed
 \end{proof}
 
 \begin{proof}（II. ~特征值）
@@ -1349,7 +1527,7 @@ $C$可以看成对$A$进行了一系列初等列变换，
     $\lambda = 1$是$n-1$重特征值，
     $\lambda = n+1$是$1$重特征值，
     它们全都是正数，
-    因此$I_n + J_n$是正定矩阵. \qed
+    因此$I_n + J_n$是正定矩阵. 
 \end{proof}
 
 \bigskip
@@ -2086,6 +2264,12 @@ A = Q^{T}Q
         D_{n-1} & S^T \bm{\alpha} \\[2pt]
         \bm{\alpha}^T S & a_{nn}
     \end{pmatrix}
+    ~~~
+    \text{记}~P = 
+     \begin{pmatrix}
+        S & O \\[2pt]
+        O & 1 
+    \end{pmatrix}
     \]
 
     接着去消除反对角线上的元素：
@@ -2110,18 +2294,32 @@ A = Q^{T}Q
         D_{n-1} & O \\[2pt]
         O & b
     \end{pmatrix}
+    ~~~
+    \text{记}~Q = 
+     \begin{pmatrix}
+        I_{n-1} & -D_{n-1}^{-1}S^T \bm{\alpha} \\[2pt]
+        O & 1 
+    \end{pmatrix}
     \]
 
     其中$b = a_{nn} - \bm{\alpha}^T S D_{n-1}^{-1} S^T \bm{\alpha}$.
-    两边取行列式，得：
+    两边取行列式，
+    注意$|P| = |S|,~|Q| = 1$.
+    得：
     \[
-    1
+    b = \frac{|P^T Q^T A Q P|}{|D_{n-1}|}
+    = \frac{|P^T Q^T A Q P|}{|S^T A_{n-1} S|}
+    = \frac{|A|}{|A_{n-1}|}
+    = \frac{\Delta_n}{\Delta_{n-1}} = \lambda_n
     \]
 
+    于是$A$合同于$\mathrm{diag}(\lambda_1 , \lambda_2 , \cdots , \lambda_{n})$.
+
+    综合(i),(ii)可知，结论对任意$n$阶实对称矩阵$A$成立.
 
 \end{proof}
 
-
+\bigskip
 
 
 
@@ -2135,13 +2333,113 @@ A = Q^{T}Q
     相关结论能否推广至$n$元函数？
 \end{example}
 
+\begin{solution}
+    $(x_0 , y_0)$是稳定点，
+    一阶微分为$0$.
+    因此泰勒展开的最低阶为$2$阶：
+    \begin{align*}
+        2 (F(x_0 + \Delta x ,y_0 + \Delta y) - F(x_0 ,y_0)) \approx
+        F_{xx}(x_0 ,y_0) \cdot (\Delta x)^2 + 2 \cdot F_{xy}(x_0 ,y_0) \cdot \Delta x \Delta y +  F_{yy}(x_0 ,y_0)  \cdot (\Delta y)^2
+    \end{align*}
+
+    右式是一个二阶微分式，
+    实际上也是一个关于$(\Delta x , \Delta y)$的二次型，
+    其二次型矩阵称为Hessian矩阵：
+    \[
+    H  = 
+    \begin{pmatrix}
+        F_{xx}(x_0 , y_0) & F_{xy}(x_0 , y_0) \\[2pt]
+        F_{xy}(x_0 , y_0) & F_{yy}(x_0 , y_0) 
+    \end{pmatrix},~~~
+    \text{记为}~
+    \begin{pmatrix}
+        A & B \\[2pt]
+        B & C
+    \end{pmatrix}
+    \]
+
+    如果$\Delta x , \Delta y \ne 0$，
+    则$(x_0 , y_0)$是极小值点
+    当且仅当在邻域内满足$F(x_0 + \Delta x , y_0 + \Delta y) - F(x_0 , y_0) > 0$.
+    即上述二次型是正定的，
+    亦即$H$是正定矩阵.
+    利用顺序主子式可写出条件是$A > 0$且$AC - B^2 > 0$.
+
+    类似地，
+    $(x_0 , y_0)$是极小值点当且仅当$H$负定，
+    即$A < 0$且$AC-B^2 > 0$.
+
+    $(x_0 , y_0)$不是极值点当且仅当$H$不定，
+    即$AC-B^2 < 0$.
+    
+    其余情况下（$H$不满秩），
+    无法通过二阶导数判断$(x_0 , y_0)$是否为极值点.
+
+\end{solution}
+
 \bigskip
 
 \begin{example}
     ~
 
     (1)~$\mathbb{R}^3$中的
-    曲面$z = 5x^2 + 4xy + 2y^2$是什么类型的二次曲面？
+    曲面$z^2 + 5x^2 + 4xy + 2y^2 = 1$是什么类型的二次曲面？
 
     (2)~$\mathbb{R}^2$中的曲线$5x^2 + 4xy + 2y^2 - 24x - 12y + 18 = 0$是什么类型的二次曲线？
 \end{example}
+
+\begin{remark}
+    注意正交矩阵的意义是刚体运动，
+    因此对曲面/曲线方程进行正交替换，
+    曲面/曲线的类型不改变.
+\end{remark}
+
+\begin{solution}
+    
+    (1)~考虑二次型$5x^2 + 4xy + 2y^2$.
+    其二次型矩阵：
+    \[
+    A = 
+    \begin{pmatrix}
+        5 & 2 \\[2pt]
+        2 & 2
+    \end{pmatrix}
+    \]
+
+    
+    计算其特征值为$\lambda_1 = 6,  \lambda_2 = 1$.
+    解出其正交对角化$C^{-1} A C = \mathrm{diag}(6,1)$.
+    其中正交矩阵$C$：
+    \[
+    C = 
+    \begin{pmatrix}
+        \frac{2}{\sqrt{5}} & -\frac{1}{\sqrt{5}}  \\[12pt]
+        \frac{1}{\sqrt{5}} & \frac{2}{\sqrt{5}}
+    \end{pmatrix}
+    \]
+
+    因此做正交替换：
+    \[
+    \begin{pmatrix}
+        x \\[2pt]
+        y 
+    \end{pmatrix}
+    = C \begin{pmatrix}
+        x' \\[2pt]
+        y'
+    \end{pmatrix}
+    \]
+    
+    代入曲线方程将得到$z^2 + 6x'^2 + y'^2 = 1$.
+    这是个椭球面，
+    因此原曲面也是椭球面.
+
+    \medskip
+
+    利用(1)中的正交替换，
+    代入曲线方程，
+    得到$6x'^2 + y'^2 - 12\sqrt{5}x' + 18 = 0$.
+    进一步配方化简得到曲线方程为$6(x - \sqrt{5})^2 + y'^2 = 12$.
+    这是个椭圆，
+    因此原曲线也是椭圆.
+\end{solution}
