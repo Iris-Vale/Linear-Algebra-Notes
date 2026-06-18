@@ -407,6 +407,43 @@ P^{-1}AP =
     \]
 \end{example}
 
+\begin{remark}
+    求秩即可.
+\end{remark}
+
+\begin{solution}
+    做初等行变换：
+  \[
+    \begin{pmatrix}
+        1 & -1 & -3 & 1 \\
+        1 & -1 & 2 & -1 \\
+        4 & -4 & 3 & -2 
+    \end{pmatrix}
+    \to
+    \begin{pmatrix}
+        1 & -1 & -3 & 1 \\
+        0 & 0 & 5 & -2 \\
+        0 & 0 & 15 & -6 
+    \end{pmatrix}
+    \to
+     \begin{pmatrix}
+        1 & -1 & -3 & 1 \\
+        0 & 0 & 5 & -2 \\
+        0 & 0 & 0 & 0
+    \end{pmatrix}
+    \]
+
+    该矩阵的秩为$2$.
+    因此相抵标准型是：
+    \[
+     \begin{pmatrix}
+        1 & 0 & 0 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 0 & 0 
+    \end{pmatrix}
+    \]
+\end{solution}
+
 \bigskip
 
 \begin{example}
@@ -427,6 +464,33 @@ P^{-1}AP =
     \end{pmatrix}
     \]
 \end{example}
+
+\begin{solution}
+    上一问中计算出矩阵$A$的秩为$2$.
+    对矩阵$B$做初等行变换：
+    \[
+    \begin{pmatrix}
+        1 & 3 & -2 & 0 \\
+        3 & -2 & 0 & 1 \\
+        4 & 1 & -2 & 1 
+    \end{pmatrix}
+    \to
+    \begin{pmatrix}
+        1 & 3 & -2 & 0 \\
+        0 & -11 & 6 & 1 \\
+        0 & -11 & 6 & 1 
+    \end{pmatrix}
+    \to
+    \begin{pmatrix}
+        1 & 3 & -2 & 0 \\
+        0 & -11 & 6 & 1 \\
+        0 & 0 & 0 & 0 
+    \end{pmatrix}
+    \]
+
+    $B$的秩也是$2$.
+    因此$A$与$B$相抵.
+\end{solution}
 
 
 \bigskip
@@ -461,6 +525,90 @@ P^{-1}AP =
     此时在右侧得到的行变换后的$3$阶矩阵就是$C_1$.
 \end{remark}
 
+\begin{solution}
+    先做初等行变换，通过右侧放置单位矩阵来记录所做的行变换，
+    得到$C_1$：
+    \begin{align*}
+        \left ( \begin{array}{cccc:ccc}
+        1 & -1 & -3 & 1 & 1 & 0 & 0  \\
+        1 & -1 & 2 & -1 & 0 & 1 & 0  \\
+        4 & -4 & 3 & -2 & 0 & 0 & 1
+        \end{array} \right ) 
+        \to
+        \left ( \begin{array}{cccc:ccc}
+            1 & -1 & -3 & 1 & 1 & 0 & 0  \\
+            0 & 0 & 5 & -2 & -1 & 1 & 0  \\
+            0 & 0 & 15 & -6 & -4 & 0 & 1
+        \end{array} \right )  \\[12pt]
+        \to
+        \left ( \begin{array}{cccc:ccc}
+            2 & -2 & -6 & 2 & 2 & 0 & 0  \\
+            0 & 0 & 5 & -2 & -1 & 1 & 0  \\
+            0 & 0 & 0 & 0 & -1 & -3 & 1
+        \end{array} \right ) 
+        \to 
+        \left ( \begin{array}{cccc:ccc}
+            2 & -2 & -1 & 0 & 1 & 1 & 0  \\
+            0 & 0 & 5 & -2 & -1 & 1 & 0  \\
+            0 & 0 & 0 & 0 & -1 & -3 & 1
+        \end{array} \right ) 
+    \end{align*}
+    
+    再做初等行变换，通过下侧放置单位矩阵来记录所做的列变换，
+    得到$C_2$：
+    \begin{align*}
+        \left ( 
+            \begin{array}{cccc}
+            2 & -2 & -1 & 0  \\
+            0 & 0 & 5 & -2    \\
+            0 & 0 & 0 & 0  \\ \hdashline
+            1 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 1 
+        \end{array} \right ) 
+        \to
+        \left ( 
+            \begin{array}{cccc}
+            2 & 0 & 0 & 0  \\
+            0 & 0 & 0 & -2    \\
+            0 & 0 & 0 & 0  \\ \hdashline
+            1 & 1 & 1/2 & 0 \\
+            0 & 1 & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 5/2 & 1 
+        \end{array} \right ) 
+        \to \left ( 
+            \begin{array}{cccc}
+            1 & 0 & 0 & 0  \\
+            0 & 1 & 0 & 0    \\
+            0 & 0 & 0 & 0  \\ \hdashline
+            1/2 & 0 & 1/2 & 1 \\
+            0 & 0 & 0 & 1 \\
+            0 & 0 & 1 & 0 \\
+            0 & -1/2 & 5/2 & 0 
+        \end{array} \right ) 
+    \end{align*}
+
+    因此：
+    \begin{align*}
+        C_1 = 
+        \begin{pmatrix}
+            1 & 1 & 0  \\
+            -1 & 1 & 0  \\
+            -1 & -3 & 1
+        \end{pmatrix}
+        ~~~~~
+        C_2 = 
+        \begin{pmatrix}
+            1/2 & 0 & 1/2 & 1 \\
+            0 & 0 & 0 & 1 \\
+            0 & 0 & 1 & 0 \\
+            0 & -1/2 & 5/2 & 0 
+        \end{pmatrix}
+    \end{align*}
+\end{solution}
+
 \subsubsection{相抵标准型的应用}
 
 \begin{example}
@@ -473,20 +621,138 @@ P^{-1}AP =
     如果$A$本身是相抵标准型，你能按题意做出这个分解吗？
 \end{remark}
 
+\begin{solution}
+    存在可逆矩阵$P_{m \times m }$和$Q_{n \times n}$，
+    使得：
+    \begin{align*}
+        PAQ  = 
+        \begin{pmatrix}
+            I_r & O \\
+            O & O
+        \end{pmatrix}
+    \end{align*}
+
+    而这个相抵标准型可以直接分解成秩为$r$的$m \times r$矩阵和$r \times n$矩阵相乘：
+    \begin{align*}
+        \begin{pmatrix}
+            I_r & O \\
+            O & O
+        \end{pmatrix}
+        = 
+        \begin{pmatrix}
+            I_r  \\
+            O 
+        \end{pmatrix}
+        \begin{pmatrix}
+            I_r & O
+        \end{pmatrix}
+    \end{align*}
+
+    将上述两式整理成$A$的分解式:
+    \begin{align*}
+        A  = P^{-1}
+        \begin{pmatrix}
+            I_r  \\
+            O 
+        \end{pmatrix}
+        \begin{pmatrix}
+            I_r & O
+        \end{pmatrix} Q^{-1}
+    \end{align*}
+
+    则题目所要求的矩阵$B$和$C$即为：
+    \begin{align*}
+        B = 
+        P^{-1}
+        \begin{pmatrix}
+            I_r  \\
+            O 
+        \end{pmatrix}
+        ~~~~~
+        C = 
+        \begin{pmatrix}
+            I_r & O
+        \end{pmatrix} Q^{-1}
+    \end{align*}
+
+\end{solution}
+
+
 \bigskip
+\bigskip
+
 
 \begin{example}
 
     (1)~
-    设$n$阶方阵$A$的秩为$r$.
+    设$n$阶方阵$A$的秩为$r~(r<n)$.
     证明：存在秩为$n-r$的$n$阶非零矩阵$B$和$C$，
     使得$AB=O$，$CA=O$.
 
     (2)~
-    设$n$阶方阵$A$的秩为$r~(r > 0)$.
+    设$n$阶方阵$A$的秩为$r~(r<n)$.
     证明：存在$n$阶非零方阵$B$，
     使得$AB=BA = O$.
 \end{example}
+
+\begin{proof}
+    直接做第(2)问.
+    存在可逆矩阵$P_{m \times m }$和$Q_{n \times n}$，
+    使得：
+    \begin{align*}
+        PAQ  = 
+        \begin{pmatrix}
+            I_r & O \\
+            O & O
+        \end{pmatrix}
+    \end{align*}
+
+    对于这个相抵标准型，
+    可以直接找到一个秩为$n-r$的矩阵$R = \mathrm{diag}(O,I_{n-r})$，
+    左乘或右乘的结果都是零矩阵：
+    \begin{align*}
+        \begin{pmatrix}
+            I_r & O \\
+            O & O
+        \end{pmatrix} 
+        \begin{pmatrix}
+            O & O \\
+            O & I_{n-r}
+        \end{pmatrix}
+        = 
+        \begin{pmatrix}
+            O & O \\
+            O & I_{n-r}
+        \end{pmatrix}
+        \begin{pmatrix}
+            I_r & O \\
+            O & O
+        \end{pmatrix} 
+        =
+        O
+    \end{align*}
+
+    即：
+    \begin{align*}
+        PAQR = RPAQ = O
+    \end{align*}
+
+    因为$P$和$Q$可逆，
+    上式推出：
+    \begin{align*}
+        A\boxed{QR} = \boxed{RP}A = O
+    \end{align*}
+
+    这样就足以解答第(1)问了.
+    为了凑出第(2)问所要求的矩阵$B$，
+    只需要在保持等式的条件下，
+    把两个方框里的矩阵形式凑成一样的：
+    \begin{align*}
+        A\boxed{QRP} = \boxed{QRP}A = O
+    \end{align*}
+
+    则$QRP$就是题目所要求的矩阵$B$.
+\end{proof}
 
 \bigskip
 
@@ -507,6 +773,339 @@ P^{-1}AP =
     \end{pmatrix}
     \]
 \end{example}
+
+\begin{remark}
+    两个矩阵的秩相等，
+    意味着可以通过初等行列变换从左侧变换到右侧.
+    如果能写出初等变换对应的矩阵，
+    就等于是解出了方程.
+\end{remark}
+
+\begin{proof}
+    
+    (1)~必要性.
+    已知存在$n \times s$矩阵$X$和$m \times r$矩阵$Y$，
+    使得$AX -  YB = C$.
+    这个等式告诉我们，
+    可以做如下的初等变换：
+    \begin{align*}
+        \begin{pmatrix}
+            A & O \\
+            O & B 
+        \end{pmatrix} \to
+        \begin{pmatrix}
+            A & AX \\
+            O & B 
+        \end{pmatrix} \to
+        \begin{pmatrix}
+            A & AX-YB \\
+            O & B 
+        \end{pmatrix} =
+        \begin{pmatrix}
+            A & C \\
+            O & B 
+        \end{pmatrix}
+    \end{align*}
+    这就证明了：
+    \begin{align*}
+        \mathrm{rank}
+        \begin{pmatrix}
+            A & O \\
+            O & B 
+        \end{pmatrix}=
+        \mathrm{rank}
+        \begin{pmatrix}
+            A & C \\
+            O & B 
+        \end{pmatrix}
+    \end{align*}
+
+    \medskip
+
+    (2)~充分性.
+    已知上述的秩等式成立.
+    我们尝试去求解初等行列变换，
+    即求解$P$和$Q$，
+    使得：
+    \begin{align*}
+        P
+        \begin{pmatrix}
+            A & O \\
+            O & B 
+        \end{pmatrix}
+        Q =
+        \begin{pmatrix}
+            A & C \\
+            O & B 
+        \end{pmatrix}
+    \end{align*}
+
+    我们借助相抵标准型来完成这件事.
+    设$A,B$的秩分别为$r,t$.
+    则存在可逆矩阵$P_1 , Q_1 , P_2 , Q_2$，
+    使得：
+    \begin{align*}
+        P_1 A Q_1 =
+        \begin{pmatrix}
+            I_r & O \\
+            O & O 
+        \end{pmatrix}
+        ~~~~~
+        P_2 B Q_2 =
+        \begin{pmatrix}
+            I_t & O \\
+            O & O 
+        \end{pmatrix}
+    \end{align*}
+
+    于是有：
+    \begin{align*}
+        \begin{pmatrix}
+            P_1 & O \\
+            O & P_2
+        \end{pmatrix}
+        \begin{pmatrix}
+            A & O \\
+            O & B
+        \end{pmatrix}
+        \begin{pmatrix}
+            Q_1 & O \\
+            O & Q_2
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            I_r & O & O & O \\
+            O & O & O & O \\
+            O & O & I_t & O \\
+            O & O & O & O \\
+        \end{pmatrix}
+    \end{align*}
+
+    同样的变换施加到另一个矩阵上是：
+    \begin{align*}
+        \begin{pmatrix}
+            P_1 & O \\
+            O & P_2
+        \end{pmatrix}
+        \begin{pmatrix}
+            A & C \\
+            O & B
+        \end{pmatrix}
+        \begin{pmatrix}
+            Q_1 & O \\
+            O & Q_2
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            P_1 A Q_1 & P_1 C Q_2 \\
+            O & P_2 B Q_2
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            I_r & O & C_1 & C_2 \\
+            O & O & C_3 & C_4 \\
+            O & O & I_t & O \\
+            O & O & O & O \\
+        \end{pmatrix}
+    \end{align*}
+
+    对它进一步施加初等行列变换，可以再简化：
+    \begin{align*}
+        \begin{pmatrix}
+            I_r & O & C_1 & C_2 \\
+            O & O & C_3 & C_4 \\
+            O & O & I_t & O \\
+            O & O & O & O \\
+        \end{pmatrix}
+        \to 
+        \begin{pmatrix}
+            I_r & O & O & C_2 \\
+            O & O & O & C_4 \\
+            O & O & I_t & O \\
+            O & O & O & O \\
+        \end{pmatrix}
+        \to 
+        \begin{pmatrix}
+            I_r & O & O & O \\
+            O & O & O & C_4 \\
+            O & O & I_t & O \\
+            O & O & O & O \\
+        \end{pmatrix}
+    \end{align*}
+
+    也就是说存在矩阵$G_1,G_2$，
+    使得：
+    \begin{align*}
+        \begin{pmatrix}
+            I_m & G_1 \\
+            O & I_r
+        \end{pmatrix}
+        \begin{pmatrix}
+            I_r & O & C_1 & C_2 \\
+            O & O & C_3 & C_4 \\
+            O & O & I_t & O \\
+            O & O & O & O \\
+        \end{pmatrix}
+        \begin{pmatrix}
+            I_n & G_2 \\
+            O & I_s
+        \end{pmatrix}
+        = 
+        \begin{pmatrix}
+            I_r & O & O & O \\
+            O & O & O & C_4 \\
+            O & O & I_t & O \\
+            O & O & O & O \\
+        \end{pmatrix}
+    \end{align*}
+
+    事实上可以直接读出矩阵$G_1,G_2$分别是：
+    \begin{align*}
+        G_1 = 
+        \begin{pmatrix}
+            -C_1 & O \\
+            -C_2 & O
+        \end{pmatrix}
+        ~~~~~
+        G_2 = 
+        \begin{pmatrix}
+            O & -C_2 \\
+            O & O
+        \end{pmatrix}
+    \end{align*}
+
+    从最右侧的形式可以看出，
+    矩阵的秩为$r+t+\mathrm{rank}(C_4)$.
+    但由已知条件知道它的秩应该是$r+t$.
+    因此$C_4 = O$.
+    这样我们就已经做到了将两个矩阵都通过初等行列变换变成$\mathrm{diag}(I_r,O,I_t,O)$，
+    以此为桥梁来整理上述的所有式子：
+    \begin{align*}
+        &\mathrm{diag}(I_r,O,I_t,O)
+        = \\[4pt]
+        &
+        \begin{pmatrix}
+            P_1 & O \\
+            O & P_2
+        \end{pmatrix}
+        \begin{pmatrix}
+            A & O \\
+            O & B
+        \end{pmatrix}
+        \begin{pmatrix}
+            Q_1 & O \\
+            O & Q_2
+        \end{pmatrix}
+        = 
+        \begin{pmatrix}
+            I_m & G_1 \\
+            O & I_r
+        \end{pmatrix}
+         \begin{pmatrix}
+            P_1 & O \\
+            O & P_2
+        \end{pmatrix}
+        \begin{pmatrix}
+            A & C \\
+            O & B
+        \end{pmatrix}
+        \begin{pmatrix}
+            Q_1 & O \\
+            O & Q_2
+        \end{pmatrix}
+        \begin{pmatrix}
+            I_n & G_2 \\
+            O & I_s
+        \end{pmatrix}
+    \end{align*}
+
+    整理并计算得到：
+    \begin{align*}
+        \begin{pmatrix}
+            A & C \\
+            O & B
+        \end{pmatrix}
+        &= 
+        \begin{pmatrix}
+            P_1^{-1} & O \\
+            O & P_2^{-1}
+        \end{pmatrix}
+        \begin{pmatrix}
+            I_m & G_1 \\
+            O & I_r
+        \end{pmatrix}^{-1}
+        \begin{pmatrix}
+            P_1 & O \\
+            O & P_2
+        \end{pmatrix}
+        \begin{pmatrix}
+            A & O \\
+            O & B
+        \end{pmatrix}
+        \begin{pmatrix}
+            Q_1 & O \\
+            O & Q_2
+        \end{pmatrix}
+        \begin{pmatrix}
+            I_n & G_2 \\
+            O & I_s
+        \end{pmatrix}^{-1}
+        \begin{pmatrix}
+            Q_1^{-1} & O \\
+            O & Q_2^{-1}
+        \end{pmatrix} \\[4pt]
+        &= \begin{pmatrix}
+            P_1^{-1} & O \\
+            O & P_2^{-1}
+        \end{pmatrix}
+        \begin{pmatrix}
+            I_m & -G_1 \\
+            O & I_r
+        \end{pmatrix}
+        \begin{pmatrix}
+            P_1 A Q_1 & O \\
+            O & P_2 B Q_2
+        \end{pmatrix}
+        \begin{pmatrix}
+            I_n & -G_2 \\
+            O & I_s
+        \end{pmatrix}
+        \begin{pmatrix}
+            Q_1^{-1} & O \\
+            O & Q_2^{-1}
+        \end{pmatrix} \\[4pt]
+        &= \begin{pmatrix}
+            P_1^{-1} & O \\
+            O & P_2^{-1}
+        \end{pmatrix}
+        \begin{pmatrix}
+            P_1 A Q_1 & -G_1 P_2 B Q_2 - P_1 A Q_1 G_2 \\
+            O & P_2 B Q_2
+        \end{pmatrix}
+        \begin{pmatrix}
+            Q_1^{-1} & O \\
+            O & Q_2^{-1}
+        \end{pmatrix} \\[4pt]
+        &= 
+        \begin{pmatrix}
+            A & -P_1^{-1} G_1 P_2 B  - A Q_1 G_2 Q_2^{-1}\\
+            O & B
+        \end{pmatrix}
+    \end{align*}
+
+    比较左右两侧，得到：
+    \begin{align*}
+        C  =  -P_1^{-1} G_1 P_2 B  - A Q_1 G_2 Q_2^{-1}
+    \end{align*}
+
+    这样就找到了矩阵方程$AX - YB = C$的解：
+    \begin{align*}
+        X = -Q_1 G_2 Q_2^{-1},~~~Y= P_1^{-1} G_1 P_2
+    \end{align*}
+
+    因此矩阵方程是有解的.
+\end{proof}
+
 
 \subsubsection{相似对角化的计算}
 
@@ -531,6 +1130,110 @@ P^{-1}AP =
     (3)~计算$A^{20}$.
 \end{example}
 
+\begin{solution}
+    ~
+
+    (1)计算特征多项式：
+    \[
+    |\lambda I - A|=
+    \begin{vmatrix}
+    \lambda-4 & -2 & -2\\
+    0 & \lambda-4 & 0\\
+    0 & 6 & \lambda+2
+    \end{vmatrix}
+    = (\lambda-4)^2 (\lambda + 2)
+    \]
+
+    $A$的特征值为：
+    $\lambda_1=4$（$2$重）,
+    $\lambda_2=-2$（$1$重）.
+
+    (i) $\lambda=4$：
+    解方程$(4I-A)\bm{X}=\bm{0}$.
+    系数矩阵$4I-A$为：
+    \begin{align*}
+        \begin{pmatrix}
+    0 & -2 & -2\\
+    0 & 0 & 0\\
+    0 & 6 & 6
+    \end{pmatrix}
+    \end{align*}
+
+    它的秩为$1$，
+    能得到$2$个线性无关的特征向量：
+    \begin{align*}
+        \bm{X}_1=\begin{pmatrix}1\\0\\0\end{pmatrix},\quad
+    \bm{X}_2=\begin{pmatrix}0\\-1\\1\end{pmatrix}
+    \end{align*}
+
+    构成基础解系，
+    即特征子空间的一组基.
+    因此$\lambda = 4$对应的全部特征向量为$c_1 \bm{X}_1 + c_2 \bm{X}_2$，
+    其中$c_1 ,c_2$不同时为$0$.
+
+
+    (ii)~$\lambda=-2$： 
+    解方程$(-2I-A)\bm{X}=\bm{0}$.
+    系数矩阵$-2I-A$为：
+    \begin{align*}
+        \begin{pmatrix}
+    6 & 2 & 2\\
+    0 & 6 & 0\\
+    0 & -6 & 0
+    \end{pmatrix}
+    \end{align*}
+
+    它的秩为$2$，
+    能得到$1$个线性无关的特征向量：
+    \begin{align*}
+        \bm{X}_3=\begin{pmatrix}1\\0\\-3\end{pmatrix}
+    \end{align*}
+    
+    构成基础解系，
+    即特征子空间的一组基.
+    因此$\lambda = -2$对应的全部特征向量为$c_3 \bm{X}_3$，
+    其中$c_3 \ne 0$.
+
+    \medskip
+
+    (2)~在(1)中，
+    我们已经得到了$3$个线性无关的特征向量，
+    因此$A$可对角化.
+
+    \medskip
+
+    (3)~
+    设矩阵：
+    \begin{align*}
+         P= (\bm{X}_1 , \bm{X}_2 , \bm{X}_3) = 
+        \begin{pmatrix} 
+    1 & 0 & 1\\
+    0 & -1 & 0\\
+    0 & 1 & -3
+    \end{pmatrix},
+    \quad
+    D=\begin{pmatrix}
+    4 & 0 & 0\\
+    0 & 4 & 0\\
+    0 & 0 & -2
+    \end{pmatrix}
+    \end{align*}
+
+    则有$D=P^{-1}AP$.
+    于是：
+    \begin{align*}
+        A^{20} 
+        = (PDP^{-1})^{20}
+        = PD^{20}P
+        = \begin{pmatrix}
+        4^{20} & 2(4^{20}-2^{20}) & 2(4^{20}-2^{20})\\
+        0 & 4^{20} & 0\\
+        0 & -6(4^{20}-2^{20}) & 2^{20}
+        \end{pmatrix}
+    \end{align*}
+
+\end{solution}
+
 \bigskip
 
 \begin{example}
@@ -553,6 +1256,23 @@ P^{-1}AP =
     但是注意$A$是实对称矩阵，
     这应该能带来很大的方便.
 \end{remark}
+
+\begin{solution}
+    注意$A$是实对称矩阵，
+    $-5$是$A$的一个重数为$2$的特征值，
+    意味着$-5$能对应$2$个线性无关的特征向量，
+    即$-5I - A$的秩为$1$.
+    计算$-5I - A$：
+    \begin{align*}
+        \begin{pmatrix}
+            -1 & -2 & -2 \\
+        -2 & -4 & -4 \\
+        -2 & -4 & -5-a
+        \end{pmatrix}
+    \end{align*}
+
+    由秩为$1$可知$a=-1$.
+\end{solution}
 
 \bigskip
 
@@ -578,6 +1298,21 @@ P^{-1}AP =
     目标是得到代数重数和几何重数的关系.
 \end{remark}
 
+\begin{proof}
+    $A$是上三角矩阵，
+    容易求得$A$的特征多项式为$|\lambda I - A| = (\lambda - 1)^r (\lambda + 1)^{n-r}$.
+    可知$1$是$r$重特征值，
+    $-1$是$n-r$重特征值.
+    只需证明它们的特征子空间的维数（几何重数）也分别是$r$和$n-r$.
+
+    所谓特征子空间的维数，
+    就是齐次线性方程组$(\lambda I - A) \bm{X} = \bm{0}$的解空间维数.
+    根据维数公式，这等于$n - \mathrm{rank}(\lambda I - A)$.
+    于是我们考察矩阵$I - A$和$-I - A$的秩，
+    易见它们分别是$n-r$和$r$.
+    因此特征值$1$和$-1$的特征子空间维数分别为$r$和$n-r$.
+\end{proof}
+
 \bigskip
 
 如果已知$\lambda_i$是特征值，
@@ -601,6 +1336,46 @@ $\dim \operatorname{Ker} (\lambda I - A)$，
     (2)~~求证：若$n$阶方阵$A$是对合矩阵（$A^2 = I_n$），则$A$必可对角化.
 \end{example}
 
+\begin{proof}
+    ~
+
+    (1)~先计算特征值.
+    设$\lambda$是$A$的特征值，
+    对应的一个特征向量是$\bm{X}$.
+    由$A^2 = A$可知$A^2 \bm{X} = A \bm{X} = \lambda \bm{X}$.
+    但是另一方面，
+    $A^2 \bm{X} = A (A \bm{X}) = A (\lambda \bm{X}) = \lambda A \bm{X} = \lambda^2 \bm{X}$.
+    比较两式可知$\lambda = \lambda^2$，
+    即$A$的特征值只可能是$0$或$1$.
+    我们只考察它们的特征子空间维数之和是否为$n$，
+    即证明$\dim \operatorname{Ker}(I - A) + \dim \operatorname{Ker} A = n$.
+
+    根据维数公式：$n = \dim \operatorname{Ker}(I - A) + \dim \operatorname{Im}(I - A)$，
+    $n = \dim \operatorname{Ker}A + \dim \operatorname{Im}A$.
+    只需证明$\dim \operatorname{Ker}(I - A) + \dim \operatorname{Ker}A = n$，
+    即$\mathrm{rank}(I-A) + \mathrm{rank}(A) = n$.
+    这是上一章习题中证明过的结论.
+
+    \medskip
+
+    (2)~先计算特征值.
+    设$\lambda$是$A$的特征值，
+    对应的一个特征向量是$\bm{X}$.
+    由$A^2 = I$可知$A^2 \bm{X} = I \bm{X} = \bm{X}$.
+    但是另一方面，
+    $A^2 \bm{X} = A (A \bm{X}) = A (\lambda \bm{X}) = \lambda A \bm{X} = \lambda^2 \bm{X}$.
+    比较两式可知$\lambda^2 = 1$，
+    即$A$的特征值只可能是$1$或$-1$.
+    我们只考察它们的特征子空间维数之和是否为$n$，
+    即证明$\dim \operatorname{Ker}(I - A) + \dim \operatorname{Ker} (I+A) = n$.
+
+    根据维数公式：$n = \dim \operatorname{Ker}(I - A) + \dim \operatorname{Im}(I - A)$，
+    $n = \dim \operatorname{Ker}(I+A) + \dim \operatorname{Im}(I+A)$.
+    只需证明$\dim \operatorname{Ker}(I - A) + \dim \operatorname{Ker}(I+A) = n$，
+    即$\mathrm{rank}(I-A) + \mathrm{rank}(I+A) = n$.
+    这是上一章习题中证明过的结论.
+\end{proof}
+
 \bigskip
 
 \begin{example}
@@ -609,6 +1384,17 @@ $\dim \operatorname{Ker} (\lambda I - A)$，
     证明：$-1$是$A$的一个特征值，
     且$A$至少有$k$个属于$-1$的线性无关特征向量.
 \end{example}
+
+\begin{proof}
+    我们的目标是研究$I+A$的秩.
+    已知$A$和$B$满足$(A+I)B = O$.
+    根据上一章习题中证明过的结论，
+    $\mathrm{rank}(A+I) + \mathrm{rank}(B) \leq n$.
+    再由维数公式：$\dim \operatorname{Ker} (A+I) + \mathrm{rank}(A+I) = n$.
+    代入可知$\dim \operatorname{Ker} (A+I) \geq k$，
+    即属于特征值$-1$的特征子空间至少是$k$维，
+    亦即至少有$-1$个属于$-1$的线性无关的特征向量.
+\end{proof}
 
 \bigskip
 
@@ -623,6 +1409,35 @@ $\dim \operatorname{Ker} (\lambda I - A)$，
     本题的切入点是注意形如$\bm{\alpha} \bm{\beta}^T$的矩阵秩为$1$.
 \end{remark}
 
+\begin{proof}
+    按矩阵乘法的规则，
+    $A = \bm{\alpha} \bm{\beta}^T$的每一个列向量都与$\bm{\alpha}$共线，
+    因此$\mathrm{rank}(A) < 1$.
+    又因为$\bm{\alpha},\bm{\beta}$都是非零向量，
+    $A =  \bm{\alpha} \bm{\beta}^T$不是零矩阵.
+    因此$\mathrm{rank} (A) = 1$.
+    由维数公式可知$\dim \operatorname{Ker} A = n-1$，
+    即$A$的$0$特征值的几何重数是$n-1$.
+    这表明$0$的代数重数至少是$n-1$.
+
+    设$f(\lambda)$是$A$的特征多项式.
+    由上述讨论可知，
+    $\lambda^{n-1}$是$f(\lambda)$的一个因式.
+    而$f(\lambda)$是$n$次多项式.
+    因此$f(\lambda)$是$\lambda^{n-1}$与某个一次因式$\lambda - a$的乘积.
+    这就说明$f(\lambda)$一定还有一个根$a$，
+    即$f(\lambda)$一定有$n$个特征值.
+
+    对剩下的一个特征值$a$进行分类讨论：
+    如果$a=0$，
+    则特征值$0$的代数重数为$n$，
+    而几何重数是$n-1$.
+    则$A$不可对角化.
+    此时$a \ne 0$，
+    则特征值$0$的代数重数和几何重数都是$n-1$，
+    而特征值$a$的代数重数和几何重数都是$1$.
+    此时$A$可对角化.
+\end{proof}
 
 
 \bigskip
@@ -633,6 +1448,32 @@ $\dim \operatorname{Ker} (\lambda I - A)$，
     证明：若$ST = TS$，
     则$S$可对角化.
 \end{example}
+
+\begin{proof}
+    $T$有$n$个互不相同的特征值，
+    则$T$可对角化，
+    且每个特征值的特征子空间都是$1$维的.
+    设$\lambda$是$T$的一个特征值，
+    对应的一个特征向量是$\bm{x}$.
+    则有：
+    \begin{align*}
+        T (S \bm{x})
+        = ST \bm{x} 
+        = S (\lambda \bm{x})
+        = \lambda (S \bm{x})
+    \end{align*}
+
+    可见$S\bm{x}$是$T$的属于$\lambda$的特征向量.
+    因为$T$的属于$\lambda$的特征子空间是一维的，
+    即$\langle \bm{x} \rangle$，
+    因此存在数$\mu \in \mathbb{K}$，
+    使得$S \bm{x} = \mu \bm{x}$.
+    因此$\bm{x}$是$S$的特征向量.
+    由$\lambda$的任意性可知，
+    $T$特征向量都是$S$的特征向量，
+    因此$S$有$n$个线性无关的特征向量，
+    $S$可对角化.
+\end{proof}
 
 \bigskip
 
@@ -645,6 +1486,13 @@ $\dim \operatorname{Ker} (\lambda I - A)$，
     只要两个矩阵的某个相似不变量不同，
     那它们就一定不相似.
 \end{remark}
+
+\begin{proof}
+    $\mathrm{tr}(AB - BA) = \mathrm{tr}(AB) - \mathrm{tr}(BA) = 0$，
+    但$\mathrm{tr}(kI_n) = nk$.
+    $\mathrm{tr}(AB - BA) \ne \mathrm{tr}(kI_n)$，
+    因此它们必定不相似.
+\end{proof}
 
 \subsubsection{*相似对角化的应用}
 
@@ -669,3 +1517,46 @@ $\dim \operatorname{Ker} (\lambda I - A)$，
 
     (3)~利用(1)的结论求解二阶常系数线性微分方程$y'' = 2y'+3y$.
 \end{example}
+
+\begin{solution}
+    ~
+    
+    (1)~$A$的特征多项式为$\lambda^2 - 2 \lambda - 3 = 0$.
+    特征值为$\lambda_1 = 3,~\lambda_2 = -1$.
+    解得它们分别对应的一个特征向量是$\bm{\xi}_1 = (3,1)^T, ~\bm{\xi}_2 = (1,-1)^T$.
+    因此题目所要求的矩阵$P$为：
+    \begin{align*}
+        \begin{pmatrix}
+        3 & 1 \\[2pt]
+        1 & -1
+        \end{pmatrix}
+    \end{align*}
+    
+
+    满足$P^{-1}AP = \mathrm{diag}(3,-1)$.
+
+    \medskip
+
+    (2)~记状态向量$\bm{\alpha}_n = (a_{n+1}, a_n)^T$.
+    则递推公式可以表达为矩阵形式：
+    \begin{align*}
+        \begin{pmatrix}
+            a_{n+2} \\
+            a_{n+1}
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+        2 & 3 \\
+        1 & 0
+        \end{pmatrix}
+        \begin{pmatrix}
+            a_{n+1} \\
+            a_{n}
+        \end{pmatrix}
+        ~~~~~\text{即}~
+        \bm{\alpha}_{n+1}
+        = 
+        A\bm{\alpha}_1
+    \end{align*}
+
+\end{solution}

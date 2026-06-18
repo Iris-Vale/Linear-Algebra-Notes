@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.3.30)  18 JUN 2026 02:41
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.3.30)  18 JUN 2026 22:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1159,57 +1159,34 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
  [1
 
-] (./ch7.tex
+] (./ch6.tex
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 40.
+(Font)              size <10.95> substituted on input line 11.
 
 [2
 
 
-] [3] [4] [5]
-Overfull \hbox (1.953pt too wide) detected at line 444
+] [3] [4] [5] [6] [7] [8] [9]
+Overfull \hbox (12.38686pt too wide) detected at line 1094
 []
  []
 
-[6] [7] [8] [9] [10] [11] [12] [13] [14
-
-] [15] [16]
-Overfull \hbox (26.27806pt too wide) detected at line 1437
-[] [] [] \OT1/cmr/m/n/10.53937 = []  [] [][] []\OML/cmm/m/it/10.53937 C[]AC[] \OT1/cmr/m/n/10.53937 = [](1\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 1\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 0)
- []
-
-[17] [18] [19] [20] [21] [22] [23]
-Overfull \hbox (35.06058pt too wide) detected at line 2303
-[] [] [] \OT1/cmr/m/n/10.53937 = []  [] [] [][] []\OML/cmm/m/it/10.53937 Q \OT1/cmr/m/n/10.53937 = []
- []
-
-[24]
-Overfull \hbox (26.89638pt too wide) detected at line 2343
-[]
- []
-
-[25]) [26] (./main_LA.aux)
+[10] [11] [12] [13] [14]) [15] (./main_LA.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.41063pt have occurred.
 
-
-Package rerunfilecheck Warning: File `main_LA.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main_LA.out':
-(rerunfilecheck)             Before: 9EF2CF0A1D2BBD85E450D091B9A4913D;2407
-(rerunfilecheck)             After:  11B28B295F41A035DD3FCB981D71D152;2402.
+Package rerunfilecheck Info: File `main_LA.out' has not changed.
+(rerunfilecheck)             Checksum: 70F143826F36D1E84F871B1915302CC1;1302.
  ) 
 Here is how much of TeX's memory you used:
- 47412 strings out of 476683
- 1201496 string characters out of 5807575
- 1886012 words of memory out of 5000000
- 66858 multiletter control sequences out of 15000+600000
- 526728 words of font info for 126 fonts, out of 8000000 for 9000
+ 47212 strings out of 476683
+ 1188514 string characters out of 5807575
+ 1905012 words of memory out of 5000000
+ 66663 multiletter control sequences out of 15000+600000
+ 526696 words of font info for 122 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 93i,19n,97p,3330b,505s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,16n,97p,3330b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main_LA.pdf (26 pages).
+Output written on main_LA.pdf (15 pages).
