@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.3.30)  19 JUN 2026 12:25
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.3.30)  21 JUN 2026 12:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1162,26 +1162,32 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ] (./ch8.tex
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 11.
+(Font)              size <10.95> substituted on input line 57.
 
 [2
 
 
-] [3] [4]) [5] (./main_LA.aux)
+] [3] [4] [5] [6] [7] [8]) [9] (./main_LA.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.41063pt have occurred.
 
-Package rerunfilecheck Info: File `main_LA.out' has not changed.
-(rerunfilecheck)             Checksum: E51593ADB9929DD0585F1C9CAA993666;734.
+
+Package rerunfilecheck Warning: File `main_LA.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main_LA.out':
+(rerunfilecheck)             Before: 515B409CB4DFBFCB57B5741DF0226C72;3055
+(rerunfilecheck)             After:  BFDB55F1C7526606749B6AD77BCFC7F7;1530.
  ) 
 Here is how much of TeX's memory you used:
- 46981 strings out of 476683
- 1173681 string characters out of 5807575
- 1864012 words of memory out of 5000000
- 66439 multiletter control sequences out of 15000+600000
- 526648 words of font info for 116 fonts, out of 8000000 for 9000
+ 47269 strings out of 476683
+ 1192091 string characters out of 5807575
+ 1869012 words of memory out of 5000000
+ 66726 multiletter control sequences out of 15000+600000
+ 526656 words of font info for 117 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 93i,17n,97p,3330b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,17n,97p,3330b,525s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main_LA.pdf (5 pages).
+Output written on main_LA.pdf (9 pages).
