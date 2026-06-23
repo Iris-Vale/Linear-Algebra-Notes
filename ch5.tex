@@ -46,7 +46,7 @@ $\mathbb{K}^n \to \mathbb{K}^m$的线性映射是允许的.
 但实际上$(A+B)^2 = (A+B)(A+B) = A^2 + AB + BA + B^2$，
 一般不等于$A^2 + 2AB + B^2$.
 又如$(AB)^2$，
-应当是$ABAB$而不等写成$A^2 B^2$.\vspace{0.5em}
+应当是$ABAB$而不等写成$A^2 B^2$.\medskip
 
 但是，
 $AB \ne BA$也不是任何情况下都不对.
@@ -55,18 +55,14 @@ $AB \ne BA$也不是任何情况下都不对.
 它是代表恒等映射的矩阵，
 它在矩阵乘法中的作用如同“$1$”在实数乘法中的作用，
 即满足：
-
 \begin{eq1}
-    I_n A_n = A_n I_n = A_n  \\[12pt]
-\end{eq1}
+    I_n A_n = A_n I_n = A_n  \end{eq1}
 
 由此还发现，
 对任意的$k \in \mathbb{K}$，
 有：
-
 \begin{eq1}
-    (kI_n) A_n = A_n (kI_n) = kA_n  \\[12pt]
-\end{eq1}
+    (kI_n) A_n = A_n (kI_n) = kA_n  \end{eq1}
 
 即单位矩阵的$k$倍$kI_n$也与任何同阶方阵可交换，
 且乘法的效果等同于数乘$k$.
@@ -75,10 +71,8 @@ $AB \ne BA$也不是任何情况下都不对.
 就不必畏手畏脚，
 可以验证我们熟知的一些代数恒等式代入矩阵后依然成立，
 例如运用立方差公式有：
-
 \begin{eq1}
-    I-A^3 = (I-A)(I + A + A^2) \\[12pt]
-\end{eq1}
+    I-A^3 = (I-A)(I + A + A^2) \end{eq1}
 初学者有时会因为太害怕交换律不成立而做不出这种最简单的因式分解.
 这种极端也要通过练习尽量地避免.
 
@@ -118,11 +112,10 @@ $|AB| = |A||B|$.
 其中$W$是指齐次线性方程组$A\bm{X} = \bm{0}$的解空间.
 用线性映射的语言，
 维数公式可以改写成$n = \dim \operatorname{Im} \mathcal{A} + \dim \operatorname{Ker} \mathcal{A} $.
-\vspace{1em}
+\medskip
 
 对于矩阵加法的秩，
 有一个重要的不等式：
-
 \begin{eq1}
     \mathrm{rank}(A+B) \leq \mathrm{rank}(A) + \mathrm{rank}(B)
 \end{eq1}
@@ -139,7 +132,6 @@ $|AB| = |A||B|$.
 上述秩不等式是在讨论$\operatorname{Im} (\mathcal{A}+\mathcal{B})$与
 $\operatorname{Im} \mathcal{A}, \operatorname{Im} \mathcal{B}$这三个线性子空间的维数关系.
 它们之间有一个直接的关系是：
-
 \begin{eq1}
     \operatorname{Im}(\mathcal{A} + \mathcal{B})
     \subset
@@ -148,7 +140,6 @@ $\operatorname{Im} \mathcal{A}, \operatorname{Im} \mathcal{B}$这三个线性子
 这是因为$\operatorname{\mathcal{A} + \mathcal{B}}$中的元素必定形如
 $\mathcal{A}\bm{x} + \mathcal{B}\bm{x}$.
 于是我们立即得到：
-
 \begin{eq1}
     \dim \operatorname{Im}(\mathcal{A} + \mathcal{B})
     \leq
@@ -159,7 +150,6 @@ $\mathcal{A}\bm{x} + \mathcal{B}\bm{x}$.
 其中，第一个不等号是从包含关系得到的；
 第二个不等号是从子空间加法的维数公式得到的.
 不妨在此回忆一下这个公式：
-
 \begin{eq1}
     \dim (V_1) + \dim (V_2) = \dim (V_1 + V_2) + \dim (V_1 \cap V_2)
 \end{eq1}
@@ -177,13 +167,11 @@ $\dim (V_1) + \dim (V_2)$也是有一定意义的，
 \dim \operatorname{Im}\mathcal{B}$，
 实际上是指$\dim (\operatorname{Im}\mathcal{A}  \oplus \operatorname{Im}\mathcal{B})$.
 我们知道这其实是一个分块对角矩阵的秩：
-
 \begin{eq1}
     \begin{pmatrix}
         A & O \\[4pt]
         O & B
-    \end{pmatrix} \\[12pt]
-\end{eq1}
+    \end{pmatrix} \end{eq1}
 
 它代表一个$\mathbb{K}^n \oplus \mathbb{K}^n  \to \mathbb{K}^m \oplus \mathbb{K}^m$
 的线性映射，$\mathcal{A}$是它在第一个$\mathbb{K}^n$上的限制，
@@ -192,7 +180,6 @@ $\operatorname{Im}\mathcal{A} \oplus \operatorname{Im}\mathcal{B}$
 即是它的像空间.
 当然，
 也不难用纯矩阵的方法证明（见习题部分）：
-
 \begin{eq1}
     \mathrm{rank}
     \begin{pmatrix}
@@ -200,13 +187,11 @@ $\operatorname{Im}\mathcal{A} \oplus \operatorname{Im}\mathcal{B}$
         O & B
     \end{pmatrix}
     = 
-    \mathrm{rank}(A) + \mathrm{rank}(B)\\[12pt]
-\end{eq1}
+    \mathrm{rank}(A) + \mathrm{rank}(B)\end{eq1}
 
 利用分块矩阵的初等变换，
 （后文将会提及），
 我们将能证明：
-
 \begin{eq1}
     \mathrm{rank}
     \begin{pmatrix}
@@ -226,19 +211,17 @@ $\operatorname{Im}\mathcal{A} \oplus \operatorname{Im}\mathcal{B}$
         B & B
     \end{pmatrix}
     \geq
-    \mathrm{rank}(A+B) \\[12pt]
-\end{eq1}
+    \mathrm{rank}(A+B) \end{eq1}
 
 于是，
 通过分块矩阵处理两个矩阵秩的相加，
 我们用纯矩阵的方式再次证明了这个不等式.
 出于考试的目的，
 同学们应该熟悉这两种思路中的至少一种.
-\vspace{1em}
+\medskip
 
 对于矩阵乘法的秩，
 也有一个重要的不等式：
-
 \begin{eq1}
     \mathrm{rank}(AB)
     \leq
@@ -275,7 +258,6 @@ $\operatorname{\mathcal{A} \circ \mathcal{B}}$实质上是
 即$\dim \operatorname{Im}(\mathcal{A}|_{\operatorname{Im}\mathcal{B}}) \leq \dim \operatorname{Im} \mathcal{B} $.
 对$\mathcal{A}|_{\operatorname{Im}\mathcal{B}}$列出维数公式（注意定义域是$\operatorname{Im}\mathcal{B}$），
 便会发现这是显然的：
-
 \begin{eq1}
     \dim \operatorname{Im}\mathcal{B}
     = 
@@ -336,7 +318,7 @@ $A_{m \times n}$与$B_{m \times n}$等价，
 我们定义，
 由单位矩阵$I$经过一次初等行（列）变换得到的矩阵称为\textbf{初等矩阵}.
 分为三种：
-\vspace{0.5em}
+\medskip
 
 (1)~
 把$I$的第$i$行的$k$倍加到第$j$行上
@@ -351,7 +333,7 @@ $A_{m \times n}$与$B_{m \times n}$等价，
 （或者等价地，把第$i$列乘以非零常数$c$），
 得到的初等矩阵记为$P(i(c))$.
 
-\vspace{0.5em}
+\medskip
 
 
 可以直接验证，
@@ -371,7 +353,6 @@ $A_{m \times n}$与$B_{m \times n}$等价，
 假如我们只使用一系列初等行变换，
 将$A$变成了单位矩阵$I$，
 这相当于对$A$左乘了一系列初等矩阵$P_1 , P_2, \cdots ,P_k$：
-
 \begin{eq1}
     (P_k P_{k-1} \cdots P_2 P_1) A = I
 \end{eq1}
@@ -442,7 +423,6 @@ $P$只需让矩阵运算有定义，而不需要$P$可逆.}
 将矩阵$B$也看成列向量组$B = (\bm{b}_1 , \bm{b}_2 , \cdots , \bm{b}_s)$.
 根据分块矩阵的运算规则，
 有：
-
 \begin{eq1}
     AX = A (\bm{X}_1 , \bm{X}_2 , \cdots , \bm{X}_s)
     = (A\bm{X}_1 , A\bm{X}_2 , \cdots , A \bm{X}_s)
@@ -559,7 +539,6 @@ $V^*$中的元素称为\textbf{对偶向量}，
 将一个对偶向量$\bm{w}^* \in V^*$与一个向量$v \in V$放在一起，
 它们将相互作用“缩并”成一个数$\bm{w}^*(\bm{v})$.
 以矩阵乘法表示：
-
 \begin{eq1}
     \begin{pmatrix}
         a_1 , a_2 , \cdots , a_n 
@@ -570,8 +549,7 @@ $V^*$中的元素称为\textbf{对偶向量}，
         \vdots \\[2pt]
         b_n 
     \end{pmatrix} 
-    = a_1 b_1 + a_2 b_2 + \cdots + a_n b_n \\[12pt]
-\end{eq1}
+    = a_1 b_1 + a_2 b_2 + \cdots + a_n b_n \end{eq1}
 
 这正是欧氏空间中两个向量标准内积（点乘）的算法.
 这也表明把线性泛函看成一种“对偶向量”是十分恰当的.
@@ -619,14 +597,12 @@ $V^*$中的元素称为\textbf{对偶向量}，
 它是$V^*$的一组基，
 称为\textbf{对偶基}.
 $\bm{e}_i^*$的定义满足下式：
-
 \begin{eq1}
     \bm{e}_i^*(\bm{e}_j) = \delta_{ij} =
     \begin{cases}
         1, \quad i = j \\[2pt]
         0, \quad i \ne j
-    \end{cases} \\[12pt]
-\end{eq1}
+    \end{cases} \end{eq1}
 
 注意$\bm{e}_i^*$本质上是一个线性映射，
 该式对每个$\bm{e}_i$给出了它作用到$V$中一组基上的像，
@@ -654,7 +630,6 @@ $\{ \bm{e}_i^*\}$对$\bm{e}_i$的作用确有标准正交基内积之意.
 我们自然地就能找到任意向量$\bm{v} \in V$在$V^*$中的“镜像”$\bm{v}^*$.
 只需按一组基展开，
 然后将基替换成对偶基即可：
-
 \begin{eq1}
     \bm{v} = x_1 \bm{e}_1 + x_2 \bm{e}_2 + \cdots + x_n \bm{e}_n
     ~\mapsto~ 
@@ -666,24 +641,23 @@ $\{ \bm{e}_i^*\}$对$\bm{e}_i$的作用确有标准正交基内积之意.
 但要注意，
 这个同构映射依赖于基的选择，
 并不是$V$和$V^*$之间天然存在的.
-\vspace{1em}
+\medskip
 
 更进一步地，
 设$V$和$W$是两个线性空间，
 $\mathcal{A}$是$V \to W$的线性映射.
 我们希望找到$\mathcal{A}$的“镜像”.
 由此给出了如下的定义：
-\vspace{0.5em}
+\medskip
 
 \textbf{线性映射的转置}~~
 设$\mathcal{A} : V → W$是线性映射，
 定义$\mathcal{A}$的转置映射$\mathcal{A}^T$为：
-
 \begin{eq1}
     \mathcal{A}^T : W^* \to V^*, ~~~\bm{w}^* \mapsto \bm{w}^* \circ \mathcal{A}
 \end{eq1}
 
-\vspace{0.5em}
+\medskip
 
 就这样，
 我们把两个线性空间之间的线性映射$\mathcal{A}$
@@ -691,7 +665,7 @@ $\mathcal{A}$是$V \to W$的线性映射.
 那么，
 \textbf{转置映射的表示矩阵就是表示矩阵的转置.}
 叙述为以下的定理：
-\vspace{0.5em}
+\medskip
 
 \textbf{定理5.3.1}~~
 \textit{设$V,W$分别是$n$维和$m$维向量空间，
@@ -702,12 +676,11 @@ $\{ \bm{w}_1 , \bm{w}_2 , \cdots , \bm{w}_m\}$.
 则转置映射$\mathcal{A}^T$在两组对偶基下$\{ \bm{v}_i^* \}$和$\{ \bm{w}_j^* \}$下的表示矩阵即为$A^T$.
 }
 
-\vspace{0.5em}
+\medskip
 转置映射的表示矩阵作用的对象是行向量，
 并输出一个行向量，
 因此“用法”应该是右乘行向量，
 即依照如下形式：
-
 \begin{eq1}
     \bm{Y}^T = \bm{X}^T A^T
 \end{eq1}
@@ -720,15 +693,13 @@ $\{ \bm{w}_1 , \bm{w}_2 , \cdots , \bm{w}_m\}$.
 设$\mathcal{A}$和$\mathcal{B}$都是线性映射，
 可以按照定义去计算$(\mathcal{A} \circ \mathcal{B})^T$.
 任取$\bm{w}^* \in W^*$，有：
-
 \begin{eq1}
     (\mathcal{A} \circ \mathcal{B})^T (\bm{w}^*)
     &= \bm{w}^* \circ (\mathcal{A} \circ \mathcal{B})
     = (\bm{w}^* \circ \mathcal{A}) \circ \mathcal{B} \\[4pt]
     &= \mathcal{A}^T (\bm{w}^*) \circ \mathcal{B}
     = \mathcal{B}^T (\mathcal{A}^T (\bm{w}^*)) \\[4pt]
-    &= \mathcal{B}^T \circ \mathcal{A}^T (\bm{w}^*) \\[12pt]
-\end{eq1} 
+    &= \mathcal{B}^T \circ \mathcal{A}^T (\bm{w}^*) \end{eq1} 
 即得到
 $(\mathcal{A} \circ \mathcal{B})^T = \mathcal{B}^T \circ \mathcal{A}^T$.
 可见，
@@ -801,7 +772,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
 又得到$\operatorname{Ker} (A^T)$与$\operatorname{Im}A$互为正交补.
 这两个结论进一步揭示了$A$与$A^T$的对称关系.
 
-\vspace{0.5em}
+\medskip
 
 \subsection{习题}
 
@@ -851,7 +822,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     这里从矩阵秩的定义出发直接证明.
 \end{remark}
 
-\begin{proof}
+\begin{pf}
     ~
 
     (1)~
@@ -862,16 +833,16 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     $\bm{\beta}_{j_1},\dots,\bm{\beta}_{j_\ell}$ 是 $B$ 的列向量组的一个极大线性无关组.
 
     分块矩阵的列向量组为：
-    \[
+    \begin{eq1}
     \binom{\bm{\alpha}_1}{0},\dots,\binom{\bm{\alpha}_n}{0},
     \binom{0}{\bm{\beta}_1},\dots,\binom{0}{\bm{\beta}_s}
-    \]
+    \end{eq1}
 
     考虑向量组：
-    \[
+    \begin{eq1}
     \binom{\bm{\alpha}_{i_1}}{0},\dots,\binom{\bm{\alpha}_{i_k}}{0},
     \binom{0}{\bm{\beta}_{j_1}},\dots,\binom{0}{\bm{\beta}_{j_\ell}}
-    \]
+    \end{eq1}
 
     这是由$\binom{A}{O}$和$\binom{O}{B}$这两个块列的极大线性无关组拼成的，
     因此，如果再往里添加别的任何列向量，
@@ -879,57 +850,57 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     我们只需证明它是线性无关的，
     从而它就是整个大矩阵的一个极大线性无关组.
     若：
-    \[
+    \begin{eq1}
     \sum_{t=1}^k a_t \binom{\bm{\alpha}_{i_t}}{0}
     +
     \sum_{u=1}^\ell b_u \binom{0}{\bm{\beta}_{j_u}}
     =\bm{0}
-    \]
+    \end{eq1}
 
     则：
-    \[
+    \begin{eq1}
     \binom{
     \sum_{t=1}^k a_t \bm{\alpha}_{i_t}
     }{
     \sum_{u=1}^\ell b_u \bm{\beta}_{j_u}
     }
     =\bm{0}
-    \]
+    \end{eq1}
 
     于是
-    \[
+    \begin{eq1}
     \sum_{t=1}^k a_t \bm{\alpha}_{i_t}=\bm{0},\qquad
     \sum_{u=1}^\ell b_u \bm{\beta}_{j_u}=\bm{0}
-    \]
+    \end{eq1}
 
     由线性无关性知：
-    \[
+    \begin{eq1}
     a_1=\cdots=a_k=0,\qquad b_1=\cdots=b_\ell=0.
-    \]
+    \end{eq1}
 
     故上述向量组线性无关.
     
 
     
     因此：
-    \[
+    \begin{eq1}
     \operatorname{rank}
     \begin{pmatrix}
     A & 0\\
     0 & B
     \end{pmatrix}
     = k+\ell = \operatorname{rank}(A) + \operatorname{rank}(B)
-    \]
+    \end{eq1}
 
     \medskip
 
     (2)~
     对照$(1)$中的列向量组取法，
     得到：
-    \[
+    \begin{eq1}
     \binom{\bm{\alpha}_{i_1}}{\bm{\gamma}_{i_1}},\dots,\binom{\bm{\alpha}_{i_k}}{\bm{\gamma}_{i_k}},
     \binom{0}{\bm{\beta}_{j_1}},\dots,\binom{0}{\bm{\beta}_{j_{\ell}}}
-    \]
+    \end{eq1}
 
     其中 $\bm{\gamma}_i$ 为$C$的第$i$列.
     按类似$(1)$中的论证，
@@ -940,17 +911,16 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     有可能再添加别的向量，
     使得上述向量组依然线性无关.
     因此，得到的是不等式：
-
-    \[
+    \begin{eq1}
     \operatorname{rank}
     \begin{pmatrix}
     A & 0\\
     C & B
     \end{pmatrix}
     \ge k+\ell = \operatorname{rank}(A) + \operatorname{rank}(B)
-    \]
+    \end{eq1}
 
-\end{proof}
+\end{pf}
 
 有了这两个结论，
 我们提出用分块矩阵法证明秩等式和不等式的关键点：
@@ -976,8 +946,8 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     证明：$\mathrm{rank}(A) + \mathrm{rank}(B) \leq n$.
 \end{example}
 
-\begin{proof}
-    \[
+\begin{pf}
+    \begin{eq1}
     \begin{pmatrix}
         A & O \\
         I & B
@@ -992,22 +962,22 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
         A & O \\
         I & O 
     \end{pmatrix}
-    \]
+    \end{eq1}
 
     这一初等变换不改变矩阵的秩.
     对于左侧的矩阵，
     有：
-    \[
+    \begin{eq1}
         \operatorname{rank}(A) + \operatorname{rank}(B) \leq
         \operatorname{rank}
         \begin{pmatrix}
             A & O \\
             I & B
         \end{pmatrix}
-    \]
+    \end{eq1}
 
     对于右侧的矩阵，有：
-    \[
+    \begin{eq1}
         \operatorname{rank}
         \begin{pmatrix}
             A & O \\
@@ -1020,10 +990,10 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
             I
         \end{pmatrix}
         \leq n
-    \]
+    \end{eq1}
 
     综上，有：
-    \[
+    \begin{eq1}
     \operatorname{rank}(A) + \operatorname{rank}(B)
     \leq
     \operatorname{rank}
@@ -1038,8 +1008,8 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
             I & O
         \end{pmatrix}
     \leq n
-    \]
-\end{proof}
+    \end{eq1}
+\end{pf}
 
 ~\par
 
@@ -1049,20 +1019,18 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     $C$是$r \times s$矩阵.
 
     (1)~~证明Sylvester秩不等式：
-    \[
-        \mathrm{rank}(A) + \mathrm{rank}(B) - n \le \mathrm{rank}(AB) \\[12pt]
-    \]
+    \begin{eq1}
+        \mathrm{rank}(A) + \mathrm{rank}(B) - n \le \mathrm{rank}(AB) \end{eq1}
 
     (2)~~证明Frobenius秩不等式：
-    \[
-        \mathrm{rank}(AB) + \mathrm{rank}(BC) - \mathrm{rank}(B) \le \mathrm{rank}(ABC)\\[12pt]
-    \]
+    \begin{eq1}
+        \mathrm{rank}(AB) + \mathrm{rank}(BC) - \mathrm{rank}(B) \le \mathrm{rank}(ABC)\end{eq1}
 \end{example}
 
-\begin{proof}
+\begin{pf}
 
     (1)~
-    \[
+    \begin{eq1}
     \begin{pmatrix}
     A & O \\
     I_n & B
@@ -1077,10 +1045,10 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     O & -AB \\
     I_n & O
     \end{pmatrix}
-    \]
+    \end{eq1}
 
     因此：
-    \[
+    \begin{eq1}
     \operatorname{rank}(A)
     + \operatorname{rank}(B)
     \leq
@@ -1095,12 +1063,12 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
         I_n & O
     \end{pmatrix}
     = \operatorname{rank}(AB) + n
-    \]
+    \end{eq1}
 
     \medskip
 
     (2)~
-    \[
+    \begin{eq1}
     \begin{pmatrix}
     AB & O \\
     B & BC
@@ -1115,7 +1083,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     O & -ABC \\
     B & O
     \end{pmatrix}
-    \]
+    \end{eq1}
 
     因此：
     \begin{eq1}
@@ -1135,7 +1103,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     &= \operatorname{rank}(ABC) + \operatorname{rank}(B)
     \end{eq1}
 
-\end{proof}
+\end{pf}
 
 ~\par
 
@@ -1147,11 +1115,10 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     (2)~~求证：$n$阶方阵$A$是对合矩阵（$A^2 = I_n$）的充要条件是$\mathrm{rank}(I_n + A) + \mathrm{rank}(I_n - A) = n$.
 \end{example}
 
-\begin{proof}
+\begin{pf}
     ~
 
     (1)~
-
     \begin{eq1}
         \begin{pmatrix}
             A & O \\
@@ -1180,7 +1147,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     \end{eq1}
 
     即我们知道：
-    \[
+    \begin{eq1}
     \operatorname{rank}(A) + \mathrm{rank}(I_n - A)
     = \mathrm{rank}
     \begin{pmatrix}
@@ -1192,15 +1159,15 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
             A(A-I_n) & A-I_n \\
             O & I_n
     \end{pmatrix}
-    \]
+    \end{eq1}
 
-    \smallskip
+    \medskip
 
     “$\Longrightarrow$”：
     若$A$是幂等矩阵，
     则$A(A-I_n) = O$.
     则：
-    \[
+    \begin{eq1}
     \begin{pmatrix}
             A(A-I_n) & A-I_n \\
             O & I_n
@@ -1215,10 +1182,10 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
         O & O \\
         O & I_n
     \end{pmatrix}
-    \]
+    \end{eq1}
 
     于是：
-    \[
+    \begin{eq1}
     \mathrm{rank}(A) + \mathrm{rank}(I_n - A)
     = 
     \begin{pmatrix}
@@ -1226,13 +1193,13 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
             O & I_n
     \end{pmatrix}
     = n
-    \]
+    \end{eq1}
 
-    \smallskip
+    \medskip
 
     “$\Longleftarrow$”：
     若已知：
-    \[
+    \begin{eq1}
     \mathrm{rank}(A) + \mathrm{rank}(I_n - A)
     =
     \mathrm{rank}
@@ -1241,11 +1208,11 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
         O & I_n
     \end{pmatrix} 
     = n
-    \]
+    \end{eq1}
 
     根据例5.1(2)的结论，
     我们知道：
-    \[
+    \begin{eq1}
     \mathrm{rank}
     \begin{pmatrix}
             A(A-I_n) & A-I_n \\
@@ -1255,7 +1222,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     \mathrm{rank}(A(A-I_n))
     + \mathrm{rank} (I_n)
     = \mathrm{rank}(A(A-I_n)) + n
-    \]
+    \end{eq1}
 
     因此只能有$\mathrm{rank}(A(A-I_n)) = 0$，
     即$A(A-I_n) = O$，
@@ -1264,7 +1231,6 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     \bigskip
 
     (2)~（将第(1)问的过程复刻一遍，只不过是将$A$和$I_n - A$分别替换成$I_n + A$和$I_n - A$.）
-    
     \begin{eq1}
         \begin{pmatrix}
             I_n + A & O \\
@@ -1293,7 +1259,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     \end{eq1}
 
     即我们知道：
-    \[
+    \begin{eq1}
     \operatorname{rank}(I_n + A) + \mathrm{rank}(I_n - A)
     = \mathrm{rank}
     \begin{pmatrix}
@@ -1305,15 +1271,15 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
             1/2 \cdot (I_n + A)(A-I_n) & A-I_n \\
             O & 2I_n
     \end{pmatrix}
-    \]
+    \end{eq1}
 
-    \smallskip
+    \medskip
 
     “$\Longrightarrow$”：
     若$A$是对合矩阵，
     则$(I_n + A)(A-I_n) = O$.
     则：
-    \[
+    \begin{eq1}
     \begin{pmatrix}
             1/2 \cdot (I_n + A)(A-I_n) & A-I_n \\
             O & 2I_n
@@ -1328,10 +1294,10 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
         O & O \\
         O & I_n
     \end{pmatrix}
-    \]
+    \end{eq1}
 
     于是：
-    \[
+    \begin{eq1}
     \mathrm{rank}(I_n + A) + \mathrm{rank}(I_n - A)
     = 
     \begin{pmatrix}
@@ -1339,13 +1305,13 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
             O & I_n
     \end{pmatrix}
     = n
-    \]
+    \end{eq1}
 
-    \smallskip
+    \medskip
 
     “$\Longleftarrow$”：
     若已知：
-    \[
+    \begin{eq1}
     \mathrm{rank}(I_n + A) + \mathrm{rank}(I_n - A)
     =
     \mathrm{rank}
@@ -1354,7 +1320,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
         O & 2I_n
     \end{pmatrix} 
     = n
-    \]
+    \end{eq1}
 
     根据例5.1(2)的结论，
     我们知道：
@@ -1373,16 +1339,16 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     因此只能有$\mathrm{rank}((I_n + A)(A-I_n)) = 0$，
     即$(I_n + A)(A-I_n) = O$，
     $A$是对合矩阵.
-\end{proof}
+\end{pf}
 
 ~\medskip
 
 \begin{example}
     设$A$为$m \times n$矩阵.
     证明：
-    \[
+    \begin{eq1}
     \mathrm{rank}(I_m - AA^T) - \mathrm{rank}(I_n - A^T A) = m -n
-    \]
+    \end{eq1}
 \end{example}
 
 \begin{remark}
@@ -1390,7 +1356,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     把等式理解成
     $\mathrm{rank}(I_m - AA^T) + n = \mathrm{rank}(I_n - A^T A) + m$.
     于是我们只需要考虑如何做到：
-    \[
+    \begin{eq1}
     \begin{pmatrix}
         I_m - AA^T & ~  \\
         ~ & I_n
@@ -1400,20 +1366,20 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
         I_n - A^TA & ~ \\
         ~ & I_m
     \end{pmatrix}
-    \]
+    \end{eq1}
 \end{remark}
 
-\begin{proof}
+\begin{pf}
     考虑如下的分块矩阵：
-    \[
+    \begin{eq1}
     \begin{pmatrix}
         I_m  &  A \\[4pt]
         A^T  & I_n
     \end{pmatrix}
-    \]
+    \end{eq1}
 
     一方面：
-    \[
+    \begin{eq1}
     \begin{pmatrix}
         I_m  &  A \\[4pt]
         A^T  & I_n
@@ -1428,10 +1394,10 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
         I_m  &  O \\[4pt]
         O  & I_n - A^T A
     \end{pmatrix}
-    \]
+    \end{eq1}
 
     另一方面：
-    \[
+    \begin{eq1}
     \begin{pmatrix}
         I_m  &  A \\[4pt]
         A^T  & I_n
@@ -1446,10 +1412,10 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
         I_m - AA^T  &  O \\[4pt]
         O  & I_n
     \end{pmatrix}
-    \]
+    \end{eq1}
 
     可见：
-    \[
+    \begin{eq1}
     \mathrm{rank}
     \begin{pmatrix}
         I_m  &  O \\[4pt]
@@ -1465,10 +1431,10 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
         I_m - AA^T  &  O \\[4pt]
         O  & I_n
     \end{pmatrix}
-    \]
+    \end{eq1}
 
     即 $\mathrm{rank}(I_m - AA^T) + n = \mathrm{rank}(I_n - A^T A) + m$.
-\end{proof}
+\end{pf}
 
 ~\par
 
@@ -1483,7 +1449,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     将在后面的例题中解释这种构造背后的原理.
 \end{remark}
 
-\begin{proof}
+\begin{pf}
     \begin{eq1}
     \begin{pmatrix}
         A &  O  &  O \\
@@ -1519,7 +1485,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     &\geq \operatorname{rank}(A + B) + \operatorname{rank}(AB)
     \end{eq1}
 
-\end{proof}
+\end{pf}
 
 \subsubsection{秩相关的证明 II——线性映射法}
 
@@ -1584,7 +1550,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     画图可以帮助理清线性映射的关系.
 \end{remark}
 
-\begin{proof}
+\begin{pf}
     设矩阵$A$表示线性映射$\mathcal{A}: \mathbb{K}^n \to \mathbb{K}^m$，
     矩阵$B$表示线性映射$\mathcal{B}: \mathbb{K}^s \to \mathbb{K}^n$.
     $AB = O$的“翻译”为$\operatorname{Im}\mathcal{B} \subset \operatorname{Ker}\mathcal{A}$（图\ref{fig:AB=O}）.
@@ -1593,11 +1559,11 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     $\dim \operatorname{Im} \mathcal{A} + \dim \operatorname{Ker} \mathcal{A} = n$.
     代入上述不等式有：
     $\dim \operatorname{Im} \mathcal{B} \leq  n - \dim \operatorname{Im} \mathcal{A}$.
-\end{proof}
+\end{pf}
 
 \begin{figure}[H] 
     \centering
-    \includegraphics[trim=0 30cm 0 0cm, clip, width=1\textwidth]{fig_AB=O.pdf}
+    \includegraphics[trim=0 30cm 0 0cm, clip, width=1\textwidth]{fig/fig_AB=O.pdf}
     \caption{例5.8图}
     \label{fig:AB=O}
 \end{figure}
@@ -1611,17 +1577,15 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     $C$是$r \times s$矩阵.
 
     (1)~~证明Sylvester秩不等式：
-    \[
-        \mathrm{rank}(A) + \mathrm{rank}(B) - n \le \mathrm{rank}(AB) \\[12pt]
-    \]
+    \begin{eq1}
+        \mathrm{rank}(A) + \mathrm{rank}(B) - n \le \mathrm{rank}(AB) \end{eq1}
 
     (2)~~证明Frobenius秩不等式：
-    \[
-        \mathrm{rank}(AB) + \mathrm{rank}(BC) - \mathrm{rank}(B) \le \mathrm{rank}(ABC)\\[12pt]
-    \]
+    \begin{eq1}
+        \mathrm{rank}(AB) + \mathrm{rank}(BC) - \mathrm{rank}(B) \le \mathrm{rank}(ABC)\end{eq1}
 \end{example}
 
-\begin{proof}
+\begin{pf}
     ~
 
     (1)~设矩阵$A$表示线性映射$\mathcal{A}: \mathbb{K}^n \to \mathbb{K}^m$，
@@ -1632,17 +1596,17 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     （图\ref{fig:sylv}）.
 
     列出映射$\mathcal{A}|_{\operatorname{Im}\mathcal{B}}$的维数公式：
-    \[
+    \begin{eq1}
     \dim \operatorname{Im} \mathcal{B}
     = \dim \operatorname{Ker} (\mathcal{A}|_{\operatorname{Im}\mathcal{B}})
     + \dim \operatorname{Im} (\mathcal{A}|_{\operatorname{Im}\mathcal{B}})
-    \]
+    \end{eq1}
     即：
-    \[
+    \begin{eq1}
     \mathrm{rank}(B)
     = \dim \operatorname{Ker} (\mathcal{A}|_{\operatorname{Im}\mathcal{B}})
     + \mathrm{rank}(AB)~~~~~~(*)
-    \]
+    \end{eq1}
 
     将该式对照待证的不等式，
     发现我们只需要搞清楚
@@ -1660,7 +1624,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
 
     \begin{figure}[H] 
     \centering
-    \includegraphics[trim=0 30cm 0 0cm, clip, width=1\textwidth]{fig_sylv.pdf}
+    \includegraphics[trim=0 30cm 0 0cm, clip, width=1\textwidth]{fig/fig_sylv.pdf}
     \caption{例5.9(1)图}
     \label{fig:sylv}
     \end{figure}
@@ -1675,17 +1639,17 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     
     
     列出映射$\mathcal{A}|_{\operatorname{Im}\mathcal{B} \circ \mathcal{C}}$的维数公式：
-    \[
+    \begin{eq1}
     \dim \operatorname{Im} (\mathcal{B} \circ \mathcal{C})
     = \dim \operatorname{Ker} (\mathcal{A}|_{\operatorname{Im}\mathcal{B}\circ \mathcal{C}})
     + \dim \operatorname{Im} (\mathcal{A}|_{\operatorname{Im}\mathcal{B}\circ \mathcal{C}})
-    \]
+    \end{eq1}
     即：
-    \[
+    \begin{eq1}
     \mathrm{rank}(BC)
     = \dim \operatorname{Ker} (\mathcal{A}|_{\operatorname{Im}\mathcal{B}\circ \mathcal{C}})
     + \mathrm{rank}(ABC)~~~~~~(*)
-    \]
+    \end{eq1}
 
     将该式对照待证的不等式，
     发现我们只需要搞清楚
@@ -1706,11 +1670,11 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
 
     \begin{figure}[H] 
     \centering
-    \includegraphics[trim=0 28cm 0 0cm, clip, width=1\textwidth]{fig_frob.pdf}
+    \includegraphics[trim=0 28cm 0 0cm, clip, width=1\textwidth]{fig/fig_frob.pdf}
     \caption{例5.9(2)图}
     \label{fig:frob}
     \end{figure}
-\end{proof}
+\end{pf}
 
 
 \bigskip
@@ -1724,7 +1688,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     (2)~~求证：$n$阶方阵$A$是对合矩阵（$A^2 = I_n$）的充要条件是$\mathrm{rank}(I_n + A) + \mathrm{rank}(I_n - A) = n$.
 \end{example}
 
-\begin{proof}
+\begin{pf}
     ~
 
     (1)~“$\Longrightarrow$”：
@@ -1736,7 +1700,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     $\mathrm{rank}(A) + \mathrm{rank}(I_n - A) \geq \mathrm{rank}(A + I_n - A) = n$.
     二者结合得到$\mathrm{rank} (A)  + \mathrm{rank} (I_n - A)  = n$.
 
-    \smallskip
+    \medskip
 
     “$\Longleftarrow$”：
     若$\mathrm{rank}(A) + \mathrm{rank}(I_n - A) = n$.
@@ -1772,7 +1736,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     (2)~模仿(1)的证明.
     证明“$\Longleftarrow$”时，
     去证$\mathbb{K}^n = \operatorname{Ker} (\mathcal{I} + \mathcal{A}) \oplus \operatorname{Ker} (\mathcal{I} - \mathcal{A})$.
-\end{proof}
+\end{pf}
 
 
 \bigskip
@@ -1780,12 +1744,12 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
 \begin{example}（例5.5）
     设$A$为$m \times n$矩阵.
     证明：
-    \[
+    \begin{eq1}
     \mathrm{rank}(I_m - AA^T) - \mathrm{rank}(I_n - A^T A) = m -n
-    \]
+    \end{eq1}
 \end{example}
 
-\begin{proof}
+\begin{pf}
     方便起见，
     记$I_m - AA^T = M$，
     $I_n - A^TA = N$，
@@ -1821,7 +1785,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     这说明$A^T|_{\operatorname{Ker}M}$与$A|_{\operatorname{Ker}N}$互为逆映射.
     因此它们都是$\operatorname{Ker}M$与$\operatorname{Ker}N$之间的同构映射.
     而$\operatorname{Ker}M$与$\operatorname{Ker}N$同构就说明$\dim \operatorname{Ker}M = \dim \operatorname{Ker}N$.
-\end{proof}
+\end{pf}
 
 在上一题中，
 需要通过巧妙地利用$AA^T$和$A^TA$的对称关系来研究$\operatorname{Ker}M$和$\operatorname{Ker}N$的关系，
@@ -1845,7 +1809,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     本题的关键在于正确翻译$AB=BA$这个条件.
 \end{remark}
 
-\begin{proof}
+\begin{pf}
     设矩阵$A,B$分别表示$\mathbb{K}^n$上的线性变换$\mathcal{A} , \mathcal{B}$.
     我们知道$\operatorname{Im}(\mathcal{A} \circ \mathcal{B}) = \operatorname{Im}(\mathcal{A}|_{\operatorname{Im}\mathcal{B}}) \subset \operatorname{Im}\mathcal{A}$.
     同理，
@@ -1853,28 +1817,26 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     现在$\mathcal{A} \circ \mathcal{B} = \mathcal{B} \circ \mathcal{A}$，
     于是$ \operatorname{Im}(\mathcal{A} \circ \mathcal{B}) \subset \operatorname{Im}\mathcal{A} \cap \operatorname{Im}\mathcal{B}$，
     因此：
-
-    \[
+    \begin{eq1}
     \dim \operatorname{Im}(\mathcal{A} \circ \mathcal{B}) \leq \dim \operatorname{Im}\mathcal{A} \cap \operatorname{Im}\mathcal{B}
-    \]
+    \end{eq1}
 
     现在涉及两个子空间的交集，
     待证的不等式中又有两个子空间的维数之和，
     想到用维数公式：
-
-    \[
+    \begin{eq1}
     \dim (\operatorname{Im}\mathcal{A} + \operatorname{Im}\mathcal{B})
     = \dim \operatorname{Im} \mathcal{A} 
     + \dim \operatorname{Im} \mathcal{B}
     - \dim (\operatorname{Im} \mathcal{A} \cap \operatorname{Im} \mathcal{B}  )
-    \]
+    \end{eq1}
 
     代入上面的不等式，并代入“秩即像空间维数”的关系，
     得到：
-    \[
+    \begin{eq1}
      \dim (\operatorname{Im}\mathcal{A} + \operatorname{Im}\mathcal{B})
      \leq \mathrm{rank}(A) + \mathrm{rank}(B) - \mathrm{rank}(AB) 
-    \]
+    \end{eq1}
 
     对照待证的不等式，
     我们只需要证明$\mathrm{rank}(A+B) = \dim \operatorname{Im}(\mathcal{A}+ \mathcal{B}) \leq \dim (\operatorname{Im}\mathcal{A} + \operatorname{Im}\mathcal{B})$即可.
@@ -1882,15 +1844,14 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     $(\mathcal{A}+\mathcal{B})\bm{x} = \mathcal{A}\bm{x} + \mathcal{B}\bm{x} \in \operatorname{Im}\mathcal{A} + \operatorname{Im}\mathcal{B}$，
     因此$\operatorname{Im}(\mathcal{A}+\mathcal{B}) \subset \dim (\operatorname{Im}\mathcal{A} + \operatorname{Im}\mathcal{B})$，
     从而$\dim \operatorname{Im}(\mathcal{A}+ \mathcal{B}) \leq \dim (\operatorname{Im}\mathcal{A} + \operatorname{Im}\mathcal{B})$成立.
-\end{proof}
+\end{pf}
 
 本题最后证明了不等式$\dim \operatorname{Im}(\mathcal{A}+ \mathcal{B}) \leq \dim (\operatorname{Im}\mathcal{A} + \operatorname{Im}\mathcal{B})$.
 而$\dim (\operatorname{Im}\mathcal{A} + \operatorname{Im}\mathcal{B})$正是分块矩阵$(A ~|~B)$的秩.
 用该式替换掉待证的不等式之后，
 如果再考虑使用分块矩阵法，
 则能想到如下的构造思路：
-
-\[
+\begin{eq1}
 \begin{pmatrix}
     * & * & AB \\
     A & B & O
@@ -1899,8 +1860,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
 \begin{pmatrix}
     A & O & O \\
     O & B & O 
-\end{pmatrix} \\[12pt]
-\]
+\end{pmatrix} \end{eq1}
 
 直接凭空想到这个构造是比较困难的.
 而从$AB=BA$的条件入手，
@@ -1934,7 +1894,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     为此，只需要考察$A$对标准正交基的作用.
 \end{remark}
 
-\begin{proof}
+\begin{pf}
     （方法1：直接计算）
     
     设$M_{n \times n}$的$(i,j)$元是$m_{ij}$.
@@ -1945,9 +1905,9 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
 
     设矩阵$AM$的$(i,j)$元为$b_{ij}$，
     按照矩阵乘法的规则有：
-    \[
+    \begin{eq1}
     b_{ij} = \sum_{p = 1} ^n a_{ip} m_{pj} 
-    \]
+    \end{eq1}
 
     考察求和式中的各项何时非零.
     由$A$的定义，
@@ -1971,9 +1931,9 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     即是说$A^n$满足$j-i \leq n-1$的元素皆为$0$，
     但这是任何指标$(i,j)$都满足的.
     因此$A^n$是零矩阵.
-\end{proof}
+\end{pf}
 
-\begin{proof}
+\begin{pf}
     （方法2：线性变换）
 
     设$\bm{e}_{j}$是$\mathbb{K}^n$的第$j$个标准正交基，
@@ -1985,12 +1945,11 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     $A \bm{e}_j = \bm{\alpha}_j \in \langle \bm{e}_1 , \cdots , \bm{e}_{j-1}\rangle$.
     对任意的$\bm{x} = x_1 \bm{e}_1 + x_2 \bm{e}_2 + \cdots + x_r \bm{e}_r \in \langle \bm{e}_1 , \cdots , \bm{e}_r \rangle$，
     有：
-
-    \[
+    \begin{eq1}
     A \bm{x} 
     = A (x_1 \bm{e}_1 + x_2 \bm{e}_2 + \cdots + x_r \bm{e}_r)
     \in \langle \bm{e}_1 , \cdots , \bm{e}_{r-1}\rangle
-    \]
+    \end{eq1}
 
     可见将$A$限制在定义域$\langle \bm{e}_1 , \cdots , \bm{e}_{r} \rangle$上时，
     像空间是$\langle \bm{e}_1 , \cdots , \bm{e}_{r-1} \rangle$
@@ -2000,7 +1959,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     即对任意的$\bm{x} \in \mathbb{K}^n$，
     有$A^n \bm{x} = \bm{0}$.
     这样的$A^n$只能是零矩阵.
-\end{proof}
+\end{pf}
 
 \bigskip
 
@@ -2028,7 +1987,7 @@ $A$是个很有特点的矩阵，
     使得$A^m = I$.
 \end{example}
 
-\begin{proof}
+\begin{pf}
     设$\bm{e}_{j}$是$\mathbb{K}^n$的第$j$个标准正交基，
     即第$j$分量是$1$，其余分量为$0$的向量.
     按照置换矩阵的定义，
@@ -2047,14 +2006,14 @@ $A$是个很有特点的矩阵，
     即$A^1 , A^2 , \cdots , A^{n!}, A^{n!+1}$中必有两个相同的.
     不妨设$A^{r} = A^{r+m}$，
     则$A^m$就是单位矩阵.
-\end{proof}
+\end{pf}
 
 \bigskip
 
 \begin{example}
     设$a,b,c,d$是非零实数，
     求下列矩阵的逆：
-    \[
+    \begin{eq1}
     A = 
     \begin{pmatrix}
         a & b & c & d \\
@@ -2062,7 +2021,7 @@ $A$是个很有特点的矩阵，
         -c & d & a & -b \\
         -d & -c & b & a 
     \end{pmatrix}
-    \]
+    \end{eq1}
 \end{example}
 
 \begin{remark}
@@ -2072,7 +2031,7 @@ $A$是个很有特点的矩阵，
     方法2的“看法”是利用上一题中的置换矩阵.
 \end{remark}
 
-\begin{proof}
+\begin{pf}
     （方法1）
 
     观察矩阵的列向量组$\bm{\alpha}_1 , \cdots , \bm{\alpha}_4$，
@@ -2082,14 +2041,14 @@ $A$是个很有特点的矩阵，
     通过计算发现$A^T A = (a^2 + b^2 + c^2 + d^2)I$.
     则$A^{-1} = \frac{1}{a^2 + b^2 + c^2 + d^2} A^T$.
 
-\end{proof}
+\end{pf}
 
-\begin{proof}
+\begin{pf}
     （方法2）
 
     将矩阵元素排列的规律用置换矩阵来描述.
     分别按照$a,b,c,d$去定义以下$4$个置换矩阵：
-    \[
+    \begin{eq1}
     E_1 = I,~
     E_2 = 
     \begin{pmatrix}
@@ -2112,30 +2071,27 @@ $A$是个很有特点的矩阵，
         0 & 1 & 0 & 0 \\
         -1 & 0 & 0 & 0
     \end{pmatrix}
-    \]
+    \end{eq1}
 
     置换矩阵的乘积依然是置换矩阵，
     我们考察这些置换矩阵之间的代数关系.
     重点关注$E_2, E_3, E_4$.
     通过计算得到以下的乘法表
     【矩阵$A$与四元数$a + bi + cj + dk$有何联系？】：
-
     \begin{eq1}
         &E_2 \cdot E_2 = E_3 \cdot E_3 = E_4 \cdot E_4 = -E_1 \\[6pt]
         &E_2 \cdot E_3 = -E_3 \cdot E_2 = E_4 \\[6pt]
         &E_3 \cdot E_4 = -E_4 \cdot E_3 = E_2 \\[6pt]
-        &E_4 \cdot E_2 = -E_2 \cdot E_4 = E_3 \\[12pt]
-    \end{eq1}
+        &E_4 \cdot E_2 = -E_2 \cdot E_4 = E_3 \end{eq1}
 
     可见$E_1 , E_2 , E_3 , E_4$构成了一个封闭的代数体系.
     $A = a E_1 + b E_2 + c E_3 + d E_4$.
     我们寻找一个同样具有形式$p E_1 + q E_2 + r E_3 + s E_4$的矩阵$B$，
     使得$AB$是数量矩阵$ = \lambda E_1$.
     考察矩阵乘法：
-
-    \[
+    \begin{eq1}
     (a E_1 + b E_2 + c E_3 + d E_4)(p E_1 + q E_2 + r E_3 + s E_4)
-    \]
+    \end{eq1}
 
     在乘法代数展开式中，
     所有的平方项实质都是$E_1$的倍数，
@@ -2144,14 +2100,12 @@ $A$是个很有特点的矩阵，
     因此一个简单的想法是取$p,q,r,s$让所有的交叉项抵消.
     最方便的是让$(p,q,r,s) = (a,-b,-c,-d)$.
     此时有：
-
     \begin{eq1}
     (a E_1 + b E_2 + c E_3 + d E_4)(a E_1 + -b E_2 + -c E_3 + -d E_4)
-    = (a^2 + b^2 + c^2 + d^2) E_1 \\[12pt]
-    \end{eq1}
+    = (a^2 + b^2 + c^2 + d^2) E_1 \end{eq1}
 
     所以$A^{-1} = \frac{1}{a^2 + b^2 + c^2 + d^2}(a E_1 + -b E_2 + -c E_3 + -d E_4)$.
-\end{proof}
+\end{pf}
 
 
 ~\par
@@ -2176,8 +2130,7 @@ $A$是个很有特点的矩阵，
             1 & 1 & -1 & 1 & 1 \\[4pt]
             1 & 1 & 1 & -1 & 1 \\[4pt]
             1 & 1 & 1 & 1 & -1
-        \end{pmatrix} \\[12pt]
-    \end{eq1}
+        \end{pmatrix} \end{eq1}
 
     求$A$的逆.
 \end{example}
@@ -2204,11 +2157,11 @@ $A$是个很有特点的矩阵，
     设$A-2I$的逆矩阵形如$pA+qI$，
     即$(A-2I)(pA+qI) = I$.
     计算左侧得到：
-    \[
+    \begin{eq1}
     (A-2I)(pA+qI)
     = pA^2 + (q-2p)A - 2qI
     = (q-p)A - 2qI
-    \]
+    \end{eq1}
     解得$p = -\frac{1}{2}, ~q = -\frac{1}{2}$.
     因此$A-2I$的逆矩阵是$-\frac{1}{2}A - \frac{1}{2}I$.
 
@@ -2221,16 +2174,15 @@ $A$是个很有特点的矩阵，
     猜测$A = J-2I$的逆矩阵形如$pJ + qI$.
     即$(J - 2I) (pJ + qI) = I$.
     计算左侧得到：
-    \[
+    \begin{eq1}
     (J - 2I) (pJ + qI)
     = pJ^2 + (q - 2p)J - 2qI
     = (q + 3p)J - 2qI
-    \]
+    \end{eq1}
     解得$p = \frac{1}{6}, ~q = -\frac{1}{2}$，
     因此$J - 2I$的逆矩阵是$\frac{1}{6}J - \frac{1}{2}I$，
     即：
-    
-    \[
+    \begin{eq1}
     A^{-1} = 
     \frac{1}{6}
     \begin{pmatrix}
@@ -2240,7 +2192,7 @@ $A$是个很有特点的矩阵，
         1 & 1 & 1 & -2 & 1 \\[4pt]
         1 & 1 & 1 & 1 & -2 
     \end{pmatrix}
-    \]
+    \end{eq1}
 
 \end{solution}
 
@@ -2254,15 +2206,13 @@ $A$是个很有特点的矩阵，
 
     (1)~~
     证明：
-
     \begin{eq1}
         \mathrm{rank}(A^*) = 
         \begin{cases}
             n, \quad \mathrm{rank}(A) = n \\[2pt]
             1, \quad \mathrm{rank}(A) = n-1 \\[2pt]
             0, \quad \mathrm{rank}(A) \le n-2 
-        \end{cases} \\[12pt]
-    \end{eq1}
+        \end{cases} \end{eq1}
 
     (2)~~
     若已知$|A|$，如何计算$|A^{*}|$？
@@ -2293,7 +2243,7 @@ $A$是个很有特点的矩阵，
     且$|A| \ne 0$.
     所以$\operatorname{rank}(A^*)= \operatorname{rank}(A^{-1}) =n$
 
-    \smallskip
+    \medskip
 
     (ii)~当$\operatorname{rank}(A)=n-1$时，
     $|A|=0$，
@@ -2315,7 +2265,7 @@ $A$是个很有特点的矩阵，
     \operatorname{rank}(A^*)=1.
     $
 
-    \smallskip
+    \medskip
 
     (iii)~当$\operatorname{rank}(A)\le n-2$时，
     $A$ 的所有 $(n-1)$ 阶子式全部为零，
@@ -2327,15 +2277,14 @@ $A$是个很有特点的矩阵，
     $.
 
     综上：
-
-    \[
+    \begin{eq1}
     \operatorname{rank}(A^*)=
     \begin{cases}
     n, & \operatorname{rank}(A)=n,\\[4pt]
     1, & \operatorname{rank}(A)=n-1,\\[4pt]
     0, & \operatorname{rank}(A)\le n-2.
     \end{cases}
-    \]
+    \end{eq1}
 
    \medskip
 
@@ -2384,7 +2333,7 @@ $A$是个很有特点的矩阵，
     证明：$|A| \ne 0$.
 \end{example}
 
-\begin{proof}
+\begin{pf}
     反证法.
     假设$|A| = 0$.
     则$\mathrm{rank}(A) \leq n-1$.
@@ -2404,7 +2353,7 @@ $A$是个很有特点的矩阵，
     因此每个列向量第$i$分量都是$0$，
     从而$A^*$的第$i$行是零向量，
     矛盾.
-\end{proof}
+\end{pf}
 
 \clearpage
 
@@ -2418,11 +2367,11 @@ $A$是个很有特点的矩阵，
     则$A^*$也可逆.
     利用公式$A^* = |A|A^{-1}$，
     有：
-    \[
+    \begin{eq1}
     (A^*)^* = |A^*| (A^*)^{-1}
     = |A|^{n-1} |A|^{-1} A 
     = |A|^{n-2} A
-    \]
+    \end{eq1}
 
     如果$A$不可逆，
     即$\mathrm{rank}(A) \leq n-1$，
@@ -2442,14 +2391,12 @@ $A$是个很有特点的矩阵，
 
     (1)~
     如果$A$可逆，证明：
-
     \begin{eq1}
         \begin{vmatrix}
             A & B \\[4pt]
             C & D 
         \end{vmatrix}
-        = |A||D - CA^{-1}B| \\[12pt]
-    \end{eq1} 
+        = |A||D - CA^{-1}B| \end{eq1} 
 
     (2)~如果$D$可逆，
     是否能得到类似的结论？
@@ -2461,10 +2408,10 @@ $A$是个很有特点的矩阵，
     只需要化成分块上三角或者分块下三角.
 \end{remark}
 
-\begin{proof}
+\begin{pf}
 
     (1)~
-    \[
+    \begin{eq1}
     \det 
     \begin{pmatrix}
         A & B \\[4pt]
@@ -2477,10 +2424,10 @@ $A$是个很有特点的矩阵，
         O & D-CA^{-1}B
     \end{pmatrix}
     = \det (A) \cdot \det (D-CA^{-1}B)
-    \]
+    \end{eq1}
 
     (2)~
-    \[
+    \begin{eq1}
     \det 
     \begin{pmatrix}
         A & B \\[4pt]
@@ -2493,9 +2440,9 @@ $A$是个很有特点的矩阵，
         C & D
     \end{pmatrix}
     = \det (D) \cdot \det (A-BD^{-1}C)
-    \]
+    \end{eq1}
 
-\end{proof}
+\end{pf}
 
 \bigskip
 
@@ -2503,7 +2450,6 @@ $A$是个很有特点的矩阵，
 如果$A,D$都可逆，
 结合两个小问的结论，
 我们得到一个公式：
-
 \begin{eq1}
     |A| |D - CA^{-1}B|
     = |D| |A-BD^{-1}C|
@@ -2523,7 +2469,6 @@ $A$是个很有特点的矩阵，
 \begin{example}
     
     计算下列矩阵行列式的值：
-
     \begin{eq1}
         M = 
         \begin{pmatrix}
@@ -2531,8 +2476,7 @@ $A$是个很有特点的矩阵，
             a_2a_1 + 1 & a_2^2 & \cdots & a_2 a_n + 1 \\[4pt]
             \vdots & \vdots & \ddots & \vdots \\[4pt]
             a_na_1+ 1& a_na_2 + 1& \cdots & a_n^2
-        \end{pmatrix} \\[12pt]
-    \end{eq1}
+        \end{pmatrix} \end{eq1}
 \end{example}
 
 \begin{remark}
@@ -2552,7 +2496,7 @@ $A$是个很有特点的矩阵，
 \begin{solution}
     
     将$M$化为：
-    \[
+    \begin{eq1}
     M = -I_n + 
     \begin{pmatrix}
     a_1 & 1\\
@@ -2565,7 +2509,7 @@ $A$是个很有特点的矩阵，
     a_1 & a_2 & \cdots & a_n\\
     1 & 1 & \cdots & 1
     \end{pmatrix}
-    \]
+    \end{eq1}
     
     由降阶公式得到：
     \begin{eq1}
@@ -2605,7 +2549,6 @@ $A$是个很有特点的矩阵，
 
 \begin{example}
     计算下列矩阵行列式的值：
-
     \begin{eq1}
         M =
         \begin{pmatrix}
@@ -2614,8 +2557,7 @@ $A$是个很有特点的矩阵，
             1 & 2 & 0 & \cdots & n \\[4pt]
             \vdots & \vdots & \vdots & \ddots & \vdots \\[4pt]
             1 & 2 & 3 &\cdots & 0
-        \end{pmatrix}\\[12pt]
-    \end{eq1}
+        \end{pmatrix}\end{eq1}
 \end{example}
 
 \begin{remark}
@@ -2625,7 +2567,7 @@ $A$是个很有特点的矩阵，
 \begin{solution}
     
     将$M$化为：
-    \[
+    \begin{eq1}
     M =
     \begin{pmatrix}
         -1 & 0 & \cdots & 0 \\
@@ -2645,10 +2587,9 @@ $A$是个很有特点的矩阵，
     1 & 2 & \cdots & n\\
     0 & 0 & \cdots & 0
     \end{pmatrix}
-    \]
+    \end{eq1}
 
     由降阶公式得到$|M|$的值为：
-
     \begin{eq1}
         &|I_2|^{-1}
         \cdot 
@@ -2749,7 +2690,7 @@ $A$是个很有特点的矩阵，
     使得$A + \lambda I_n$可逆.
 \end{example}
 
-\begin{proof}
+\begin{pf}
     $|A + \lambda I_n|$是
     关于$\lambda$的$n$次多项式，
     至多有$n$个零点，
@@ -2760,7 +2701,7 @@ $A$是个很有特点的矩阵，
     \lambda_0|)$时，
     $|A + \lambda I_n|\ne 0 $，
     即$A+\lambda I_n$可逆.
-\end{proof}
+\end{pf}
 
 这一题的结论给我们很大的启发：
 对于不可逆矩阵$A$，
@@ -2774,15 +2715,13 @@ $A$是个很有特点的矩阵，
     设$A,B,C,D$都是$n$阶实方阵，
     且满足$AC=CA$.
     证明：
-
     \begin{eq1}
         \begin{vmatrix}
             A & B \\[4pt]
             C & D 
         \end{vmatrix} 
         = 
-        |AD-CB| \\[12pt]
-    \end{eq1}
+        |AD-CB| \end{eq1}
 \end{example}
 
 \begin{remark}
@@ -2791,11 +2730,11 @@ $A$是个很有特点的矩阵，
     使用摄动法就可以绕过这个阻碍.
 \end{remark}
 
-\begin{proof}
+\begin{pf}
 
     如果$A$可逆，
     可以做分块初等变换，推导出降阶公式：
-    \[
+    \begin{eq1}
     \det 
     \begin{pmatrix}
         A & B \\
@@ -2808,11 +2747,11 @@ $A$是个很有特点的矩阵，
         O & D - CA^{-1}B
     \end{pmatrix}
     = |A| |D - CA^{-1}B|
-    \]
+    \end{eq1}
 
     利用$AC=CA$，
     可以进一步得到：
-    \[
+    \begin{eq1}
      \det 
     \begin{pmatrix}
         A & B \\
@@ -2821,7 +2760,7 @@ $A$是个很有特点的矩阵，
     = |AD - ACA^{-1}B|
     = |AD - CAA^{-1}B|
     = |AD-CB|
-    \]
+    \end{eq1}
 
     若$A$不可逆，
     使用摄动法.
@@ -2830,21 +2769,21 @@ $A$是个很有特点的矩阵，
     有$A + \lambda I_n$可逆.
     用$A + \lambda I_n$代替$A$，
     有：
-    \[
+    \begin{eq1}
      \det 
     \begin{pmatrix}
         A + \lambda I_n & B \\
         C & D
     \end{pmatrix}
     = |(A + \lambda I_n)D-CB|
-    \]
+    \end{eq1}
 
     注意等号两边都是关于$\lambda$的$n$次多项式.
     现在这两个多项式在$\lambda \in U$时处处成立，
     即有无穷多个$\lambda$使得这两个多项式相等，
     意味着它对于$\lambda \in \mathbb{R}$是恒等式，
     因此也对$\lambda = 0$成立.    
-\end{proof}
+\end{pf}
 
 \bigskip
 
@@ -2854,13 +2793,13 @@ $A$是个很有特点的矩阵，
     证明：$(AB)^* = B^*A^*$.
 \end{example}
 
-\begin{proof}
+\begin{pf}
     若$A,B$均可逆，
     则利用公式$A^* = |A|A^{-1}$，
     可得：
-    \[
+    \begin{eq1}
     (AB)^* = |AB|(AB)^{-1} = |B|B{-1} \cdot |A| A^{-1} = B^*A^*
-    \]
+    \end{eq1}
     
     若$A,B$其中之一不可逆，
     使用摄动法.
@@ -2870,9 +2809,9 @@ $A$是个很有特点的矩阵，
     使得$\lambda \in U$时，
     $A(\lambda) , B(\lambda)$均可逆.
     则有：
-    \[
+    \begin{eq1}
     (A(\lambda) B(\lambda))^* = B(\lambda)^* A(\lambda)^*
-    \]
+    \end{eq1}
 
     该等式左右两侧的每个矩阵元都是关于$\lambda$的有限阶多项式.
     但是等式对$\lambda \in U$成立，
@@ -2880,7 +2819,7 @@ $A$是个很有特点的矩阵，
     因此该式是关于$\lambda$的恒等式，
     对于$\lambda = 0$也成立，
     即$(AB)^* = B^*A^*$.
-\end{proof}
+\end{pf}
 
 \bigskip
 
@@ -2893,28 +2832,28 @@ $A$是个很有特点的矩阵，
 
         (1)~设 $A,B$ 分别为 $m \times n$ 和 $n\times m$ 矩阵，
         证明：若矩阵 $I_n + AB$ 可逆，则矩阵 $I_m + BA$ 也可逆，并且
-        \[
+        \begin{eq1}
         (I_m + AB)^{-1} = I_m - A(I_n + BA)^{-1}B.
-        \]
+        \end{eq1}
 
         (2)~设 $A$ 是 $n$ 阶可逆矩阵，
         $\boldsymbol{\alpha}, \boldsymbol{\beta}$ 为 $n$ 维列向量.
         证明Sherman-Morrison公式：若矩阵
         $A + \boldsymbol{\alpha}\boldsymbol{\beta}^T$
         可逆，则：
-        \[
+        \begin{eq1}
         (A + \boldsymbol{\alpha}\boldsymbol{\beta}^T)^{-1}
         = A^{-1} - \frac{A^{-1}\boldsymbol{\alpha}\boldsymbol{\beta}^T A^{-1}}{1 + \boldsymbol{\beta}^T A^{-1}\boldsymbol{\alpha}}
-        \]
+        \end{eq1}
 
         (3)~设$A$是$n$阶可逆矩阵，
         $U,V$均为$n \times m$矩阵，
         则$A + UV^T$可逆当且仅当$I_m + V^T A^{-1} U$可逆，
         且有Sherman-Morrison-Woodbury公式：
-        \[
+        \begin{eq1}
         (A + UV^T)^{-1}
         = A^{-1} - A^{-1} U (I_n + V^T A^{-1}U)^{-1} V^T A^{-1}
-        \]
+        \end{eq1}
     \end{example}
 
     \begin{remark}
@@ -2922,20 +2861,20 @@ $A$是个很有特点的矩阵，
         当心不要随意调换矩阵乘法的顺序即可.
     \end{remark}
 
-    \begin{proof}
+    \begin{pf}
         ~
 
         (1)~直接去验证
         $(I_m +AB)(I_m - A(I_n + BA)^{-1} B) = I_m$.
         计算过程如下：
-        \begin{align*}
+        \begin{eq1}
             (I_m +AB)(I_m - A(I_n + BA)^{-1} B)
             &= I_m +AB - A(I_n + BA)^{-1} B - ABA (I_n + BA)^{-1} B \\
             &= I_m +AB - A \cdot (I_n + BA)^{-1} \cdot B - A \cdot BA (I_n + BA)^{-1} \cdot B \\
             &= I_m + AB - A (I_n - BA)(I_n + BA)^{-1}  B \\
             &= I_m + AB - AB \\
             &= I_m
-        \end{align*}
+        \end{eq1}
 
         \medskip
 
@@ -2949,21 +2888,21 @@ $A$是个很有特点的矩阵，
         1 + \boldsymbol{\beta}^T A^{-1}\boldsymbol{\alpha} \neq 0,
         $
         且：
-        \[
+        \begin{eq1}
         (I_n + A^{-1}\boldsymbol{\alpha}\boldsymbol{\beta}^T)^{-1}
         = I_n - A^{-1}\boldsymbol{\alpha} (1 + \boldsymbol{\beta}^T A^{-1}\boldsymbol{\alpha})^{-1}  \boldsymbol{\beta}^T.
-        \]
+        \end{eq1}
 
         因此
-        \begin{align*}
+        \begin{eq1}
         (A + \boldsymbol{\alpha}\boldsymbol{\beta}^T)^{-1}
         &= \left(I_n + A^{-1}\boldsymbol{\alpha}\boldsymbol{\beta}^T\right)^{-1} A^{-1} \\
         &= A^{-1} - \frac{A^{-1}\boldsymbol{\alpha}\boldsymbol{\beta}^T A^{-1}}{1 + \boldsymbol{\beta}^T A^{-1}\boldsymbol{\alpha}}.
-        \end{align*}
+        \end{eq1}
 
         \medskip
 
         (3)~将(1)的结论中的矩阵$A$替换为(3)中的$V^T$，
         (1)中的$B$替换为$A^{-1}U$即可.
-    \end{proof}
+    \end{pf}
 \end{comment}

@@ -329,14 +329,14 @@ $1$的个数就是正惯性指数.
 
 \begin{example}
     设矩阵：
-    \begin{align*}
+    \begin{eq1}
         A = 
         \begin{pmatrix}
             1 & \bm{\alpha} & \bm{\beta} \\
             0 & 1 & \bm{\alpha} \\
             0 & 0 & 1
         \end{pmatrix}
-    \end{align*}
+    \end{eq1}
     计算$A^n$.
 \end{example}
 
@@ -370,8 +370,7 @@ $1$的个数就是正惯性指数.
 \begin{example}
     求下列 $n$ 阶矩阵的逆阵，
     其中 $a_i \neq 0 \ (1 \leq i \leq n)$：
-
-\[
+\begin{eq1}
 A =
 \begin{pmatrix}
 1 + a_1 & 1 & 1 & \cdots & 1 \\
@@ -380,7 +379,7 @@ A =
 \vdots & \vdots & \vdots & \ddots & \vdots \\
 1 & 1 & 1 & \cdots & 1 + a_n
 \end{pmatrix}.
-\]
+\end{eq1}
 
 \end{example}
 
@@ -391,7 +390,7 @@ A =
 \begin{example}
     证明：
     与$n$阶Jordan块
-    \begin{align*}
+    \begin{eq1}
         J = 
         \begin{pmatrix}
             \lambda & 1 & ~ & ~  \\
@@ -399,7 +398,7 @@ A =
             ~ & ~ & \ddots & 1 \\
             ~ & ~ & ~ & \lambda
         \end{pmatrix}
-    \end{align*}
+    \end{eq1}
     可交换的矩阵必然是$J$的多项式.
 \end{example}
 
@@ -419,13 +418,13 @@ A =
     设 $A$ 为 $m$ 阶矩阵，
     $B$ 为 $n$ 阶矩阵，
     求分块对角阵 $C$ 的伴随矩阵：
-    \[
+    \begin{eq1}
     C =
     \begin{pmatrix}
     A & O \\
     O & B
     \end{pmatrix}.
-    \]
+    \end{eq1}
 \end{example}
 
 \subsubsection{矩阵的相抵与相似}
@@ -440,14 +439,14 @@ A =
     如何计算它的满秩分解，
     即如何求出$B$和$C$？
     以下面的矩阵$A$为例展示具体的计算步骤：
-    \begin{align*}
+    \begin{eq1}
         A = 
     \begin{pmatrix}
         1 & -1 & -3 & 1 \\
         1 & -1 & 2 & -1 \\
         4 & -4 & 3 & -2 
     \end{pmatrix} 
-    \end{align*}
+    \end{eq1}
 \end{example}
 
 \bigskip
@@ -575,9 +574,9 @@ A =
 $\{1, x, x^2, \cdots, x^n\}$
 到基$\{1, x-a, (x-a)^2, \cdots, (x-a)^n\}$
 的过渡矩阵，并以此证明多项式的 Taylor 公式：
-\[
+\begin{eq1}
 f(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \cdots + \frac{f^{(n)}(a)}{n!}(x-a)^n,
-\]
+\end{eq1}
 其中 $f^{(n)}(x)$ 表示 $f(x)$ 的 $n$ 次导数。
 \end{example}
 
@@ -596,14 +595,14 @@ f(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \cdots + \frac{
     则可以利用对角化方便地计算$A^n$.
     但如果$A$不可对角化呢？
     以下面的矩阵为例：
-    \begin{align*}
+    \begin{eq1}
         A = 
         \begin{pmatrix}
             4 & 2 & 2 \\
             0 & 4 & 0 \\
             0 & -2 & -2 
         \end{pmatrix}
-    \end{align*}
+    \end{eq1}
 
     (1)~计算它的全部特征值和特征向量，
     并说明它为什么不可对角化.
@@ -611,14 +610,14 @@ f(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \cdots + \frac{
     (2)~求可逆矩阵$P$，
     使得$P^{-1}AP = J$.
     其中$J$是$A$的Jordan标准型：
-    \begin{align*}
+    \begin{eq1}
         J = 
         \begin{pmatrix}
             -2 & ~ & ~ \\
             ~ & 4 & 1 \\
             ~ & ~ & 4
         \end{pmatrix}
-    \end{align*}
+    \end{eq1}
 
     (3)~计算$A^{20}$.
 \end{example}

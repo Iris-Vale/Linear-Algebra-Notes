@@ -1,0 +1,31 @@
+# 编译产物
+main_LA.aux
+main_LA.log
+main_LA.out
+main_LA.pdf
+main_LA.synctex.gz
+main_LA.toc
+preface.aux
+
+# 临时文件
+~$*
+
+# 输出目录
+%OUTDIR%/
+
+# PPT源文件及媒体
+*.pptx
+ppt/
+
+# 非讲义目录
+线性代数B/
+线性代数C/
+
+# 讲义PDF（编译输出的成品）
+线代辅导讲义_*.pdf
+期末复习6.20.pdf
+LA_figure.pdf
+fig.pdf
+
+# 其他
+README.md

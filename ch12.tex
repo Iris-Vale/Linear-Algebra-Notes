@@ -5,7 +5,7 @@
 \subsubsection{傅里叶级数的计算与收敛性}
 
 在傅里叶级数这一章，最重要的是能熟练地计算出傅里叶系数，并且写对傅里叶级数的形式.
-有如下几种情况：\vspace{0.5em}
+有如下几种情况：\medskip
 
 \textbf{1.~~$f(x)$是$\mathbb{R}$上以$2\pi$为周期的函数，在$[-\pi.\pi]$上有界可积}
 \begin{eq1}
@@ -16,7 +16,7 @@ f(x) \sim \frac{a_0}{2} + \ss \left( a_n \cos nx + b_n \sin nx \right)
 \begin{eq1}
     a_n &= \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos nx ~\d x ~,~~ n = 0,1,2,\cdots \\
     b_n &= \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin nx ~\d x ~,~~ n = 1,2,\cdots
-\end{eq1}\vspace{0.5em}
+\end{eq1}\medskip
 
 \textbf{2.~~$f(x)$是$\mathbb{R}$上以$2\pi$为周期的偶函数，在$[-\pi.\pi]$上有界可积}
 
@@ -30,7 +30,7 @@ f(x) \sim \frac{a_0}{2} + \ss a_n \cos nx
     a_n &= \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos nx ~\d x
     = \frac{2}{\pi} \int_{0}^{\pi} f(x) \cos nx ~\d x
      ~,~~ n = 0,1,2,\cdots
-\end{eq1}\vspace{0.5em}
+\end{eq1}\medskip
 
 \textbf{3.~~$f(x)$是$\mathbb{R}$上以$2\pi$为周期的奇函数，在$[-\pi.\pi]$上有界可积}
 
@@ -44,7 +44,7 @@ f(x) \sim \ss b_n \sin nx
     b_n &= \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin nx ~\d x
     = \frac{2}{\pi} \int_{0}^{\pi} f(x) \sin nx ~\d x
      ~,~~ n = 1,2,\cdots
-\end{eq1}\vspace{0.5em}
+\end{eq1}\medskip
 
 \textbf{4.~~$f(x)$是$\mathbb{R}$上以任意$2l$为周期的函数，在$[-\pi.\pi]$上有界可积}
 \begin{eq1}
@@ -55,37 +55,34 @@ f(x) \sim \frac{a_0}{2} + \ss \left( a_n \cos \frac{n\pi}{l} x + b_n \sin \frac{
 \begin{eq1}
     a_n &= \frac{1}{l} \int_{-l}^{l} f(x) \cos  \frac{n\pi}{l} x ~\d x ~,~~ n = 0,1,2,\cdots \\
     b_n &= \frac{1}{l} \int_{-l}^{l} f(x) \sin  \frac{n\pi}{l} x ~\d x ~,~~ n = 1,2,\cdots
-\end{eq1}\vspace{0.5em}
+\end{eq1}\medskip
 
 \textbf{5.~~$f(x)$是有穷区间$[-l,l)$上的有界可积函数：}做周期为$2l$的周期延拓，然后计算傅里叶级数.
 
-\textbf{6.~~$f(x)$是有穷区间$[0,l]$上的有界可积函数：}做奇延拓或偶延拓，再做周期延拓，然后计算傅里叶级数.\vspace{1em}
+\textbf{6.~~$f(x)$是有穷区间$[0,l]$上的有界可积函数：}做奇延拓或偶延拓，再做周期延拓，然后计算傅里叶级数.\medskip
 
 以上，$f(x)$与其傅里叶级数之间均用“$\sim$”而不是“$=$”连接.
 这是因为$f(x)$的傅里叶级数不一定收敛到$f(x)$.
 因此我们计算出傅里叶级数之后，一般还要问：
 $f(x)$的傅里叶级数的和函数$S(x)$是什么？
 它和$f(x)$有何关系？
-对此我们有两个定理可以用：\vspace{1em}
+对此我们有两个定理可以用：\medskip
 
 \textbf{定理（狄利克雷定理）}~~
 \textit{设函数$f(x)$以$2\pi$为周期，在区间$[-\pi,\pi]$上满足狄利克雷条件，
 即$f(x)$在$[-\pi,\pi]$上分段连续且分段单调，则$f(x)$的傅里叶级数在任意一点$x$处均收敛，且其和函数为：}
 \begin{eq1}
-    \setstretch{1.25}
     S(x) = 
     \begin{cases}
         f(x)  \quad &x\text{为}f(x)\text{的连续点} \\[6pt]
         \frac{f(x+0) + f(x-0)}{2} \quad &  x\text{为}f(x)\text{的间断点}
     \end{cases}
-\end{eq1}\vspace{1em}
-
-\setstretch{1.75}
+\end{eq1}\medskip
 
 \textbf{定理}~~
 \textit{设函数$f(x)$以$2\pi$为周期，且在区间$[-\pi,\pi]$上分段可微，
 则$f(x)$的傅里叶级数在任意一点$x$处均收敛到和函数$S(x)$.
-$S(x)$的形式同上.}\vspace{1em}
+$S(x)$的形式同上.}\medskip
 
 
 在得到了傅里叶级数及其和函数之后，可以进一步计算某些数项级数的和.
@@ -116,7 +113,7 @@ $S(x)$的形式同上.}\vspace{1em}
 因此，对于线性空间的理解，可以将欧氏空间作为“模板”.
 或者说，线性空间的概念就是对向量空间的抽象化和普遍化.
 
-以向量运算的性质作为“模板”，可以公理化地定义加法和数乘运算，从而构建出一般的线性空间（对公理化定义不感兴趣者可跳过，不影响理解）：\vspace{1em}
+以向量运算的性质作为“模板”，可以公理化地定义加法和数乘运算，从而构建出一般的线性空间（对公理化定义不感兴趣者可跳过，不影响理解）：\medskip
 
 \textit{若集合$V$上定义了元素之间的加法和实数对元素的数乘，且满足以下$8$条规则，那么称$V$是$\mathbb{R}$上的线性空间：}
 
@@ -135,7 +132,7 @@ $S(x)$的形式同上.}\vspace{1em}
 
 (7)~\textbf{数乘分配律I：}\textit{$\alpha (\bm{x}_1 + \bm{x}_2) = \alpha \bm{x}_1 + \alpha \bm{x}_2$，$\forall \alpha \in \mathbb{R}$，$\bm{x_1},\bm{x_2} \in V$.}
 
-(8)~\textbf{数乘分配律II：}\textit{$(\alpha + \beta)\bm{x} = \alpha \bm{x} + \beta \bm{x}$，$\forall \alpha,\beta \in \mathbb{R}$，$\bm{x} \in V$.}\vspace{1em}
+(8)~\textbf{数乘分配律II：}\textit{$(\alpha + \beta)\bm{x} = \alpha \bm{x} + \beta \bm{x}$，$\forall \alpha,\beta \in \mathbb{R}$，$\bm{x} \in V$.}\medskip
 
 一个集合“升级”成了线性空间之后，还可以继续“升级”，以求获得更好的性质.
 回顾$n$维欧氏空间$\mathbb{R}^n$，这是一个性质极好的空间，
@@ -162,7 +159,7 @@ $S(x)$的形式同上.}\vspace{1em}
 
 (3)~\textbf{线性（数乘）：}\textit{$(\alpha \bm{x}, \bm{y}) = \alpha (\bm{x},\bm{y})$.}
 
-(4)~\textbf{线性（加法）：}\textit{$(\bm{x}+\bm{y},\bm{z}) = (\bm{x},\bm{z}) + (\bm{y},\bm{z})$.}\vspace{1em}
+(4)~\textbf{线性（加法）：}\textit{$(\bm{x}+\bm{y},\bm{z}) = (\bm{x},\bm{z}) + (\bm{y},\bm{z})$.}\medskip
 
 度量、范数和内积相比，内积是“级别最高”的一种结构.
 因为它可以自然地诱导出另外二者.
@@ -206,7 +203,6 @@ $S(x)$的形式同上.}\vspace{1em}
 习惯上也记作$\bm{i},\bm{j},\bm{k}$.
 所谓单位正交系，是指范数（模长）为$1$，且两两之间内积为$0$（正交）的一组向量. 即：
 \begin{eq1}
-    \setstretch{1.25}
     (\bm{e}_i , \bm{e}_j) = \delta_{ij} = 
     \begin{cases}
         1\quad i = j \\
@@ -214,20 +210,18 @@ $S(x)$的形式同上.}\vspace{1em}
     \end{cases} 
 \end{eq1}
 
-\setstretch{1.75}
-
 对任意$\bm{x}  \in \mathbb{R}^3$，$\bm{x}$
 都可以\textbf{正交分解}到$\bm{e}_1,\bm{e}_2,\bm{e}_3$这$3$个方向上，即：
-\begin{eq}
+\begin{eq1}
     \bm{x} = a_1 \bm{e}_1 + a_2 \bm{e}_2 + a_3 \bm{e}_3
-\end{eq}
+\end{eq1}
 
 问题在于如何知道系数$a_1,a_2,a_3$？
 根据内积的几何意义，若$\bm{x}$与单位向量$\bm{e}_1$做内积，
 相当于\textbf{正交投影}到了$\bm{e}_i$的方向上，这正是我们要的：
-\begin{eq}
+\begin{eq1}
     (\bm{x}, \bm{e}_i) = x_i
-\end{eq}
+\end{eq1}
 
 代入进去：
 \begin{eq1}
@@ -276,9 +270,9 @@ $f$的傅里叶级数在间断点处也不收敛到$f$.
 我们也尚未定义其中的极限是指什么.
 为了定义它，我们回到旅途的起点.
 回顾序列$\{ x_n \}$收敛到$x_0$的$\epsilon-\delta$定义：
-\begin{eq}
+\begin{eq1}
     \forall \epsilon > 0 ,~ \exists N \in \mathbb{N^{*}},~ \text{当}n \ge N\text{时}, ~|x_n - x_0|< \epsilon 
-\end{eq}
+\end{eq1}
 
 在这个定义中，我们用绝对值表示了$x_n$和$x_0$之间的距离（度量），
 并且通过这个距离小于任意的$\epsilon$来反映极限存在.
@@ -371,7 +365,7 @@ $\{ \bm{e}_1 , \bm{e}_2 , \bm{e}_3 \}$，
 这和傅里叶级数的（均方）收敛能等同起来看待吗？
 对于第一个问题，教材给出了肯定的回答：
 从贝塞尔不等式看出，傅里叶系数的平方和级数是一个有上界$\Vert \bm{x} \Vert^2 $的正项级数，因此收敛.
-对于第二个问题，还需要用以下定理打个补丁：\vspace{1em}
+对于第二个问题，还需要用以下定理打个补丁：\medskip
 
 \textbf{定理}~~\textit{设$\{ \bm{e}_i \}$是完备内积空间$H$（指柯西收敛原理成立的空间）中的一个单位正交系，
 $\{ \alpha_i \}$是一个实数列，
@@ -380,11 +374,11 @@ $\{ \alpha_i \}$是一个实数列，
 \begin{eq1}
     \Vert \sum_{i=1}^{\infty} \alpha_i \bm{e}_i \Vert^2 = \sum_{i=1}^{\infty} |\alpha_i|^2
 \end{eq1}
-\vspace{1em}
+\medskip
 
 有了收敛性的保证，
 本节的主旨可以总结如下——
-\vspace{1em}
+\medskip
 
 
 \textbf{定理}~~\textit{设$\{ \bm{e}_i \}$是完备内积空间$H$中的一个单位正交系.
@@ -397,7 +391,7 @@ $\bm{x} = \sum_{i=1}^{\infty} (\bm{x},\bm{e}_i) \bm{e}_i$，即$\bm{x}$的傅里
 
 \textit{(3)~对任意的$\bm{x} \in H $，有
 $\Vert \bm{x} \Vert^2 = \sum_{i=1}^{\infty} | (\bm{x},\bm{e}_i) |^2$，即帕塞瓦尔等式成立.}
-\vspace{1.25em}
+\medskip
 
 在函数空间$V = R[-\pi,\pi]$或$L^2[-\pi,\pi]$中，
 若要证明“函数$f$的傅里叶级数一定均方收敛到$f$”（即教材上的帕塞瓦尔等式成立），是比较麻烦的.
@@ -463,7 +457,7 @@ $\Vert \bm{x} \Vert^2 = \sum_{i=1}^{\infty} | (\bm{x},\bm{e}_i) |^2$，即帕塞
     在$[-\pi,\pi]$上$f(x)$的傅里叶级数的和函数是$\cos px$，即：
     \begin{eq1}
         \cos(px) = \frac{\sin(p\pi)}{p\pi} + \sum_{n=1}^{\infty} (-1)^n \left( \frac{1}{p+n} + \frac{1}{p-n} \right) \frac{\sin(p\pi)}{\pi} \cos(nx)
-    \end{eq1} \vspace{0.5em}
+    \end{eq1} \medskip
 
     (2)~~在傅里叶展开式中令 \( x = 0 \):
     \begin{eq1}
@@ -495,23 +489,23 @@ $\Vert \bm{x} \Vert^2 = \sum_{i=1}^{\infty} | (\bm{x},\bm{e}_i) |^2$，即帕塞
     \end{eq1}
 
     当$n>0$时，用分部积分法求出：
-    \[
+    \begin{eq1}
         a_n = \frac{1}{\pi} \int_{-\pi}^{\pi} e^x \cos(nx) ~\d x 
         = \frac{1}{\pi} \left[ \frac{\cos(nx) + n \sin(nx)}{1+n^2} e^x \right]_{-\pi}^{\pi}
         = (-1)^n \frac{e^{\pi} - e^{-\pi}}{\pi (1+n^2)}
-    \]
+    \end{eq1}
 
     以及：
-    \[
+    \begin{eq1}
          b_n = \frac{1}{\pi} \int_{-\pi}^{\pi} e^x \sin(nx) ~\d x 
          = \frac{1}{\pi} \left[ \frac{\sin(nx) - n \cos(nx)}{1+n^2} e^x \right]_{-\pi}^{\pi} 
          = (-1)^{n-1} \frac{n(e^{\pi} - e^{-\pi})}{\pi (1+n^2)}
-    \]
+    \end{eq1}
 
     $f(x)$的傅里叶级数是：
-    \[
+    \begin{eq1}
         \frac{1}{2\pi} (e^{\pi} - e^{-\pi}) + \sum_{n=1}^{\infty} \left( (-1)^n \frac{e^{\pi} - e^{-\pi}}{\pi (1+n^2)} \cos(nx) + (-1)^{n-1} \frac{n(e^{\pi} - e^{-\pi})}{\pi (1+n^2)} \sin(nx) \right)
-    \]
+    \end{eq1}
 
     $f(x)$在$[-\pi,\pi]$上分段连续，分段单调.
     因此，根据狄利克雷定理得：
@@ -525,7 +519,7 @@ $\Vert \bm{x} \Vert^2 = \sum_{i=1}^{\infty} | (\bm{x},\bm{e}_i) |^2$，即帕塞
         设 \( 2\pi \) 周期函数$\vphantom{\ss}$ \( f(x) \) 在 \([-\pi, \pi]\) 上的表达式为 \( f(x) = x^2 \)，求 \( f(x) \) 所对应的 Fourier 级数及其和函数，
         并给出级数$\sum_{n=1}^{\infty} \frac{1}{n^2}, \quad \sum_{n=1}^{\infty} \frac{(-1)^n}{n^2}, \quad \sum_{n=1}^{\infty} \frac{1}{n^4}$的值.
     }
-\end{example}\vspace{0.5em}
+\end{example}\medskip
 
 \begin{solution}
     
@@ -535,11 +529,11 @@ $\Vert \bm{x} \Vert^2 = \sum_{i=1}^{\infty} | (\bm{x},\bm{e}_i) |^2$，即帕塞
 
 
     计算 \( a_0 \)：
-    \[
+    \begin{eq1}
     a_0 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2  ~\d x 
     = \frac{2}{\pi} \int_{0}^{\pi} x^2  ~\d x 
     = \frac{2}{\pi} \left[ \frac{x^3}{3} \right]_0^{\pi} = \frac{2}{\pi} \cdot \frac{\pi^3}{3} = \frac{2\pi^2}{3}
-    \]
+    \end{eq1}
     
     计算 \( a_n \) (\( n \geq1 1 \))：
     \begin{eq1}
@@ -565,9 +559,9 @@ $\Vert \bm{x} \Vert^2 = \sum_{i=1}^{\infty} | (\bm{x},\bm{e}_i) |^2$，即帕塞
     \end{eq1}
 
     所以：
-    \[
+    \begin{eq1}
     a_n = \frac{2}{\pi} \cdot \frac{2\pi (-1)^n}{n^2} = \frac{4(-1)^n}{n^2}
-    \]
+    \end{eq1}
     
     傅里叶级数为：
     \begin{eq1}
@@ -576,13 +570,13 @@ $\Vert \bm{x} \Vert^2 = \sum_{i=1}^{\infty} | (\bm{x},\bm{e}_i) |^2$，即帕塞
 
     由于 \( f(x) = x^2 \) 在 \([-\pi, \pi]\) 上连续且满足 Dirichlet 条件，其傅里叶级数在 \([-\pi, \pi]\) 上收敛于 \( x^2 \).
     在端点 \( x = \pm\pi \) 处，级数收敛于：
-    \[
+    \begin{eq1}
     \frac{f(\pi^-) + f(-\pi^+)}{2} = \frac{\pi^2 + \pi^2}{2} = \pi^2
-    \]
+    \end{eq1}
     因此，和函数$S(x)$为：
-    \[
+    \begin{eq1}
     S(x) = f(x) = (x-2k\pi)^2 ,\quad k \in \mathbb{Z}
-    \]
+    \end{eq1}
     
     (2)~~
     求 \( \sum_{n=1}^{\infty} \frac{1}{n^2} \)：
@@ -592,9 +586,9 @@ $\Vert \bm{x} \Vert^2 = \sum_{i=1}^{\infty} | (\bm{x},\bm{e}_i) |^2$，即帕塞
     \end{eq1}
   
     解得：
-    \[
+    \begin{eq1}
     4 \sum_{n=1}^{\infty} \frac{1}{n^2} = \pi^2 - \frac{\pi^2}{3} = \frac{2\pi^2}{3} \implies \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}
-    \]
+    \end{eq1}
 
     (3)~~
     求 \( \sum_{n=1}^{\infty} \frac{(-1)^n}{n^2} \)：
@@ -604,9 +598,9 @@ $\Vert \bm{x} \Vert^2 = \sum_{i=1}^{\infty} | (\bm{x},\bm{e}_i) |^2$，即帕塞
     \end{eq1}
 
     解得：
-    \[
+    \begin{eq1}
     4 \sum_{n=1}^{\infty} \frac{(-1)^n}{n^2} = -\frac{\pi^2}{3} \implies \sum_{n=1}^{\infty} \frac{(-1)^n}{n^2} = -\frac{\pi^2}{12}
-    \]
+    \end{eq1}
 
     (4)~~
     求 \( \sum_{n=1}^{\infty} \frac{1}{n^4} \)：
@@ -616,26 +610,26 @@ $\Vert \bm{x} \Vert^2 = \sum_{i=1}^{\infty} | (\bm{x},\bm{e}_i) |^2$，即帕塞
     \end{eq1}
     
     左边：
-    \[
+    \begin{eq1}
     \frac{1}{\pi} \int_{-\pi}^{\pi} x^4  ~\d x = 
     \frac{2}{\pi} \left[ \frac{x^5}{5} \right]_0^{\pi} 
     = \frac{2\pi^4}{5}
-    \]
+    \end{eq1}
 
     右边：
-    \[
+    \begin{eq1}
     \frac{1}{2} \left( \frac{2\pi^2}{3} \right)^2 + \sum_{n=1}^{\infty} \left( \frac{4(-1)^n}{n^2} \right)^2 = \frac{1}{2} \cdot \frac{4\pi^4}{9} + \sum_{n=1}^{\infty} \frac{16}{n^4} = \frac{2\pi^4}{9} + 16 \sum_{n=1}^{\infty} \frac{1}{n^4}
-    \]
+    \end{eq1}
 
     联立方程：
-    \[
+    \begin{eq1}
     \frac{2\pi^4}{5} = \frac{2\pi^4}{9} + 16 \sum_{n=1}^{\infty} \frac{1}{n^4}
-    \]
+    \end{eq1}
 
     解得：
-    \[
+    \begin{eq1}
     16 \sum_{n=1}^{\infty} \frac{1}{n^4} = \frac{2\pi^4}{5} - \frac{2\pi^4}{9} = \frac{8\pi^4}{45} \implies \sum_{n=1}^{\infty} \frac{1}{n^4} = \frac{\pi^4}{90}
-    \] \qed \par
+    \end{eq1} \qed \par
 
     ~\par
 
@@ -661,7 +655,7 @@ $\Vert \bm{x} \Vert^2 = \sum_{i=1}^{\infty} | (\bm{x},\bm{e}_i) |^2$，即帕塞
     {5}{
         计算下列函数的傅里叶级数（周期为$2\pi$）：$f(x) = \frac{1-r^2}{1-2r\cos x + r^2} ~(|r|<1)$.
     }
-\end{example}\vspace{0.5em}
+\end{example}\medskip
 \begin{solution}
     注意到$f(x)$是偶函数，可以展开成余弦级数.设为：$f(x) \sim \sum_{n=0}^{\infty} a_n \cos nx$.
     又因为$f(x)$在$\mathbb{R}$上连续，

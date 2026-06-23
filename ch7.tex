@@ -68,7 +68,7 @@
 
 (3)~\textbf{线性（数乘）：}\textit{$(\alpha \bm{x}, \bm{y}) = \alpha (\bm{x},\bm{y})$.}
 
-(4)~\textbf{线性（加法）：}\textit{$(\bm{x}+\bm{y},\bm{z}) = (\bm{x},\bm{z}) + (\bm{y},\bm{z})$.}\vspace{1em}
+(4)~\textbf{线性（加法）：}\textit{$(\bm{x}+\bm{y},\bm{z}) = (\bm{x},\bm{z}) + (\bm{y},\bm{z})$.}\medskip
 
 \medskip
 
@@ -87,9 +87,9 @@ $\mathbb{R}^n$中的标准内积是大家所熟悉的.
 \textit{定义在$[a,b]$上的全体平方可积函数$L^2[a,b]$构成$\mathbb{R}$上的线性空间.
 对$f,g\in L^2[a,b]$，定义：
 }
-\begin{align*}
+\begin{eq1}
     (f,g) = \int_{a}^{b} f(x) g(x) ~\mathrm{d}x
-\end{align*}
+\end{eq1}
 
 \textit{则不难验证这是一个内积.}
 
@@ -113,7 +113,7 @@ $\mathbb{R}^n$中的标准内积是大家所熟悉的.
 则$\bm{\alpha}$与$\bm{\beta}$的距离定义为：$d (\bm{\alpha} , \bm{\beta}) 
 = \left\| \bm{\alpha} - \bm{\beta} \right\|$.}
 
-\smallskip
+\medskip
 
 \textbf{夹角}
 ~~
@@ -150,14 +150,14 @@ $\bm{\beta} = y_1 \bm{e}_1 + y_2 \bm{e}_2 + \cdots + y_n \bm{e}_n$.
 所以任意两个向量$\bm{\alpha},\bm{\beta}$
 的内积可以由一组基两两之间的内积$(\bm{e}_i , \bm{e}_j) = g_{ij}$
 来确定：
-\begin{align*}
+\begin{eq1}
     (\bm{\alpha} , \bm{\beta}) = 
     \left( \sum_{i=1}^{n} x_i \bm{e}_i , \sum_{j=1}^{n} y_j \bm{e}_j \right)
     = \sum_{i=1}^{n} \sum_{j=1}^{n} g_{ij} x_i y_j 
-\end{align*}
+\end{eq1}
 
 这个结论实际上可以写成矩阵形式：
-\begin{align*}
+\begin{eq1}
     (\bm{\alpha} , \bm{\beta})
     = (x_1 , x_2 , \cdots ,x_n) 
     \begin{pmatrix}
@@ -172,10 +172,10 @@ $\bm{\beta} = y_1 \bm{e}_1 + y_2 \bm{e}_2 + \cdots + y_n \bm{e}_n$.
         \vdots \\
         y_n
     \end{pmatrix}
-\end{align*}
+\end{eq1}
 
 其中矩阵$G$：
-\begin{align*}
+\begin{eq1}
     G = 
     \begin{pmatrix}
         g_{11} & g_{12} & \cdots & g_{1n} \\
@@ -190,7 +190,7 @@ $\bm{\beta} = y_1 \bm{e}_1 + y_2 \bm{e}_2 + \cdots + y_n \bm{e}_n$.
         \vdots & \vdots  & \ddots & \vdots \\
          (\bm{e}_n, \bm{e}_1) &  (\bm{e}_n, \bm{e}_2) & \cdots &  (\bm{e}_n, \bm{e}_n)
     \end{pmatrix*}
-\end{align*}
+\end{eq1}
 
 这里的矩阵$G$也称为\textbf{度规矩阵}.
 $\bm{\alpha}, \bm{\beta}$在给定基下的内积即可表示为$(\bm{\alpha} , \bm{\beta}) = \bm{X}^T G \bm{Y}$.
@@ -224,9 +224,9 @@ $G$其实打包了一组基的全部几何信息，
 建立解析几何的基本定律是勾股定理.
 这与欧氏度规（单位矩阵$I$）是等价的.
 勾股定理可以表达为：
-\begin{align*}
+\begin{eq1}
     \left\| \bm{X} \right\|^2 = \bm{X}^{T} I \bm{X}
-\end{align*}
+\end{eq1}
 
 勾股定理的一个重要应用是计算曲线长.
 我们把曲线微元$\mathrm{d} s$近似为直线段，
@@ -235,25 +235,25 @@ $G$其实打包了一组基的全部几何信息，
 
 如果我们把欧氏度规$I$换成任意的度规$G$，
 我们会得到相应内积空间中的“勾股定理”
-\begin{align*}
+\begin{eq1}
     \left\| \bm{X} \right\|^2 = \bm{X}^{T} G \bm{X}
-\end{align*}
+\end{eq1}
 
 
 在高等数学中，
 我们可以讨论如何在球坐标下计算三维曲线的长度.
 这个问题其实就是取球面度规：
-\[
+\begin{eq1}
 B = 
 \begin{pmatrix}
     1 & 0 & 0 \\
     0 & r^2 & 0 \\
     0 & 0 & r^2 \sin^2 \theta
 \end{pmatrix}
-\]
+\end{eq1}
 
 那么曲线的线元公式就可以写成：
-\[
+\begin{eq1}
 \mathrm{d} s^2 = 
 (\mathrm{d} r , \mathrm{d} \theta, \mathrm{d} \varphi)
 \begin{pmatrix}
@@ -268,7 +268,7 @@ B =
 \end{pmatrix}
 = 
 (\mathrm{d}r)^2 + r^2 (\mathrm{d} \theta)^2 + r^2 \sin^2 \theta (\mathrm{d} \varphi)^2
-\]
+\end{eq1}
 
 有时我们也把线元称为\textbf{度规}，
 即通过线元可以直接“读”出度规矩阵，
@@ -289,20 +289,20 @@ B =
 最经典的例子就是狭义相对论中，
 “时空距离”并不符合$\mathbb{R}^4$中的勾股定理，
 而是：
-\begin{align*}
+\begin{eq1}
     \d s ^2 = -(\mathrm{d}t)^2 + ( \mathrm{d} x)^2 + ( \mathrm{d} y)^2 + (\mathrm{d} z)^2
-\end{align*}
+\end{eq1}
 
 这里我们取光速$c =1$.
 从这个线元中“读”出的度规是\textbf{闵氏度规}：
-\[\eta = 
+\begin{eq1}\eta = 
 \begin{pmatrix}
     -1 & 0 & 0 & 0 \\
     0 & 1 & 0 & 0 \\
     0 & 0 & 1 & 0 \\
     0 & 0 & 0 & 1 
 \end{pmatrix}
-\]
+\end{eq1}
 
 按照定义它显然不是正定矩阵.
 广义相对论进一步认为，
@@ -326,19 +326,19 @@ B =
 $A$也可称为\textbf{二次型矩阵}.
 如果写出分量式$\bm{X} = (x_1 , x_2 , \cdots , x_n)^T$，
 那么二次型可以看成是一个$n$元的$2$次齐次多项式：
-\begin{align*}
+\begin{eq1}
     f(x_1 , x_2 , \cdots , x_n)
     = \sum_{i=1}^{n} \sum_{j=1}^{n} a_{ij}x_i x_j
-\end{align*}
+\end{eq1}
 
 线元$\mathrm{d} s^2$也可以看成一个二次型，
 只不过代入了向量微分$\mathrm{d} \bm{X} = (\mathrm{d} x_1 , \mathrm{d} x_2 , \cdots , \mathrm{d} x_n)$.
 更一般地，
 如下形状的二次微分式也可以当作二次型来研究：
-\begin{align*}
+\begin{eq1}
     f(\mathrm{d} x_1 , \mathrm{d} x_2 , \cdots , \mathrm{d} x_n)
     = \sum_{i=1}^{n} \sum_{j=1}^{n} a_{ij}\mathrm{d} x_i \mathrm{d} x_j
-\end{align*}
+\end{eq1}
 
 
 
@@ -351,8 +351,7 @@ $A$也可称为\textbf{二次型矩阵}.
 广义实内积可以表示为实对称矩阵.
 两种看法能不能统一起来呢？
 考察广义实内积的矩阵表达式：
-
-\begin{align*}
+\begin{eq1}
     (\bm{\alpha} , \bm{\beta})
     = \bm{X}^T A \overline{\bm{Y}}
     = 
@@ -369,7 +368,7 @@ $A$也可称为\textbf{二次型矩阵}.
         \vdots \\
         y_n
     \end{pmatrix}
-\end{align*}
+\end{eq1}
 
 我们可以这样看待这个表达式：
 它无非是在一个标准内积式$\bm{X}^T \bm{Y}$
@@ -394,13 +393,13 @@ $A$是对称矩阵这一点对$\mathcal{H}$提出了一个限制.
 任意的广义内积可以看成是
 某个\textbf{自伴算子加权下的标准内积}.
 自伴算子的性质及其与内积的关系可由下式表示：
-\begin{align*}
+\begin{eq1}
     (\bm{\alpha} , \bm{\beta})
     =
     (\mathcal{A}\bm{\alpha} , \bm{\beta})_{\mathbb{R}}
     =
     (\bm{\alpha} , \mathcal{A}\bm{\beta})_{\mathbb{R}}
-\end{align*}
+\end{eq1}
 
 其中$(\cdot , \cdot)$是欧氏空间$V$上的某个内积，
 它在给定基下表示为矩阵$A$.
@@ -410,7 +409,7 @@ $A$是对称矩阵这一点对$\mathcal{H}$提出了一个限制.
 我们借助矩阵表达式进一步地理解这一点.
 按矩阵的乘法结合律，
 表达式$\bm{X}^T A \bm{Y}$有两种结合方式：
-\begin{align*}
+\begin{eq1}
     (x_1 , x_2 , \cdots ,x_n) 
     \boxed{
          \begin{pmatrix}
@@ -441,7 +440,7 @@ $A$是对称矩阵这一点对$\mathcal{H}$提出了一个限制.
         \vdots \\
         y_n
     \end{pmatrix}
-\end{align*}
+\end{eq1}
 
 左式为$\bm{X}^T (A \bm{Y})$，
 即如果让$\mathcal{A}$作用在$\bm{\beta}$上（坐标为$\bm{Y}$），
@@ -470,11 +469,11 @@ $A$是对称矩阵这一点对$\mathcal{H}$提出了一个限制.
 新旧坐标之间的关系
 $P\bm{X}' = \bm{X}, ~ P\bm{Y}' = \bm{Y}$.
 于是有：
-\begin{align*}
+\begin{eq1}
     (\bm{\alpha} , \bm{\beta})  = \bm{X}^T A \bm{Y}
     = (P\bm{X}')^T A P\bm{Y}'
     = \bm{X}'(P^T A P) \bm{Y}'
-\end{align*}
+\end{eq1}
 
 可见同一个内积在新基下的度规矩阵为$P^T A P$.
 也就是说，
@@ -487,7 +486,7 @@ $B = P^{T}AP$（此时$B$必然也是实对称的），
 变换$A \mapsto P^{T}AP$称为\textbf{合同变换}.
 可以证明相似变换是一种等价关系：
 
-\vspace{0.5em}
+\medskip
 
 
 (1)~~反身性：取$P = I$，显然$I^{T} A I = A$.
@@ -507,7 +506,7 @@ $B$与$C$合同，
 则$C = R^{T} A R$，
 即$A $与$C$合同.
 
-\vspace{0.5em}
+\medskip
 
 如果把实对称矩阵$A$考虑成一个二次型矩阵，
 那么我们说两个\textbf{二次型等价}，
@@ -557,10 +556,9 @@ $(x_1 , x_2 , \cdots , x_n) \mapsto (x_1' , x_2' , \cdots , x_n')$.
 存在线性变换$\mathcal{M}$，
 满足对任意的$\bm{\alpha}, \bm{\beta}$（坐标分别为$\bm{X},\bm{Y}$），
 有：}
-
-\[
+\begin{eq1}
 (\mathcal{M}\bm{\alpha} , \mathcal{M}\bm{\beta}) = (\bm{\alpha} , \bm{\beta})
-\]
+\end{eq1}
 
 \textit{那么$\mathcal{M}$称为保内积变换}.
 
@@ -571,12 +569,11 @@ $(x_1 , x_2 , \cdots , x_n) \mapsto (x_1' , x_2' , \cdots , x_n')$.
 因此所谓“保内积”就是“保度规”.
 设$\mathcal{M}$的表示矩阵为$M$，
 则等价地有$M$满足：
-
-\[
+\begin{eq1}
 (M\bm{X})^T A (M\bm{Y}) = \bm{X}^T A \bm{Y},
 ~~~~~\text{即}
 \bm{X}^T M^T A M \bm{Y}= \bm{X}^T A \bm{Y}
-\]
+\end{eq1}
 
 由此可以看出$M$应该满足$M^T A M = A$，
 这就是“保度规”的意思.
@@ -668,36 +665,36 @@ $C^{-1} A C$其实就是$C^{T} A C$.
 
 我们已经能找到实对称矩阵$A$的一个合同标准型$D$.
 设$D$是如下的对角矩阵：
-\begin{align*}
+\begin{eq1}
     D = \mathrm{diag}(d_1 , \cdots , d_p , -d_{p-1} , \cdots , -d_r , 0 , 0 \cdots , 0)
-\end{align*}
+\end{eq1}
 
 对应的二次型是：
-\begin{align*}
+\begin{eq1}
     f = d_1 x_1 ^2 + \cdots + d_p x_p^2 - d_{p+1}x_{p+1}^2 - \cdots - d_{r} x_{r}^2
-\end{align*}
+\end{eq1}
 
 方便起见，这里我们已将对角线上的正数、负数和零分别排列到一起（这总是可以做到的）.
 也就是说这里的$d_i$全都为正数，$r \leq n$.
 不难想到，
 可以对二次型做进一步的化简：
-\begin{align*}
+\begin{eq1}
     x_i = 
     \begin{cases}
         \frac{y_i}{\sqrt{d_i}} , \quad 1 \leq i \leq r \\
         y_i ,\quad r < i \leq n
     \end{cases}    
-\end{align*}
+\end{eq1}
 
 得到的对角矩阵，对角线上只含$1,-1$和$0$：
-\begin{align*}
+\begin{eq1}
     D = \mathrm{diag}(1 ,  \cdots , 1 , -1 , \cdots , -1 , 0 , 0 \cdots , 0)
-\end{align*}
+\end{eq1}
 
 对应的二次型是：
-\begin{align*}
+\begin{eq1}
     f = y_1 ^2 + \cdots + y_p^2 - y_{p+1}^2 - \cdots - y_{r}^2
-\end{align*}
+\end{eq1}
 
 这似乎是我们能得到形式最简单的东西.
 我们将上述形状的对角矩阵（二次型）称为实对称矩阵$A$（二次型$\bm{X}^T A \bm{X}$）的\textbf{规范型}.
@@ -829,10 +826,9 @@ $(0,x,0,0)^T,(0,0,y,0)^T,(0,0,0,z)^T$长度的平方为正数，
 设$\bm{\alpha} = (a_1 , a_2 , \cdots , a_n)^T$，
 $\bm{\beta} = (b_1 , b_2 , \cdots , b_n)^T$
 则它们的内积（希望）定义成：
-
-\begin{align*}
+\begin{eq1}
     (\bm{\alpha} , \bm{\beta}) = a_1 b_1 + a_2 b_2 + \cdots + a_n b_n
-\end{align*}
+\end{eq1}
 
 但不妙的是这种定义不仅不满足正定性，
 甚至一个向量与自身的内积都不一定是实数.
@@ -844,10 +840,9 @@ $\bm{\beta} = (b_1 , b_2 , \cdots , b_n)^T$
 使得$(\bm{\alpha} , \bm{\alpha})$中辐角相互抵消.
 于是，
 $\mathbb{C}^n$中的标准内积定义为：
-
-\begin{align*}
+\begin{eq1}
     (\bm{\alpha} , \bm{\beta}) = a_1 \overline{b_1} + a_2 \overline{b_2 }+ \cdots + a_n \overline{b_n}
-\end{align*}
+\end{eq1}
 
 这样定义的复标准内积就满足了正定性，
 但是牺牲了对称性.
@@ -873,7 +868,7 @@ $(\bm{\alpha} , \bm{\beta}) = \overline{(\bm{\beta},\bm{\alpha})}$.
 
 (3)~\textbf{线性（数乘）：}\textit{$(\alpha \bm{x}, \bm{y}) = \alpha (\bm{x},\bm{y})$.}
 
-(4)~\textbf{线性（加法）：}\textit{$(\bm{x}+\bm{y},\bm{z}) = (\bm{x},\bm{z}) + (\bm{y},\bm{z})$.}\vspace{1em}
+(4)~\textbf{线性（加法）：}\textit{$(\bm{x}+\bm{y},\bm{z}) = (\bm{x},\bm{z}) + (\bm{y},\bm{z})$.}\medskip
 
 
 \medskip
@@ -886,14 +881,14 @@ $(\bm{\alpha} , \bm{\beta}) = \overline{(\bm{\beta},\bm{\alpha})}$.
 表达式上有一些调整.
 首先，
 对内积进行展开得到的是：
-\begin{align*}
+\begin{eq1}
     (\bm{\alpha} , \bm{\beta}) = 
     \left( \sum_{i=1}^{n}a_i \bm{e}_i , \sum_{j=1}^{n}b_j \bm{e}_j \right)
     = \sum_{i=1}^{n} \sum_{j=1}^{n} a_i \overline{b_j} g_{ij} 
-\end{align*}
+\end{eq1}
 
 写成矩阵形式是：
-\begin{align*}
+\begin{eq1}
     (\bm{\alpha} , \bm{\beta})
     = (a_1 , a_2 , \cdots ,a_n) 
     \begin{pmatrix}
@@ -908,7 +903,7 @@ $(\bm{\alpha} , \bm{\beta}) = \overline{(\bm{\beta},\bm{\alpha})}$.
         \vdots \\
         \overline{b_n}
     \end{pmatrix}
-\end{align*}
+\end{eq1}
 
 这里$g_{ij}$给出一个复矩阵$H$.
 $\bm{\alpha}, \bm{\beta}$在给定基下的内积表示为$(\bm{\alpha} , \bm{\beta}) = \bm{X}^T H \overline{\bm{Y}}$.
@@ -952,11 +947,10 @@ $\bm{X}^T H \overline{\bm{X}} > 0$对于任意非零向量$\bm{X}$成立，
 则按照定义，
 对任意的$\bm{X},\bm{Y} \in \mathbb{C}^n$，
 有：
-
-\[
+\begin{eq1}
 (H \bm{X} , \bm{Y})
 = (\bm{X} , H \bm{Y})
-\]
+\end{eq1}
 
 其中$(\cdot , \cdot )$表示$\mathbb{C}^n$上的标准内积.
 $H$作为自伴算子的表示矩阵，
@@ -971,20 +965,18 @@ $H$作为一个复矩阵，
 设$\bm{X}$是其中任意一个特征值$\lambda$的一个特征向量.
 考虑内积$(H\bm{X},\bm{Y})$.
 我们发现：
-
-\[
+\begin{eq1}
 (H\bm{X},\bm{Y}) = (\lambda\bm{X},\bm{Y}) = \lambda (\bm{X} , \bm{Y})
-\]
+\end{eq1}
 
 另一方面，
 可以利用自伴矩阵的性质，
 把$H$转移到$2$号位上.
 注意运用复内积的共轭线性，得到：
-
-\[
+\begin{eq1}
 (H\bm{X},\bm{Y}) = (\bm{X},H \bm{Y}) = 
 (\bm{X},\lambda \bm{Y}) = \overline{\lambda} (\bm{X} , \bm{Y})
-\]
+\end{eq1}
 
 两式比较，
 得到$\lambda = \overline{\lambda}$，
@@ -999,22 +991,20 @@ $H$作为一个复矩阵，
 它们分别有特征向量$\bm{X}_1 , \bm{X}_2$.
 考虑内积$(H\bm{X}_1 , \bm{X}_2)$.
 我们发现：
-
-\[
+\begin{eq1}
 (H\bm{X}_1 , \bm{X}_2) = (\lambda_1 \bm{X}_1 , \bm{X}_2) = \lambda_1 (\bm{X}_1 , \bm{X}_2)
-\]
+\end{eq1}
 
 另一方面，
 可以利用自伴矩阵的性质，
 把$H$转移到$2$号位上.
 注意运用复内积的共轭线性，
 得到：
-
-\[
+\begin{eq1}
 (H\bm{X}_1 , \bm{X}_2) = (\bm{X}_1 , H \bm{X}_2)
 =(\bm{X}_1 , \lambda_2 \bm{X}_2) 
 = \lambda_2 (\bm{X}_1 , \bm{X}_2)
-\]
+\end{eq1}
 
 比较上下二式，
 发现$\lambda_1 (\bm{X}_1 , \bm{X}_2) = \lambda_2 (\bm{X}_1 , \bm{X}_2)$.
@@ -1141,59 +1131,59 @@ $C$可以看成对$A$进行了一系列初等列变换，
     \end{eq1}
 
     做非退化线性替换：
-    \[
+    \begin{eq1}
     \begin{cases}
         y_1 = x_1 + \frac{1}{2} x_2 + \frac{1}{2} x_3 \\[8pt]
         y_2 = x_2 + \frac{1}{3}x_3 \\[6pt]
         y_3 = x_3
     \end{cases}
-    \]
+    \end{eq1}
 
     就将二次型化成了标准型$g(y_1 , y_2, y_3) = y_1^2 + \frac{3}{4}y_2^2 + \frac{2}{3}y_3^2$.
 
     \medskip
 
     (2)~为了找平方项，先做非退化线性替换：
-    \[
+    \begin{eq1}
     \begin{cases}
         y_1 = x_1 + x_2 \\[2pt]
         y_2 = x_1 - x_2 \\[2pt]
         y_3 = x_3
     \end{cases}
-    \]
+    \end{eq1}
 
     代入，二次型化为$g(y_1 , y_2, y_3) = \frac{1}{4}y_1^2 - \frac{1}{4}y_2^2 + y_3y_1$.
     再进行配方：
-    \[
+    \begin{eq1}
     g(y_1 , y_2, y_3) = \frac{1}{4}y_1^2 - \frac{1}{4}y_2^2 + y_3y_1 = 
     (\frac{1}{2}y_1 + y_3)^2 - \frac{1}{4}y_2^2 - y_3^2 
-    \]
+    \end{eq1}
 
     再做非退化线性替换：
-    \[
+    \begin{eq1}
     \begin{cases}
         z_1 = \frac{1}{2}y_1 + y_3 \\[6pt]
         z_2 = y_2 \\[2pt]
         z_3 = y_3
     \end{cases}
-    \]
+    \end{eq1}
 
     就将二次型化成了标准型$h(z_1 , z_2 , z_3) = z_1^2 - \frac{1}{4}z_2^2 - z_3^2$.
     所做的总的非退化线性替换为：
-    \[
+    \begin{eq1}
     \begin{cases}
         z_1 = \frac{1}{2}x_1 + \frac{1}{2}x_2 + x_3  \\[6pt]
         z_2 = x_1 - x_2 \\[2pt]
         z_3 = x_3
     \end{cases}
-    \] 
+    \end{eq1} 
 \end{solution}
 
 \begin{solution}（II. 成对初等变换法）
     ~
 
     (1)~
-    \[
+    \begin{eq1}
     \left(
     \begin{array}{ccc}
     1 & 1/2 & 1/2 \\[2pt]
@@ -1226,8 +1216,8 @@ $C$可以看成对$A$进行了一系列初等列变换，
     0 & 0 & 1
     \end{array}
     \right)
-    \]
-    \[
+    \end{eq1}
+    \begin{eq1}
      \xlongrightarrow[r_3 - 1/3 \cdot r_2]{c_3 - 1/3 \cdot c_2}
     \left(
     \begin{array}{ccc}
@@ -1239,25 +1229,25 @@ $C$可以看成对$A$进行了一系列初等列变换，
     0 & 0 & 1
     \end{array}
     \right)
-    \]
+    \end{eq1}
 
     做非退化线性替换$\bm{X} = C\bm{Y}$，
     能使二次型化为标准型$g(y_1 , y_2, y_3) = y_1^2 + \frac{3}{4}y_2^2 + \frac{2}{3}y_3^2$.
     其中：
-    \[ C =
+    \begin{eq1} C =
     \begin{pmatrix}
         1 & -1/2 & -1/3 \\[2pt]
         0 & 1 & -1/3 \\[2pt]
         0 & 0 & 1
     \end{pmatrix}
-    \]
+    \end{eq1}
 
 
     \bigskip
 
 
     (2)~
-    \[
+    \begin{eq1}
     \left(
     \begin{array}{ccc}
     0 & 1/2 & 1/2 \\[2pt]
@@ -1290,8 +1280,8 @@ $C$可以看成对$A$进行了一系列初等列变换，
     0 & 0 & 1
     \end{array}
     \right)
-    \]
-    \[
+    \end{eq1}
+    \begin{eq1}
     \xlongrightarrow[r_2 + 1/2 \cdot r_2]{c_2 + 1/2 \cdot c_1}
     \left(
     \begin{array}{ccc}
@@ -1314,18 +1304,18 @@ $C$可以看成对$A$进行了一系列初等列变换，
     0 & 0 & 1
     \end{array}
     \right)
-    \]
+    \end{eq1}
 
     做非退化线性替换$\bm{X} = C\bm{Y}$，
     能使二次型化为标准型$g(y_1 , y_2, y_3) = -y_1^2 + \frac{1}{4}y_2^2 - y_3^2$.
     其中：
-    \[ C =
+    \begin{eq1} C =
     \begin{pmatrix}
         -1 & 1/2 & -1 \\[2pt]
         1 & 1/2 & -1 \\[2pt]
         0 & 0 & 1
     \end{pmatrix}
-    \]
+    \end{eq1}
 
 \end{solution}
 
@@ -1335,16 +1325,16 @@ $C$可以看成对$A$进行了一系列初等列变换，
 
 \begin{example}
     设实二次型
-    \[
+    \begin{eq1}
     f(\bm{X})=f(x_1,x_2,x_3)
     =x_1^2+x_2^2+x_3^2+2ax_1x_2+2ax_1x_3+2ax_2x_3,
     \quad a\in\mathbb{R}\text{为参数}
-    \]
+    \end{eq1}
     可用非退化线性替换 \(\bm{X}=C\bm{Y}\) 化成二次型
-    \[
+    \begin{eq1}
     g(\bm{Y})=g(y_1,y_2,y_3)
     =y_1^2+y_2^2+4y_3^2+2y_1y_2
-    \]
+    \end{eq1}
 
     (1)~求参数 \(a\) 的值.
 
@@ -1355,7 +1345,7 @@ $C$可以看成对$A$进行了一系列初等列变换，
     ~
 
     (1)~写出$f(\bm{X})$和$g(\bm{Y})$的二次型矩阵：
-    \[
+    \begin{eq1}
     A  = 
     \begin{pmatrix}
         1 & a & a \\[2pt]
@@ -1369,11 +1359,11 @@ $C$可以看成对$A$进行了一系列初等列变换，
         1 & 1 & 0 \\[2pt]
         0 & 0 & 4
     \end{pmatrix}
-    \]
+    \end{eq1}
 
     计算可逆矩阵$C_1$，
     将$B$化为规范型:
-    \[
+    \begin{eq1}
     \begin{pmatrix}
         1 & 0 & 0 \\[2pt]
         0 & 0 & 1/2 \\[2pt]
@@ -1397,7 +1387,7 @@ $C$可以看成对$A$进行了一系列初等列变换，
     \end{pmatrix}
     ~~~
     \text{即}~ C_1^T B C_2 = \mathrm{diag}(1,1,0)
-    \]
+    \end{eq1}
 
     可以看出$B$的秩为$2$.
     因此$A$的秩也应该为$2$.
@@ -1410,7 +1400,7 @@ $C$可以看成对$A$进行了一系列初等列变换，
 
     (2)~再计算可逆矩阵$C_2$，
     将$A$化为规范型：
-    \[ 
+    \begin{eq1} 
     \begin{pmatrix}
     \frac{1}{\sqrt{3}} & -\frac{1}{\sqrt{3}} & 0 \\[12pt]
     \frac{1}{3} & \frac{1}{3} & -\frac{2}{3} \\[12pt]
@@ -1434,25 +1424,25 @@ $C$可以看成对$A$进行了一系列初等列变换，
     \end{pmatrix}
     ~~
     \text{即}~C_2^T A C_2 = \mathrm{diag}(1,1,0)
-    \]
+    \end{eq1}
 
     于是我们有：
-    \[
+    \begin{eq1}
     C_1^T B C_1 = 
     C_2^T A C_2 
     ~~~~~
     \text{即}~B = (C_1^T)^{-1} C_2^T A C_2 C_1^{-1}
-    \]
+    \end{eq1}
 
     题目中要求的$C$为：
-    \[
+    \begin{eq1}
     C = C_2 C_1^{-1}
     = \begin{pmatrix}
     \frac{1}{\sqrt{3}} & \frac{2}{\sqrt{3}} & \frac{2}{3} \\[12pt]
     -\frac{1}{\sqrt{3}} & 0 & \frac{2}{3} \\[12pt]
     0 & \frac{1}{\sqrt{3}} & -\frac{4}{3}
     \end{pmatrix}
-    \]
+    \end{eq1}
 \end{solution}
 
 \bigskip
@@ -1474,12 +1464,12 @@ $C$可以看成对$A$进行了一系列初等列变换，
     但是更快的方法是去证$n$个特征值都为正.
 \end{remark}
 
-\begin{proof}（I. ~顺序主子式）
+\begin{pf}（I. ~顺序主子式）
     ~
 
     $I_n + J_n$的顺序主子式都形如$|I_k + J_k|$，其中$1 \leq k \leq n$.
     用初等变换法化简之：
-    \[
+    \begin{eq1}
     \begin{vmatrix}
         2 & 1 & 1  & \cdots &  1 \\[2pt]
         1 & 2 & 1 & \cdots & 1 \\[2pt]
@@ -1504,13 +1494,13 @@ $C$可以看成对$A$进行了一系列初等列变换，
         0 & 0 & 0 & \cdots & 1 \\[2pt]
     \end{vmatrix}
     = n-1 > 0
-    \]
+    \end{eq1}
 
     所有顺序主子式都大于$0$，
     因此$I_n + J_n$是正定的.
-\end{proof}
+\end{pf}
 
-\begin{proof}（II. ~特征值）
+\begin{pf}（II. ~特征值）
     
     $J_n$的秩为$1$，
     因此$0$是$J_n$的$n-1$重特征值.
@@ -1528,7 +1518,7 @@ $C$可以看成对$A$进行了一系列初等列变换，
     $\lambda = n+1$是$1$重特征值，
     它们全都是正数，
     因此$I_n + J_n$是正定矩阵. 
-\end{proof}
+\end{pf}
 
 \bigskip
 
@@ -1537,17 +1527,17 @@ $C$可以看成对$A$进行了一系列初等列变换，
     ~
     
     (1)~若二次型
-    \[
+    \begin{eq1}
     f(x_1,x_2,x_3)=2x_1^2+x_2^2+x_3^2+2x_1x_2+t\,x_2x_3
-    \]
+    \end{eq1}
     是正定的，求 \(t\) 的取值范围.
 
     (2)~
     当 \(a_1,a_2,\cdots,a_n\) 满足什么条件时，实二次型
-    \[
+    \begin{eq1}
     f(x_1,x_2,\cdots,x_n)
     =(x_1+a_1x_2)^2+(x_2+a_2x_3)^2+\cdots+(x_{n-1}+a_{n-1}x_n)^2+(x_n+a_nx_1)^2
-    \]
+    \end{eq1}
     是正定的？
 \end{example}
 
@@ -1561,16 +1551,16 @@ $C$可以看成对$A$进行了一系列初等列变换，
 \begin{solution}~
 
     (1)~二次型矩阵：
-    \[
+    \begin{eq1}
     \begin{pmatrix}
         2 & 1 & 0 \\[2pt]
         1 & 1 & t/2 \\[2pt]
         0 & t/2 & 1 
     \end{pmatrix}
-    \]
+    \end{eq1}
     其$1$阶和$2$阶顺序主子式显然都是正数.
     而$3$阶顺序主子式（即它自身的行列式）：
-    \[
+    \begin{eq1}
     \Delta_3 = 
     \begin{vmatrix}
         2 & 1 & 0 \\[2pt]
@@ -1578,7 +1568,7 @@ $C$可以看成对$A$进行了一系列初等列变换，
         0 & t/2 & 1 
     \end{vmatrix}
     = 1 - \frac{t^2}{2}
-    \]
+    \end{eq1}
     
     则该二次型正定当且仅当$\Delta_3 > 0$，
     即$t \in (-\sqrt{2} , \sqrt{2})$.
@@ -1591,17 +1581,17 @@ $C$可以看成对$A$进行了一系列初等列变换，
     如果这个二次型是正定的，
     那么要求它每一项都为$0$当且仅当$x_1 = x_2 = \cdots = x_n = 0$，
     即下列线性方程组只有零解：
-    \[
+    \begin{eq1}
     \begin{cases}
         x_1 + a_1 x_2 = 0 \\[2pt]
         x_2 + a_2 x_3 = 0 \\[2pt]
         \cdots \\[2pt]
         x_n + a_n x_1 = 0 \\[2pt]
     \end{cases}
-    \]
+    \end{eq1}
 
     这就等同于说它的系数矩阵$A$行列式不为$0$.即：
-    \[
+    \begin{eq1}
     \det A 
     = \begin{vmatrix}
         1 & a_1 & 0 & \cdots & 0 \\[2pt]
@@ -1611,7 +1601,7 @@ $C$可以看成对$A$进行了一系列初等列变换，
         a_n & 0 & 0 & \cdots & 1 \\[2pt]
     \end{vmatrix}
     = 1 - (-1)^n a_1 a_2 \cdots a_n \ne 0 
-    \] \qed
+    \end{eq1} \qed
 \end{solution}
 
 \bigskip
@@ -1621,12 +1611,12 @@ $C$可以看成对$A$进行了一系列初等列变换，
     设$A$是$\mathbb{R}$上的$n$阶正定矩阵，
     任取非零列向量$\bm{\alpha} \in \mathbb{R}^n$，
     有：
-    \[
+    \begin{eq1}
     \begin{vmatrix}
         A & \bm{\alpha} \\
         \bm{\alpha}^T & 0
     \end{vmatrix} < 0
-    \]
+    \end{eq1}
 \end{example}
 
 \begin{remark}
@@ -1634,10 +1624,10 @@ $C$可以看成对$A$进行了一系列初等列变换，
     将其合同变换为分块对角矩阵.
 \end{remark}
 
-\begin{proof}
+\begin{pf}
     对矩阵做成对分块初等行列变换（在下式中用初等分块矩阵乘法表示），
     化为分块对角矩阵：
-    \[
+    \begin{eq1}
     \begin{pmatrix}
     I_{n} & 0 \\[2pt]
     -\bm{\alpha}^T A^{-1} & 1
@@ -1655,7 +1645,7 @@ $C$可以看成对$A$进行了一系列初等列变换，
     A & 0 \\[2pt]
     0 & -\bm{\alpha}^T A^{-1} \bm{\alpha}
     \end{pmatrix}
-    \]
+    \end{eq1}
 
     这里因为$A$是正定矩阵，
     所以$A$可逆.
@@ -1666,7 +1656,7 @@ $C$可以看成对$A$进行了一系列初等列变换，
     根据正定矩阵的定义，
     $-\bm{\alpha}^T A^{-1} \bm{\alpha} < 0$.
     于是有：
-    \[
+    \begin{eq1}
     \begin{vmatrix}
         A & \bm{\alpha} \\
         \bm{\alpha}^T & 0
@@ -1677,20 +1667,20 @@ $C$可以看成对$A$进行了一系列初等列变换，
     \end{vmatrix}
     =
     \det (A) \cdot \det (-\bm{\alpha}^T A^{-1} \bm{\alpha}) < 0
-    \] 
-\end{proof}
+    \end{eq1} 
+\end{pf}
 
 \bigskip
 
 \begin{example}
     设矩阵$A$：
-    \[
+    \begin{eq1}
     \begin{pmatrix}
         3 & -1 & 1 \\[2pt]
         -1 & 3 & 1 \\[2pt]
         1 & 1 & 3
     \end{pmatrix}
-    \]
+    \end{eq1}
 
     (1)~证明$A$是正定矩阵.
 
@@ -1708,22 +1698,22 @@ $C$可以看成对$A$进行了一系列初等列变换，
     如何利用合同变换联系到标准型的分解？
 \end{remark}
 
-\begin{proof}
+\begin{pf}
     ~
 
     (1)~计算顺序主子式：
-    \[
+    \begin{eq1}
     \Delta_1 = 3
-    \]
-    \[
+    \end{eq1}
+    \begin{eq1}
     \Delta_2 =
     \begin{vmatrix}
         3 & -1 \\[2pt]
         -1 & 3 
     \end{vmatrix}
     = 8
-    \]
-    \[
+    \end{eq1}
+    \begin{eq1}
     \Delta_3 =
     \begin{vmatrix}
         3 & -1 & 1 \\[2pt]
@@ -1731,7 +1721,7 @@ $C$可以看成对$A$进行了一系列初等列变换，
         1 & 1 & 3
     \end{vmatrix}
     = 16 
-    \]
+    \end{eq1}
 
     都是正数，因此$A$是正定矩阵.
 
@@ -1747,18 +1737,18 @@ $C$可以看成对$A$进行了一系列初等列变换，
     则$D$可以分解为$D = D_1^2$，
     其中$D_1 = \mathrm{diag}(\sqrt{\lambda_1} , \sqrt{\lambda_2} , \cdots , \sqrt{\lambda_n})$.
     于是$A$可以做如下分解：
-    \[
+    \begin{eq1}
     A = PDP^{-1}
     = PD_1 D_1 P^{-1}
     = (PD_1 P^{-1}) (P D_1 P^{-1})
-    \]
+    \end{eq1}
 
     则$PD_1P^{-1}$就是符合题目要求的矩阵$C$.
     注意$P$是正交矩阵，
     $C = PD_1P^{T}$是正定实对称的.
     计算$A$的相似对角化，
     可知：
-    \[
+    \begin{eq1}
     D  = 
     \begin{pmatrix}
         1 & 0 & 0 \\[2pt]
@@ -1773,10 +1763,10 @@ $C$可以看成对$A$进行了一系列初等列变换，
         -\frac{1}{\sqrt{3}} & 0 & -\frac{2}{\sqrt{6}} \\[12pt]
         \frac{1}{\sqrt{3}} & \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{6}}
     \end{pmatrix}
-    \]
+    \end{eq1}
 
     题目要求的矩阵$C$为：
-    \[
+    \begin{eq1}
     C = P D_1 P^{T}
     = 
     \begin{pmatrix}
@@ -1784,7 +1774,7 @@ $C$可以看成对$A$进行了一系列初等列变换，
     -\frac{1}{3} & \frac{5}{3} & \frac{1}{3} \\[10pt]
     \frac{1}{3} & \frac{1}{3} & \frac{5}{3} 
     \end{pmatrix} 
-    \]
+    \end{eq1}
 
         \medskip
 
@@ -1795,16 +1785,16 @@ $C$可以看成对$A$进行了一系列初等列变换，
     使得$C^2 = A$.
     则任取非零向量$\bm{X}$，
     有：
-    \[
+    \begin{eq1}
     \bm{X}^T A \bm{X}
     = \bm{X}^T C^2 \bm{X}
     = (\bm{X}^T C^T)(C \bm{X})
     = (C \bm{X})^T (C \bm{X})
     \geq 0
-    \]
+    \end{eq1}
 
     因此$A$是正定矩阵. 
-\end{proof}
+\end{pf}
 
 
 
@@ -1815,15 +1805,15 @@ $C$可以看成对$A$进行了一系列初等列变换，
 \begin{example}~
 
     (1)~证明：$n$ 级实对称矩阵 $A$ 正定的充要条件是，存在 $m\times n$ 列满秩实矩阵 $P$，使得
-\[
+\begin{eq1}
 A = P^{T}P
-\]
+\end{eq1}
 
 
     (2)~证明：$n$ 级实对称矩阵 $A$ 半正定的充要条件是，存在 $r\times n$ 行满秩实矩阵 $Q$，使得
-\[
+\begin{eq1}
 A = Q^{T}Q
-\]
+\end{eq1}
 \end{example}
 
 \begin{remark}
@@ -1831,13 +1821,13 @@ A = Q^{T}Q
     能否做出符合题意的分解？
 \end{remark}
 
-\begin{proof}
+\begin{pf}
     ~
 
     (1)~$A$正定当且仅当存在可逆$n$阶矩阵$C$，
     使得$C^T A C = I_n$.
     而$I_n$可以按照题意做如下分解：
-    \[
+    \begin{eq1}
     I_n = 
     \begin{pmatrix}
         I_n & O^T
@@ -1846,11 +1836,11 @@ A = Q^{T}Q
         I_n \\[2pt]
         O
     \end{pmatrix}_{m \times n}
-    \]
+    \end{eq1}
     其中$m \leq n$（否则$m \times n$矩阵不可能是列满秩的），$O$是$(n-m) \times n$阶零矩阵（若$m=n$，则不存在这个矩阵块）.
     代入并整理，
     得到：
-    \[
+    \begin{eq1}
     A = (C^T)^{-1} I_n C^{-1} = 
     (C^T)^{-1} \begin{pmatrix}
         I_n & O^T
@@ -1859,33 +1849,33 @@ A = Q^{T}Q
         I_n \\[2pt]
         O
     \end{pmatrix} C^{-1}
-    \]
+    \end{eq1}
 
     于是$A$就分解成了$A  = P^T P$，
     其中$P$是$m \times n$列满秩矩阵：
-    \[
+    \begin{eq1}
     P = 
     \begin{pmatrix}
         I_n \\[2pt]
         O
     \end{pmatrix} C^{-1}
-    \]
+    \end{eq1}
 
     \medskip
 
      (2)~$A$半正定当且仅当存在可逆$n$阶矩阵$C$，
     使得：
-    \[
+    \begin{eq1}
     C^T A C = 
     \begin{pmatrix}
         I_r & O \\[2pt]
         O & O
     \end{pmatrix}_{n \times n}
-    \]
+    \end{eq1}
     
     其中$r < n$.
     而这个标准型可以按照题意做如下分解：
-    \[
+    \begin{eq1}
     \begin{pmatrix}
         I_r & O \\[2pt]
         O & O
@@ -1897,12 +1887,12 @@ A = Q^{T}Q
     \begin{pmatrix}
         I_r & O
     \end{pmatrix}_{r \times n}
-    \]
+    \end{eq1}
     其中，
     $O$是$r \times (n-r)$阶零矩阵.
     代入并整理，
     得到：
-    \[
+    \begin{eq1}
     A = (C^T)^{-1} \begin{pmatrix}
         I_r & O \\[2pt]
         O & O
@@ -1916,17 +1906,17 @@ A = Q^{T}Q
     \begin{pmatrix}
         I_r & O
     \end{pmatrix} C^{-1}
-    \]
+    \end{eq1}
 
     于是$A$就分解成了$A  = Q^T Q$，
     其中$Q$是$r \times n$列满秩矩阵：
-    \[
+    \begin{eq1}
     Q = 
     \begin{pmatrix}
         I_r & O
     \end{pmatrix} C^{-1}
-    \]
-\end{proof}
+    \end{eq1}
+\end{pf}
 
 \subsubsection{数学归纳法}
 
@@ -1947,22 +1937,22 @@ A = Q^{T}Q
     证明：$n$阶实对称矩阵$A$正定的充要条件是$A$的所有顺序主子式都大于$0$.
 \end{example}
 
-\begin{proof}
+\begin{pf}
     (1)~“$\Longrightarrow$”：
     已知$A$正定.
     $|A_k|$是$A$的$k$阶顺序主子式，
     即$A$可以分块为：
-    \[
+    \begin{eq1}
     A = 
     \begin{pmatrix}
         A_k & * \\[2pt]
         * & *
     \end{pmatrix}
-    \]
+    \end{eq1}
     取$\binom{\bm{\delta}_k}{\bm{0}}$是后$n-k$个分量为$0$，前$k$个分量不全为$0$的列向量.
     因为$A$正定，
     所以：
-    \[
+    \begin{eq1}
     0 < 
     \begin{pmatrix}
         \bm{\delta}_k^T & \bm{0}^T
@@ -1976,7 +1966,7 @@ A = Q^{T}Q
         \bm{0}
     \end{pmatrix}
     = \bm{\delta}_k^T A_k \bm{\delta}_k
-    \]
+    \end{eq1}
     这表明$A_k$也是正定矩阵.
     而正定矩阵的行列式为正数，
     因此$A$的$k$阶顺序主子式$|A_k|$为正数.
@@ -1996,13 +1986,13 @@ A = Q^{T}Q
     现有 $n$ 阶实对称矩阵 $A$，
     满足全部顺序主子式都是正数.
     把 $A$ 分块成：
-    \[
+    \begin{eq1}
     A=
     \begin{pmatrix}
     A_{n-1} & \bm{\alpha} \\[2pt]
     \bm{\alpha}^T & a_{nn}
     \end{pmatrix},
-    \]
+    \end{eq1}
     其中 $A_{n-1}$ 是$n-1$阶实对称矩阵，
     它的全部顺序主子式就是 $A$ 的前$n-1$个顺序主子式.
     根据归纳假设，
@@ -2011,7 +2001,7 @@ A = Q^{T}Q
     对$A$做成对的分块初等行列变换
     （在下式中用初等分块矩阵乘法表示），
     化为分块对角矩阵：
-    \[
+    \begin{eq1}
     \begin{pmatrix}
     I_{n-1} & 0 \\[2pt]
     -\bm{\alpha}^T A_{n-1}^{-1} & 1
@@ -2029,7 +2019,7 @@ A = Q^{T}Q
     A_{n-1} & 0 \\[2pt]
     0 & b
     \end{pmatrix}
-    \]
+    \end{eq1}
     其中
     $b = a_{nn} - \bm{\alpha}^T A_{n-1}^{-1}\bm{\alpha}$.
     两边取行列式，得：
@@ -2041,7 +2031,7 @@ A = Q^{T}Q
     所以存在$n-1$阶可逆矩阵$C_{n-1}$，
     使得$C_{n-1}^T A_{n-1} C_{n-1} = I_{n-1}$.
     因此有：
-    \[
+    \begin{eq1}
     \begin{pmatrix}
         C_{n-1}^T & O \\[2pt]
         O & \sqrt{b}
@@ -2059,11 +2049,11 @@ A = Q^{T}Q
     I_{n-1} & 0 \\[2pt]
     0 & 1
     \end{pmatrix}
-    \]
+    \end{eq1}
 
     这说明原来的矩阵$A$合同于$n$阶单位矩阵$I_n$，
     因此$A$是正定矩阵.
-\end{proof}
+\end{pf}
 
 \bigskip
 
@@ -2072,7 +2062,7 @@ A = Q^{T}Q
     $A=LL^T$并且这个分解是唯一的.
 \end{example}
 
-\begin{proof}
+\begin{pf}
     对矩阵$A$的阶数$n$做数学归纳法.
 
     (i)~当 $n=1$ 时，
@@ -2084,13 +2074,13 @@ A = Q^{T}Q
     假设结论对任意 $n-1$ 阶实对称正定矩阵都成立.
     现有 $n$ 阶实对称正定矩阵 $A$.
     把 $A=(a_{ij})$ 分块成：
-    \[
+    \begin{eq1}
     A=
     \begin{pmatrix}
     A_{n-1} & \bm{\alpha} \\[2pt]
     \bm{\alpha}^T & a_{nn}
     \end{pmatrix},
-    \]
+    \end{eq1}
     其中 $A_{n-1}$ 是$n-1$阶实对称矩阵.
 
     $A$ 是正定矩阵，
@@ -2101,7 +2091,7 @@ A = Q^{T}Q
     对$A$做成对的分块初等行列变换
     （在下式中用初等分块矩阵乘法表示），
     化为分块对角矩阵：
-    \[
+    \begin{eq1}
     \begin{pmatrix}
     I_{n-1} & 0 \\[2pt]
     -\bm{\alpha}^T A_{n-1}^{-1} & 1
@@ -2119,19 +2109,19 @@ A = Q^{T}Q
     A_{n-1} & 0 \\[2pt]
     0 & b
     \end{pmatrix}
-    \]
+    \end{eq1}
     其中
     $b = a_{nn} - \bm{\alpha}^T A_{n-1}^{-1}\bm{\alpha}$.
     两边取行列式，得：
-    \[
+    \begin{eq1}
     |A| = |A_{n-1}|b
-    \]
+    \end{eq1}
 
     因为$A$是正定矩阵，
     所以$|A|$和$|A_{n-1}|$都是正数，
     则$b$也是正数.
     将上式整理成对$A$的分解式：
-    \[
+    \begin{eq1}
     A=
     \begin{pmatrix}
     A_{n-1} & \alpha \\[2pt]
@@ -2150,10 +2140,10 @@ A = Q^{T}Q
     I_{n-1} & -A_{n-1}^{-1}\alpha \\[2pt]
     0 & 1
     \end{pmatrix}^{-1}
-    \]
+    \end{eq1}
 
     即：
-    \[
+    \begin{eq1}
     A = L_2
     \begin{pmatrix}
     A_{n-1} & 0 \\[2pt]
@@ -2167,7 +2157,7 @@ A = Q^{T}Q
     -\alpha^T A_{n-1}^{-1} & 1
     \end{pmatrix}^{-1}
     \text{对角元为正数}
-    \]
+    \end{eq1}
     
 
     由于 $b>0$，且 $A_{n-1}$ 正定，由归纳假设，
@@ -2175,7 +2165,7 @@ A = Q^{T}Q
     使得$A_{n-1} = L_1 L_1^T$.
     另外$b = \sqrt{b}\cdot \sqrt{b}$.
     于是有：
-    \[
+    \begin{eq1}
     \begin{pmatrix}
     A_{n-1} & 0 \\[2pt]
     0 & b
@@ -2189,7 +2179,7 @@ A = Q^{T}Q
     L_1 & 0 \\[2pt]
     0 & \sqrt{b}
     \end{pmatrix}^T.
-    \]
+    \end{eq1}
 
     因此，$A = L_2 L_3 L_3^T L_2^T$.
     记$L = L_2 L_3$，
@@ -2197,7 +2187,7 @@ A = Q^{T}Q
     且$A = LL^T$.
     因此结论对$n$阶矩阵$A$也成立.
 
-\end{proof}
+\end{pf}
 
 \bigskip
 
@@ -2206,14 +2196,14 @@ A = Q^{T}Q
     都不为零.
     证明：
     二次型$f(\bm{X}) = \bm{X}^T A \bm{X}$可由非退化线性替换$\bm{X} = C \bm{Y}$化为下述标准型：
-    \[
+    \begin{eq1}
     f = \lambda_1 y_1^2 + \lambda_2 y_2^2 + \cdots + \lambda_n y_n^2
-    \]
+    \end{eq1}
 
     其中$\lambda_k = \frac{\Delta_k}{\Delta_{k-1}}$，$\Delta_0 = 1$.
 \end{example}
 
-\begin{proof}
+\begin{pf}
     等同于去证明存在$n$阶可逆矩阵$C$，
     使得$C^T A C = \mathrm{diag}(\lambda_1 , \lambda_2 , \cdots , \lambda_n)$，
     其中$\lambda_i$符合题目叙述.
@@ -2227,13 +2217,13 @@ A = Q^{T}Q
     现有$A$是$n$阶实对称矩阵，
     其各阶顺序主子式都不为零.
     对矩阵$A$分块：
-    \[
+    \begin{eq1}
     A = 
     \begin{pmatrix}
         A_{n-1} & \bm{\alpha} \\[2pt]
         \bm{\alpha}^T & a_{nn}
     \end{pmatrix}
-    \]
+    \end{eq1}
 
     其中$A_{n-1}$是$n-1$阶实对称矩阵，
     其顺序主子式$\Delta_1 , \Delta_2 , \cdots \Delta_{n-1}$都不为零.
@@ -2246,7 +2236,7 @@ A = Q^{T}Q
     对$A$进行分块初等行列变换，
     使之化为分块对角矩阵.
     首先利用归纳假设把左上角的矩阵块处理成对角矩阵：
-    \[
+    \begin{eq1}
     \begin{pmatrix}
         S^T & O \\[2pt]
         O & 1 
@@ -2270,13 +2260,13 @@ A = Q^{T}Q
         S & O \\[2pt]
         O & 1 
     \end{pmatrix}
-    \]
+    \end{eq1}
 
     接着去消除反对角线上的元素：
     将第一行左乘$-\bm{\alpha}^T S D_{n-1}^{-1}$加到第二行上，
     将第一列右乘$-D_{n-1}^{-1}S^T \bm{\alpha}$加到第二列上.
     即：
-    \[
+    \begin{eq1}
     \begin{pmatrix}
         I_{n-1} & O \\[2pt]
         -\bm{\alpha}^T S D_{n-1}^{-1} & 1 
@@ -2300,24 +2290,24 @@ A = Q^{T}Q
         I_{n-1} & -D_{n-1}^{-1}S^T \bm{\alpha} \\[2pt]
         O & 1 
     \end{pmatrix}
-    \]
+    \end{eq1}
 
     其中$b = a_{nn} - \bm{\alpha}^T S D_{n-1}^{-1} S^T \bm{\alpha}$.
     两边取行列式，
     注意$|P| = |S|,~|Q| = 1$.
     得：
-    \[
+    \begin{eq1}
     b = \frac{|P^T Q^T A Q P|}{|D_{n-1}|}
     = \frac{|P^T Q^T A Q P|}{|S^T A_{n-1} S|}
     = \frac{|A|}{|A_{n-1}|}
     = \frac{\Delta_n}{\Delta_{n-1}} = \lambda_n
-    \]
+    \end{eq1}
 
     于是$A$合同于$\mathrm{diag}(\lambda_1 , \lambda_2 , \cdots , \lambda_{n})$.
 
     综合(i),(ii)可知，结论对任意$n$阶实对称矩阵$A$成立.
 
-\end{proof}
+\end{pf}
 
 \bigskip
 
@@ -2337,15 +2327,15 @@ A = Q^{T}Q
     $(x_0 , y_0)$是稳定点，
     一阶微分为$0$.
     因此泰勒展开的最低阶为$2$阶：
-    \begin{align*}
+    \begin{eq1}
         2 (F(x_0 + \Delta x ,y_0 + \Delta y) - F(x_0 ,y_0)) \approx
         F_{xx}(x_0 ,y_0) \cdot (\Delta x)^2 + 2 \cdot F_{xy}(x_0 ,y_0) \cdot \Delta x \Delta y +  F_{yy}(x_0 ,y_0)  \cdot (\Delta y)^2
-    \end{align*}
+    \end{eq1}
 
     右式是一个二阶微分式，
     实际上也是一个关于$(\Delta x , \Delta y)$的二次型，
     其二次型矩阵称为Hessian矩阵：
-    \[
+    \begin{eq1}
     H  = 
     \begin{pmatrix}
         F_{xx}(x_0 , y_0) & F_{xy}(x_0 , y_0) \\[2pt]
@@ -2356,7 +2346,7 @@ A = Q^{T}Q
         A & B \\[2pt]
         B & C
     \end{pmatrix}
-    \]
+    \end{eq1}
 
     如果$\Delta x , \Delta y \ne 0$，
     则$(x_0 , y_0)$是极小值点
@@ -2398,28 +2388,28 @@ A = Q^{T}Q
     
     (1)~考虑二次型$5x^2 + 4xy + 2y^2$.
     其二次型矩阵：
-    \[
+    \begin{eq1}
     A = 
     \begin{pmatrix}
         5 & 2 \\[2pt]
         2 & 2
     \end{pmatrix}
-    \]
+    \end{eq1}
 
     
     计算其特征值为$\lambda_1 = 6,  \lambda_2 = 1$.
     解出其正交对角化$C^{-1} A C = \mathrm{diag}(6,1)$.
     其中正交矩阵$C$：
-    \[
+    \begin{eq1}
     C = 
     \begin{pmatrix}
         \frac{2}{\sqrt{5}} & -\frac{1}{\sqrt{5}}  \\[12pt]
         \frac{1}{\sqrt{5}} & \frac{2}{\sqrt{5}}
     \end{pmatrix}
-    \]
+    \end{eq1}
 
     因此做正交替换：
-    \[
+    \begin{eq1}
     \begin{pmatrix}
         x \\[2pt]
         y 
@@ -2428,7 +2418,7 @@ A = Q^{T}Q
         x' \\[2pt]
         y'
     \end{pmatrix}
-    \]
+    \end{eq1}
     
     代入曲线方程将得到$z^2 + 6x'^2 + y'^2 = 1$.
     这是个椭球面，
