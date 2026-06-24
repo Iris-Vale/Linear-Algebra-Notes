@@ -27,5 +27,12 @@ ppt/
 LA_figure.pdf
 fig.pdf
 
+# 未引用图片
+fig/fig_Im.pdf
+fig/fig_R2_1.pdf
+fig/fig_transcoord.pdf
+fig/fig_V1V2.pdf
+fig/fig_x+.pdf
+
 # 其他
 README.md

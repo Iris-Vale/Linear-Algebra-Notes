@@ -816,12 +816,12 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
         \mathrm{rank}(A) + \mathrm{rank}(B)
     \end{eq1}
 \end{example}
-
+\smallskip
 \begin{remark}
     讲义前文提及了关于不变子空间直和分解的理解.
     这里从矩阵秩的定义出发直接证明.
 \end{remark}
-
+\smallskip
 \begin{pf}
     ~
 
@@ -921,31 +921,14 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     \end{eq1}
 
 \end{pf}
-
-有了这两个结论，
-我们提出用分块矩阵法证明秩等式和不等式的关键点：
-
-1.~两个矩阵秩相加$\operatorname{rank}(A) + \operatorname{rank}(B)$这样的表达式难以直接处理，
-可以写成一个分块矩阵的秩.
-
-2.~分块初等变换不改变矩阵的秩.
-在用分块矩阵表达出待证等式或不等式的一部分之后，
-可以利用分块初等变换往另一部分的形式上去凑.
-构造恰当的分块矩阵需要一点经验，
-但找到诀窍后，
-证明过程是非常简洁的.
-
-
-\clearpage
-
-
+\smallskip
 \begin{example}
     设$A$是$m \times n$矩阵，
     $B$是$n \times s$矩阵，
     $AB = O$.
     证明：$\mathrm{rank}(A) + \mathrm{rank}(B) \leq n$.
 \end{example}
-
+\smallskip
 \begin{pf}
     \begin{eq1}
     \begin{pmatrix}
@@ -1010,9 +993,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     \leq n
     \end{eq1}
 \end{pf}
-
-~\par
-
+\smallskip
 \begin{example}
     设$A$是$m \times n$矩阵，
     $B$是$n \times r$矩阵，
@@ -1026,7 +1007,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     \begin{eq1}
         \mathrm{rank}(AB) + \mathrm{rank}(BC) - \mathrm{rank}(B) \le \mathrm{rank}(ABC)\end{eq1}
 \end{example}
-
+\smallskip
 \begin{pf}
 
     (1)~
@@ -1104,9 +1085,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     \end{eq1}
 
 \end{pf}
-
-~\par
-
+\smallskip
 \begin{example}
     ~
 
@@ -1114,7 +1093,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
 
     (2)~~求证：$n$阶方阵$A$是对合矩阵（$A^2 = I_n$）的充要条件是$\mathrm{rank}(I_n + A) + \mathrm{rank}(I_n - A) = n$.
 \end{example}
-
+\smallskip
 \begin{pf}
     ~
 
@@ -1350,7 +1329,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     \mathrm{rank}(I_m - AA^T) - \mathrm{rank}(I_n - A^T A) = m -n
     \end{eq1}
 \end{example}
-
+\smallskip
 \begin{remark}
     为了方便用分块矩阵，
     把等式理解成
@@ -1368,7 +1347,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     \end{pmatrix}
     \end{eq1}
 \end{remark}
-
+\smallskip
 \begin{pf}
     考虑如下的分块矩阵：
     \begin{eq1}
@@ -1435,20 +1414,18 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
 
     即 $\mathrm{rank}(I_m - AA^T) + n = \mathrm{rank}(I_n - A^T A) + m$.
 \end{pf}
-
-~\par
-
+\smallskip
 \begin{example}
     设$A,B$是$n$阶方阵，
     $AB=BA$，
     证明：$\mathrm{rank}(A+B) \leq \mathrm{rank} (A) + \mathrm{rank}(B) - \mathrm{rank}(AB)$.
 \end{example}
-
+\smallskip
 \begin{remark}
     本题分块矩阵的构造较为特殊，
     将在后面的例题中解释这种构造背后的原理.
 \end{remark}
-
+\smallskip
 \begin{pf}
     \begin{eq1}
     \begin{pmatrix}
@@ -1508,7 +1485,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     (4)~$\mathrm{rank}(AB)$.~~~
     (5)~$AB=O$.
 \end{example}
-
+\smallskip
 \begin{solution}
     ~
     (1)~$\dim \operatorname{Im} \mathcal{A}$.~~~~~~
@@ -1524,21 +1501,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     或$ \operatorname{Im} \mathcal{B} \subset \operatorname{Ker}\mathcal{A}$.
     理由：$\mathcal{B}$输出的任何向量再输入进$\mathcal{A}$，都输出$\bm{0}$.
 \end{solution}
-
-如果对于上一题中的“翻译”方式熟练，
-就已经拥有了运用线性映射语言解决矩阵问题的基础.
-拿到一道关于矩阵秩的题目，
-可以先尝试用上述方法进行“翻译”.
-关于秩的不等式中，
-通常蕴含着空间的包含关系；
-关于秩的等式中，
-通常蕴含着线性映射的维数公式.
-运用好上述的工具，
-所需的结论会自然地从翻译中“流出来”.
-这种方法的优势是比较自然和深刻，
-不需要构造技巧；
-代价是需要对线性映射的相关概念比较熟悉.
-
+\smallskip
 \begin{example}
     （例5.2）
     设$A$是$m \times n$矩阵，
@@ -1546,10 +1509,11 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     $AB = O$.
     证明：$\mathrm{rank}(A) + \mathrm{rank}(B) \leq n$.
 \end{example}
+\smallskip
 \begin{remark}
     画图可以帮助理清线性映射的关系.
 \end{remark}
-
+\smallskip
 \begin{pf}
     设矩阵$A$表示线性映射$\mathcal{A}: \mathbb{K}^n \to \mathbb{K}^m$，
     矩阵$B$表示线性映射$\mathcal{B}: \mathbb{K}^s \to \mathbb{K}^n$.
@@ -1584,7 +1548,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     \begin{eq1}
         \mathrm{rank}(AB) + \mathrm{rank}(BC) - \mathrm{rank}(B) \le \mathrm{rank}(ABC)\end{eq1}
 \end{example}
-
+\smallskip
 \begin{pf}
     ~
 
@@ -1687,7 +1651,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
 
     (2)~~求证：$n$阶方阵$A$是对合矩阵（$A^2 = I_n$）的充要条件是$\mathrm{rank}(I_n + A) + \mathrm{rank}(I_n - A) = n$.
 \end{example}
-
+\smallskip
 \begin{pf}
     ~
 
@@ -1748,7 +1712,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     \mathrm{rank}(I_m - AA^T) - \mathrm{rank}(I_n - A^T A) = m -n
     \end{eq1}
 \end{example}
-
+\smallskip
 \begin{pf}
     方便起见，
     记$I_m - AA^T = M$，
@@ -1804,11 +1768,11 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     $AB=BA$，
     证明：$\mathrm{rank}(A+B) \leq \mathrm{rank} (A) + \mathrm{rank}(B) - \mathrm{rank}(AB)$.
 \end{example}
-
+\smallskip
 \begin{remark}
     本题的关键在于正确翻译$AB=BA$这个条件.
 \end{remark}
-
+\smallskip
 \begin{pf}
     设矩阵$A,B$分别表示$\mathbb{K}^n$上的线性变换$\mathcal{A} , \mathcal{B}$.
     我们知道$\operatorname{Im}(\mathcal{A} \circ \mathcal{B}) = \operatorname{Im}(\mathcal{A}|_{\operatorname{Im}\mathcal{B}}) \subset \operatorname{Im}\mathcal{A}$.
@@ -1880,7 +1844,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     设$A_{n \times n}$是对角线全为$0$的上三角矩阵.
     证明：$A^n = O$.
 \end{example}
-
+\smallskip
 \begin{remark}
     一个比较寻常的思路是尝试去计算$A^2, A^3, \cdots$，
     发现随着幂次的升高，
@@ -1893,7 +1857,7 @@ $\dim \operatorname{Im} (\mathcal{A}^T) = n-s$.
     也就是要考察线性变换$A$对任意向量$\bm{x}$连续作用$n$次结果将会如何.
     为此，只需要考察$A$对标准正交基的作用.
 \end{remark}
-
+\smallskip
 \begin{pf}
     （方法1：直接计算）
     
@@ -1986,7 +1950,7 @@ $A$是个很有特点的矩阵，
     证明：存在正整数$m$，
     使得$A^m = I$.
 \end{example}
-
+\smallskip
 \begin{pf}
     设$\bm{e}_{j}$是$\mathbb{K}^n$的第$j$个标准正交基，
     即第$j$分量是$1$，其余分量为$0$的向量.
@@ -2023,14 +1987,14 @@ $A$是个很有特点的矩阵，
     \end{pmatrix}
     \end{eq1}
 \end{example}
-
+\smallskip
 \begin{remark}
     本题的矩阵有一定对称性，
     “看法”是不唯一的.
     方法1的“看法”是注意到$A$是正交矩阵.
     方法2的“看法”是利用上一题中的置换矩阵.
 \end{remark}
-
+\smallskip
 \begin{pf}
     （方法1）
 
@@ -2042,74 +2006,7 @@ $A$是个很有特点的矩阵，
     则$A^{-1} = \frac{1}{a^2 + b^2 + c^2 + d^2} A^T$.
 
 \end{pf}
-
-\begin{pf}
-    （方法2）
-
-    将矩阵元素排列的规律用置换矩阵来描述.
-    分别按照$a,b,c,d$去定义以下$4$个置换矩阵：
-    \begin{eq1}
-    E_1 = I,~
-    E_2 = 
-    \begin{pmatrix}
-        0 & 1 & 0 & 0 \\
-        -1 & 0 & 0 & 0 \\
-        0 & 0 & 0 & -1 \\
-        0 & 0 & 1 & 0
-    \end{pmatrix},~
-    E_3 = 
-    \begin{pmatrix}
-        0 & 0 & 1 & 0 \\
-        0 & 0 & 0 & 1 \\
-        -1 & 0 & 0 & 0 \\
-        0 & -1 & 0 & 0
-    \end{pmatrix},~
-    E_4 = 
-    \begin{pmatrix}
-        0 & 0 & 0 & 1 \\
-        0 & 0 & -1 & 0 \\
-        0 & 1 & 0 & 0 \\
-        -1 & 0 & 0 & 0
-    \end{pmatrix}
-    \end{eq1}
-
-    置换矩阵的乘积依然是置换矩阵，
-    我们考察这些置换矩阵之间的代数关系.
-    重点关注$E_2, E_3, E_4$.
-    通过计算得到以下的乘法表
-    【矩阵$A$与四元数$a + bi + cj + dk$有何联系？】：
-    \begin{eq1}
-        &E_2 \cdot E_2 = E_3 \cdot E_3 = E_4 \cdot E_4 = -E_1 \\[6pt]
-        &E_2 \cdot E_3 = -E_3 \cdot E_2 = E_4 \\[6pt]
-        &E_3 \cdot E_4 = -E_4 \cdot E_3 = E_2 \\[6pt]
-        &E_4 \cdot E_2 = -E_2 \cdot E_4 = E_3 \end{eq1}
-
-    可见$E_1 , E_2 , E_3 , E_4$构成了一个封闭的代数体系.
-    $A = a E_1 + b E_2 + c E_3 + d E_4$.
-    我们寻找一个同样具有形式$p E_1 + q E_2 + r E_3 + s E_4$的矩阵$B$，
-    使得$AB$是数量矩阵$ = \lambda E_1$.
-    考察矩阵乘法：
-    \begin{eq1}
-    (a E_1 + b E_2 + c E_3 + d E_4)(p E_1 + q E_2 + r E_3 + s E_4)
-    \end{eq1}
-
-    在乘法代数展开式中，
-    所有的平方项实质都是$E_1$的倍数，
-    而所有的交叉项实质都是$E_2, E_3$或$E_4$，
-    是我们所不要的.
-    因此一个简单的想法是取$p,q,r,s$让所有的交叉项抵消.
-    最方便的是让$(p,q,r,s) = (a,-b,-c,-d)$.
-    此时有：
-    \begin{eq1}
-    (a E_1 + b E_2 + c E_3 + d E_4)(a E_1 + -b E_2 + -c E_3 + -d E_4)
-    = (a^2 + b^2 + c^2 + d^2) E_1 \end{eq1}
-
-    所以$A^{-1} = \frac{1}{a^2 + b^2 + c^2 + d^2}(a E_1 + -b E_2 + -c E_3 + -d E_4)$.
-\end{pf}
-
-
-~\par
-
+\smallskip
 \begin{example}~
     
     (1)~设$A$是$n$阶方阵，满足
@@ -2134,7 +2031,7 @@ $A$是个很有特点的矩阵，
 
     求$A$的逆.
 \end{example}
-
+\smallskip
 \begin{remark}
     证明矩阵可逆的一种特殊的方法是，
     通过矩阵的代数计算直接找到逆矩阵.
@@ -2142,7 +2039,7 @@ $A$是个很有特点的矩阵，
     不过参考第(2)问，
     可以开发出一种巧妙的新思路.
 \end{remark}
-
+\smallskip
 \begin{solution}~
 
     (1)~
@@ -2217,7 +2114,7 @@ $A$是个很有特点的矩阵，
     (2)~~
     若已知$|A|$，如何计算$|A^{*}|$？
 \end{example}
-
+\smallskip
 \begin{remark}
     虽然伴随矩阵的一个重要功能是求逆，
     但是讨论伴随矩阵时并不总是默认$A$是可逆的，
@@ -2228,7 +2125,7 @@ $A$是个很有特点的矩阵，
     第(2)问的易错点在于$|kA|=k^n |A|$，
     注意不要以为$|kA| = k |A|$.
 \end{remark}
-
+\smallskip
 \begin{solution}
 
     (1)~
@@ -2332,7 +2229,7 @@ $A$是个很有特点的矩阵，
     其中$1 \leq k \leq n-1$.
     证明：$|A| \ne 0$.
 \end{example}
-
+\smallskip
 \begin{pf}
     反证法.
     假设$|A| = 0$.
@@ -2354,14 +2251,12 @@ $A$是个很有特点的矩阵，
     从而$A^*$的第$i$行是零向量，
     矛盾.
 \end{pf}
-
-\clearpage
-
+\smallskip
 \begin{example}
     设$A$是$n(n>2)$阶方阵.
     求$(A^*)^*$.
 \end{example}
-
+\smallskip
 \begin{solution}
     如果$A$可逆，
     则$A^*$也可逆.
@@ -2379,10 +2274,7 @@ $A$是个很有特点的矩阵，
     而$\mathrm{rank}(A^*)^* = 0$，
     即$A^* = O$.
 \end{solution}
-
-\subsubsection{降阶公式}
-
-
+\smallskip
 \begin{example}
     设$A$是$m$阶方阵，
     $D$是$n$阶方阵，
@@ -2401,13 +2293,13 @@ $A$是个很有特点的矩阵，
     (2)~如果$D$可逆，
     是否能得到类似的结论？
 \end{example}
-
+\smallskip
 \begin{remark}
     求分块矩阵的行列式，
     根据Laplace展开公式，
     只需要化成分块上三角或者分块下三角.
 \end{remark}
-
+\smallskip
 \begin{pf}
 
     (1)~
@@ -2478,7 +2370,7 @@ $A$是个很有特点的矩阵，
             a_na_1+ 1& a_na_2 + 1& \cdots & a_n^2
         \end{pmatrix} \end{eq1}
 \end{example}
-
+\smallskip
 \begin{remark}
     $M$的特点是关于$a_i a_j$的规律，
     但是对角线的规律相对特殊，
@@ -2492,7 +2384,7 @@ $A$是个很有特点的矩阵，
     最后按照矩阵整体的规律，
     设法将其分解成$BC$即可.
 \end{remark}
-
+\smallskip
 \begin{solution}
     
     将$M$化为：
@@ -2559,11 +2451,11 @@ $A$是个很有特点的矩阵，
             1 & 2 & 3 &\cdots & 0
         \end{pmatrix}\end{eq1}
 \end{example}
-
+\smallskip
 \begin{remark}
     技巧同上.
 \end{remark}
-
+\smallskip
 \begin{solution}
     
     将$M$化为：
@@ -2689,7 +2581,7 @@ $A$是个很有特点的矩阵，
     存在$\lambda = 0$的去心邻域，
     使得$A + \lambda I_n$可逆.
 \end{example}
-
+\smallskip
 \begin{pf}
     $|A + \lambda I_n|$是
     关于$\lambda$的$n$次多项式，
@@ -2702,15 +2594,7 @@ $A$是个很有特点的矩阵，
     $|A + \lambda I_n|\ne 0 $，
     即$A+\lambda I_n$可逆.
 \end{pf}
-
-这一题的结论给我们很大的启发：
-对于不可逆矩阵$A$，
-对其施加一个很小的扰动$\lambda I_n$，
-就能使其成为可逆矩阵.
-通过这个手法，
-我们就可以把不可逆的矩阵当作可逆矩阵来处理.
-这种方法称为\textbf{摄动法}.
-
+\smallskip
 \begin{example}
     设$A,B,C,D$都是$n$阶实方阵，
     且满足$AC=CA$.
@@ -2723,13 +2607,13 @@ $A$是个很有特点的矩阵，
         = 
         |AD-CB| \end{eq1}
 \end{example}
-
+\smallskip
 \begin{remark}
     本题中没有说$A,B,C,D$可逆，
     阻止了我们做初等行变换.
     使用摄动法就可以绕过这个阻碍.
 \end{remark}
-
+\smallskip
 \begin{pf}
 
     如果$A$可逆，
@@ -2792,7 +2676,7 @@ $A$是个很有特点的矩阵，
     $n \geq 2$.
     证明：$(AB)^* = B^*A^*$.
 \end{example}
-
+\smallskip
 \begin{pf}
     若$A,B$均可逆，
     则利用公式$A^* = |A|A^{-1}$，
@@ -2855,13 +2739,13 @@ $A$是个很有特点的矩阵，
         = A^{-1} - A^{-1} U (I_n + V^T A^{-1}U)^{-1} V^T A^{-1}
         \end{eq1}
     \end{example}
-
-    \begin{remark}
+\smallskip
+\begin{remark}
         本题看起来复杂，其实无非是化简矩阵代数式.
         当心不要随意调换矩阵乘法的顺序即可.
     \end{remark}
-
-    \begin{pf}
+\smallskip
+\begin{pf}
         ~
 
         (1)~直接去验证

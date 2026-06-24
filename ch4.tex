@@ -1569,7 +1569,7 @@ $P$的列向量组实质上就是$n$个线性无关的特征向量.
 \begin{example}
     证明$\mathbb{R}$上全体小于$n$次的多项式组成的集合$\mathbb{R}_n [x]$构成$n$维线性空间.
 \end{example}
-
+\smallskip
 \begin{remark}
     题目中并未指定$\mathbb{R}_n[x]$的加法和数乘是什么，
     那是因为多项式本身就自带加法和数乘的运算.
@@ -1585,7 +1585,7 @@ $P$的列向量组实质上就是$n$个线性无关的特征向量.
     数域$\mathbb{R}$中的加法交换律所带来的.
     证明中应体现这一点.
 \end{remark}
-
+\smallskip
 \begin{pf}
 
     $\mathbb{R}_n[x]= \{a_0 + a_1 x + \cdots + a_{n-1}x^{n-1}
@@ -1717,7 +1717,7 @@ $P$的列向量组实质上就是$n$个线性无关的特征向量.
     记$\mathrm{Hom}(V,W)$是全体$V \to W$的线性映射的集合.
     证明：$\mathrm{Hom}(V,W)$是$mn$维线性空间.
 \end{example}
-
+\smallskip
 \begin{remark}
     教材上提及了这个结论，并说是“容易验证”的.
     让我们看看是否真的容易验证（真的）.
@@ -1726,7 +1726,7 @@ $P$的列向量组实质上就是$n$个线性无关的特征向量.
     因此，证明线性映射的等式，
     需要先喂进去一个任意向量$\bm{x} \in V$.
 \end{remark}
-
+\smallskip
 \begin{pf}
     设$\mathcal{A},\mathcal{B}$都是$V \to W$的线性映射，
     $k \in \mathbb{K}$.
@@ -1908,9 +1908,7 @@ $P$的列向量组实质上就是$n$个线性无关的特征向量.
     其中包含$mn$个元素，
     因此$\dim \mathrm{Hom}(V,W) = mn$.
 \end{pf}
-
-\newpage
-
+\smallskip
 \begin{example}
     全体$2$维实向量集合$V$按如下的方式规定了加法和数乘：
     \begin{eq1}
@@ -1921,11 +1919,11 @@ $P$的列向量组实质上就是$n$个线性无关的特征向量.
 
     (ii)~讨论向量组$\bm{\alpha}_1 , \bm{\alpha}_2$的线性相关性.
 \end{example}
-
+\smallskip
 \begin{remark}
     此题需注意新定义的加法和数乘与$\mathbb{R}^2$中通常的加法和数乘有很大的区别.
 \end{remark}
-
+\smallskip
 \begin{pf}
     
     (i)~
@@ -2067,6 +2065,7 @@ $(1,1)$和$(2,3)$是线性相关的，
     证明：$\varphi$的不变子空间是$V$的子空间.
     特别地，特征子空间也是$V$的子空间.
 \end{example}
+\smallskip
 \begin{remark}
     子空间要求继承原来线性空间的加法和数乘运算.
     因此，对于“证明$V_0$是线性空间$V$的子空间”这类题目，
@@ -2074,7 +2073,7 @@ $(1,1)$和$(2,3)$是线性相关的，
     不需要再验证了.
     只需要验证$V_0$对加法和数乘封闭即可.
 \end{remark}
-
+\smallskip
 \begin{pf}
 
     (1)~任取$\bm{x}_1 , \bm{x}_2 \in \operatorname{Ker}\varphi$，
@@ -2128,34 +2127,7 @@ $(1,1)$和$(2,3)$是线性相关的，
     可见$U$对加法和数乘封闭，
     因此$U$是$V$的子空间.
 \end{pf}
-
-\clearpage
-
-\subsubsection{线性映射与矩阵}
-
-本节强调一些概念问题.
-\textbf{坐标}是\textbf{向量}在某一组基下的表示，
-\textbf{表示矩阵}是\textbf{线性映射}在某两组基（映射前后的空间中各有一组，
-如果是线性变换则只需要用同一组基）下的表示.
-如果基的选取发生变化，
-同一向量的坐标会发生变化，
-同一线性映射的表示矩阵也会发生变化.
-两者的规律都与\textbf{过渡矩阵}$P$有关.
-过渡矩阵的本质是把一组基$\bm{e}_i$映为另一组基$\bm{f}_i$的线性映射在基$\bm{e}_i$下的表示矩阵，
-简而言之是描述基变换方式的矩阵.
-在这一基变换下，
-向量的坐标变换遵从$\bm{X} \mapsto P^{-1} \bm{X}$，
-线性变换的表示矩阵遵从相似变换$A \mapsto P^{-1} A P$.
-
-要写一个线性映射的表示矩阵时，
-明确变换前后分别是采用哪组基，
-然后把定义域空间中的基在映射下的像写出来，
-用值域中的基展开写出坐标，
-以列向量的形式拼成矩阵.
-
-
-
-
+\smallskip
 \begin{example}
     对$\mathbb{R}$上的线性空间$V = \langle \sin x , \cos x \rangle$，
     定义映射$\mathcal{D}$是求导变换，
@@ -2165,7 +2137,7 @@ $(1,1)$和$(2,3)$是线性相关的，
 
     (2)~~写出$\mathcal{D}$在基$\{ \sin x , \cos x \}$下的表示矩阵.
 \end{example}
-
+\smallskip
 \begin{solution}
     
     (1)~显然$\sin x$与$\cos x$线性无关，
@@ -2197,8 +2169,7 @@ $(1,1)$和$(2,3)$是线性相关的，
             1 & 0
         \end{pmatrix} \end{eq1}
 \end{solution}
-
-
+\smallskip
 \begin{example}
     给定$\mathbb{R}^3$的两组基：
     \begin{eq1}
@@ -2222,7 +2193,7 @@ $(1,1)$和$(2,3)$是线性相关的，
 
     (3)~~写出$\sigma$在基$\{ \bm{\beta}_i\}$下的表示矩阵.
 \end{example}
-
+\smallskip
 \begin{remark}
     $\mathbb{R}^n$空间虽然简单，
     但概念也容易混淆.
@@ -2233,7 +2204,7 @@ $(1,1)$和$(2,3)$是线性相关的，
     如题目中给出的$\bm{\alpha}_i$和$\bm{\beta}_i$是两组基，
     因此给出的是$\mathbb{R}^n$中的元素，而非坐标.
 \end{remark}
-
+\smallskip
 \begin{solution}~
 
     (1)~请注意，
@@ -2294,12 +2265,12 @@ $(1,1)$和$(2,3)$是线性相关的，
     
     (3)~$\varphi$是满射当且仅当它的表示矩阵行满秩.
 \end{example}
-
+\smallskip
 \begin{remark}
     第(2)、(3)问的关键是把结论“翻译”成矩阵语言，
     然后根据矩阵的性质说明原因.
 \end{remark}
-
+\smallskip
 \begin{pf}
     ~
 
@@ -2348,17 +2319,15 @@ $(1,1)$和$(2,3)$是线性相关的，
     \end{eq1}
 
 \end{pf}
-
-\subsubsection{线性同构}
-
+\smallskip
 \begin{example}
     从线性同构的定义出发证明：线性空间的同构是等价关系.
 \end{example}
-
+\smallskip
 \begin{remark}
     本题用于熟悉同构映射的概念和线性映射的记号.
 \end{remark}
-
+\smallskip
 \begin{pf}
     需证明反身性、对称性和传递性.
 
@@ -2446,7 +2415,7 @@ $(1,1)$和$(2,3)$是线性相关的，
     证明$V$与其对偶空间同构，
     并给出一个同构映射.
 \end{example}
-
+\smallskip
 \begin{remark}
     按课本知识，
     证明两个相同数域上的线性空间同构是很容易的——
@@ -2459,7 +2428,7 @@ $(1,1)$和$(2,3)$是线性相关的，
     在基之间建立一一对应关系，
     就自然诱导出一个同构映射.
 \end{remark}
-
+\smallskip
 \begin{pf}
     根据例4.2的结论，
     如果取定了$V$的一组基$\{ \bm{e}_1 , \bm{e}_2, \cdots , \bm{e}_n \}$，
@@ -2480,9 +2449,7 @@ $(1,1)$和$(2,3)$是线性相关的，
     以单位矩阵$I$为表示矩阵.
     这就是$V \to V^*$的一个最简单的同构映射.
 \end{pf}
-
-\clearpage
-
+\smallskip
 \begin{example}
     设$V$和$W$分别是数域$\mathbb{K}$上的$n$维和$m$维线性空间，
     $\mathcal{A} : V \to W$是线性映射.
@@ -2501,7 +2468,7 @@ $(1,1)$和$(2,3)$是线性相关的，
     (iii)~~证明：$V / \operatorname{Ker}\mathcal{A} \cong \operatorname{Im}\mathcal{A}$，
     从而得到维数公式$n = \dim \operatorname{Im} \mathcal{A} + \dim \operatorname{Ker} \mathcal{A}$.
 \end{example}
-
+\smallskip
 \begin{remark}
     本题给出了一个对维数公式$n = \dim \operatorname{Im} \mathcal{A} + \dim \operatorname{Ker} \mathcal{A}$的更自然的证明.
 
@@ -2528,7 +2495,7 @@ $(1,1)$和$(2,3)$是线性相关的，
 
     因此加法和数乘是良定义的.
 \end{remark}
-
+\smallskip
 \begin{pf}~
 
     (i)~

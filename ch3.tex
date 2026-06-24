@@ -878,54 +878,10 @@ $x_2$的求解同理（左上）.
 
 \subsection{习题}
 
-
+\subsubsection{初等变换法}
 
 \begin{example}
-    计算行列式：【答案：$76$】
-    \begin{eq1}
-    \begin{vmatrix}
-        1 & ~ & -2 & -2 & ~ \\[2pt]
-        ~ & 1 & ~ & -2 & -2 \\[2pt]
-        3 & ~ & -2 & ~ & ~ \\[2pt]
-        ~ & 3 & ~ & -2 & ~ \\[2pt]
-        ~ & ~ & 3 & ~ & -2
-    \end{vmatrix}
-    \end{eq1}
-\end{example}
-\begin{solution}
-    按第$1$列展开：
-    \begin{eq1}
-        D = 1 \cdot A_{11} + 3 \cdot A_{31}
-    \end{eq1}
-
-    其中
-    \begin{eq1}
-        A_{11} = 
-        \begin{vmatrix}
-            1 & 0 & -2 & -2 \\[2pt]
-            0 & -2 & 0 & 0 \\[2pt]
-            3 & 0 & -2 & 0 \\[2pt]
-            0 & 3 & 0 & -2
-        \end{vmatrix}
-        = 16
-    \end{eq1}
-    \begin{eq1}
-        A_{31} = 
-        \begin{vmatrix}
-            0 & -2 & -2 & 0 \\[2pt]
-            1 & 0 & -2 & -2 \\[2pt]
-            0 & 0 & -2 & 0 \\[2pt]
-            0 & 3 & 0 & -2
-        \end{vmatrix}
-        = 20
-    \end{eq1}
-
-    故$D = 1 \times 16 + 3 \times 20 = 76$. \qed
-\end{solution}
-
-~\par
-\begin{example}
-    计算行列式：【答案：$(a_1 d_1 - b_1 c_1)(a_2 d_2 - b_2 c_2)$】
+    计算行列式：
     \begin{eq1}
     \begin{vmatrix}
         a_1 & ~ & b_1 & ~  \\[2pt]
@@ -935,13 +891,10 @@ $x_2$的求解同理（左上）.
     \end{vmatrix}
     \end{eq1}
 \end{example}
-\begin{remark}
-    化为分块对角行列式.
-\end{remark}
-
+\smallskip
 \begin{solution}
     交换第$2$行与第$3$行，再交换第$2$列与第$3$列，
-    行列式化为分块对角形：
+    化为分块对角行列式：
     \begin{eq1}
         \begin{vmatrix}
             a_1 & b_1 & ~ & ~ \\[2pt]
@@ -954,9 +907,7 @@ $x_2$的求解同理（左上）.
         = (a_1d_1 - b_1c_1)(a_2d_2 - b_2c_2)
     \end{eq1} \qed
 \end{solution}
-
-~\par
-
+\smallskip
 \begin{example}
     计算$n$阶“鸡爪形”行列式：【答案：$a_1 - a_2 b_2 - \cdots - a_n b_n$】
     \begin{eq1}
@@ -969,10 +920,7 @@ $x_2$的求解同理（左上）.
     \end{vmatrix}
     \end{eq1}
 \end{example}
-
-\begin{remark}
-    化为上（下）三角行列式.
-\end{remark}
+\smallskip
 \begin{solution}
     将第$j$列（$2 \leqslant j \leqslant n$）的$-b_j$倍加到第$1$列上，
     消去第$1$列中除$a_1$外的所有元素：
@@ -988,8 +936,7 @@ $x_2$的求解同理（左上）.
         = a_1 - a_2b_2 - \cdots - a_nb_n
     \end{eq1} \qed
 \end{solution}
-
-~\par
+\smallskip
 \begin{example}
     计算行列式：
     \begin{eq1}
@@ -1001,11 +948,12 @@ $x_2$的求解同理（左上）.
         2 & 2 & 2 & 2 & 5
     \end{vmatrix}\end{eq1}
 \end{example}
-
+\smallskip
 \begin{remark}
     行列式中的$2$很多，
-    利用全为$2$的第$2$列去把大量的$2$都消成$0$.
+    利用全为$2$的第$2$行（或第$2$列）去把大量的$2$都消成$0$.
 \end{remark}
+\smallskip
 \begin{solution}
     将第$2$行分别减去其他各行，
     使大量元素变为$0$：
@@ -1022,18 +970,17 @@ $x_2$的求解同理（左上）.
 
     按第$1$行展开：
     \begin{eq1}
-        D = (-1) \cdot (-1)^{1+1}
+        D = (-1) \cdot 
         \begin{vmatrix}
             2 & 2 & 2 & 2 \\[2pt]
             0 & 1 & 0 & 0 \\[2pt]
             0 & 0 & 2 & 0 \\[2pt]
             0 & 0 & 0 & 3
         \end{vmatrix}
-        = -1 \cdot (2 \times 1 \times 2 \times 3) = -12
+        = -12
     \end{eq1} \qed
 \end{solution}
-
-~\par
+\smallskip
 \begin{example}
     计算行列式：
     \begin{eq1}
@@ -1046,21 +993,92 @@ $x_2$的求解同理（左上）.
     \end{vmatrix}
     \end{eq1}
 \end{example}
-\begin{solution}
-    记该矩阵为$M = 2J + \text{diag}(a,b,c,d,e)$，
-    其中$J$是全$1$矩阵.
-    利用矩阵行列式引理或直接展开可得：
+\smallskip
+\begin{remark}
+    本题比上一题稍复杂一些.
+    介绍两种思路：
+    I. 任选一行（或一列）去消别的行（列），
+    形成鸡爪形行列式.
+    II. 主动添加一行一列，从而构造一个全为$2$的行（或列）
+    去辅助消除.
+\end{remark}
+\smallskip
+\begin{solution}(I. 直接初等变换)
+    
+    将第$1$列减到其他各列上：
     \begin{eq1}
-        \det(M) = abcde\left(1 + \frac{2}{a} + \frac{2}{b} + \frac{2}{c} + \frac{2}{d} + \frac{2}{e}\right)
+        D  =
+        \begin{vmatrix}
+        2+a & -a & -a & -a & -a \\[2pt]
+        2 & b & 0 & 0 & 0 \\[2pt]
+        2 & 0 & c & 0 & 0 \\[2pt]
+        2 & 0 & 0 & d & 0 \\[2pt]
+        2 & 0 & 0 & 0 & e
+    \end{vmatrix}
     \end{eq1}
 
-    或等价地写为：
+    得到了鸡爪形行列式.
+    再用其他各列去消第一列中的“$2$”，
+    变为上三角行列式：
     \begin{eq1}
-        \det(M) = 2bcde + 2acde + 2abde + 2abce + 2abcd + abcde
-    \end{eq1} \qed
+        D  =
+        \begin{vmatrix}
+        2+a+\frac{2a}{b}+\frac{2a}{c}+\frac{2a}{d}+\frac{2a}{e} & -a & -a & -a & -a \\[6pt]
+        0 & b & 0 & 0 & 0 \\[2pt]
+        0 & 0 & c & 0 & 0 \\[2pt]
+        0 & 0 & 0 & d & 0 \\[2pt]
+        0 & 0 & 0 & 0 & e
+    \end{vmatrix}
+    &= (2+a+\frac{2a}{b}+\frac{2a}{c}+\frac{2a}{d}+\frac{2a}{e})bcde \\[2pt]
+    &= abcde\left(1 + \frac{2}{a} + \frac{2}{b} + \frac{2}{c} + \frac{2}{d} + \frac{2}{e}\right)   
+    \end{eq1}    
+    \qed
 \end{solution}
+\begin{solution}（II.加边法）
 
-~\par
+    添加一行一列，行列式的值不变：
+    \begin{eq1}
+        D = 
+    \begin{vmatrix}
+        1 & 2 & 2 & 2 & 2 & 2 \\[2pt]
+        0 & 2+a & 2 & 2 & 2 & 2 \\[2pt]
+        0 & 2 & 2+b & 2 & 2 & 2 \\[2pt]
+        0 & 2 & 2 & 2+c & 2 & 2 \\[2pt]
+        0 & 2 & 2 & 2 & 2+d & 2 \\[2pt]
+        0 & 2 & 2 & 2 & 2 & 2+e
+    \end{vmatrix}
+    \end{eq1}
+
+    将第$1$行减到其他各行上：
+    \begin{eq1}
+        D  =
+        \begin{vmatrix}
+        1 & 2 & 2 & 2 & 2 & 2 \\[2pt]
+        -1 & a & 0 & 0 & 0 & 0 \\[2pt]
+        -1 & 0 & b & 0 & 0 & 0 \\[2pt]
+        -1 & 0 & 0 & c & 0 & 0 \\[2pt]
+        -1 & 0 & 0 & 0 & d & 0 \\[2pt]
+        -1 & 0 & 0 & 0 & 0 & e
+    \end{vmatrix}
+    \end{eq1}
+
+    这样也得到鸡爪形行列式了.
+    用类似于刚才的方法化为上三角行列式：
+    \begin{eq1}
+        D  =
+        \begin{vmatrix}
+        1+\frac{2}{a} + \frac{2}{b} + \frac{2}{c} + \frac{2}{d} + \frac{2}{e} & 2 & 2 & 2 & 2 & 2 \\[6pt]
+        0 & a & 0 & 0 & 0 & 0 \\[2pt]
+        0 & 0 & b & 0 & 0 & 0 \\[2pt]
+        0 & 0 & 0 & c & 0 & 0 \\[2pt]
+        0 & 0 & 0 & 0 & d & 0 \\[2pt]
+        0 & 0 & 0 & 0 & 0 & e
+        \end{vmatrix}
+        = abcde(1+\frac{2}{a} + \frac{2}{b} + \frac{2}{c} + \frac{2}{d} + \frac{2}{e})
+        \qed
+    \end{eq1}
+\end{solution}
+\smallskip
 \begin{example}
     计算行列式：【答案：$(-1)^{n-1} (n-1)2^{n-2}$】
     \begin{eq1}
@@ -1075,61 +1093,257 @@ $x_2$的求解同理（左上）.
     \end{vmatrix}
     \end{eq1}
 \end{example}
+\begin{remark}
+    行列式的规律在于相邻的行（或列）的元素只相差$\pm 1$，
+    利用这一特点，
+    做初等变换时将相邻的行（或列）相消，
+    简化行列式.
+\end{remark}
 \begin{solution}
-    对$n$做数学归纳法.
-
-    当$n=2$时，$D_2 = \begin{vmatrix} 0 & 1 \\ 1 & 0 \end{vmatrix} = -1 = (-1)^1 \cdot 1 \cdot 2^0$，
-    结论成立.
-
-    假设$n-1$阶时结论成立.
-    对$n$阶行列式，从最后一行开始逐行减去前一行：
-    $r_k \leftarrow r_k - r_{k-1}$（$k=n,n-1,\cdots,2$），
-    再从最后一列开始逐列减去前一列：
-    $c_k \leftarrow c_k - c_{k-1}$（$k=n,n-1,\cdots,2$）.
-
-    经过这些变换后，
-    行列式化为一个较简单的形式，
-    按第$1$行或第$1$列展开可得递推关系：
+    依次将第$j$列减到第$j-1$列上$(2 \leq j \leq n)$：
     \begin{eq1}
-        D_n = -2D_{n-1}
+        D_n = 
+        \begin{vmatrix}
+        -1 & -1 & -1 & \cdots & -1 & n-1 \\[2pt]
+        1 & -1 & -1 & \cdots  & -1 & n-2 \\[2pt]
+        1 & 1 & -1 & \cdots & -1 & n-3 \\[2pt]
+        \vdots & \vdots & \vdots & \ddots & \vdots &\vdots \\[2pt]
+        1 & 1 & 1 & \cdots & -1 & 1 \\[2pt]
+        1 & 1 & 1 & \cdots  & 1 & 0 
+    \end{vmatrix}
     \end{eq1}
 
-    结合初始条件$D_2 = -1$，
-    解得$D_n = (-1)^{n-1}(n-1)2^{n-2}$. \qed
+    注意对角线下方的元素全为$1$，
+    而第$1$行的前$n-1$个元素全为$-1$，
+    恰好可以用于把$1$消掉，
+    化为上三角行列式：
+    \begin{eq1}
+        D_n = 
+        \begin{vmatrix}
+        -1 & -1 & -1 & \cdots & -1 & n-1 \\[2pt]
+        0 & -2 & -2 & \cdots  & -2 & 2n-3 \\[2pt]
+        0 & 0 & -2 & \cdots & -2 & 2n-4 \\[2pt]
+        \vdots & \vdots & \vdots & \ddots & \vdots &\vdots \\[2pt]
+        0 & 0 & 0 & \cdots & -2 & n \\[2pt]
+        0 & 0 & 0 & \cdots  & 2 & n-1 
+    \end{vmatrix}
+    = (-1) \cdot (-2)^{n-1} \cdot (n-1)
+    = (-1)^{n-1} \cdot  2^{n-2}  \cdot (n-1)
+    \end{eq1}
 \end{solution}
 
-~\par
+\bigskip
+
 \begin{example}
-    计算$n$阶行列式【答案：斐波那契数列】：
+    计算$n$阶行列式：
+    \begin{eq1}
+        D_n = 
+    \begin{vmatrix}
+        \frac{1}{a_1 + b_1} & \frac{1}{a_1 + b_2} & \cdots  & \frac{1}{a_1 + b_n} \\[12pt]
+        \frac{1}{a_2 + b_1} & \frac{1}{a_2 + b_2} & \cdots  & \frac{1}{a_2 + b_n} \\[12pt]
+        \vdots & \vdots & ~ & \vdots  \\[6pt]
+        \frac{1}{a_n + b_1} & \frac{1}{a_n + b_2} & \cdots  & \frac{1}{a_n + b_n} \\[12pt]
+    \end{vmatrix}_{n} \end{eq1}
+\end{example}
+\begin{remark}
+    虽然行列式的每个元素都是分式，
+    计算困难，
+    但是元素之间仍有规律，
+    通过初等行变换可以提取出公因式，
+    进而通过消消乐化简.
+\end{remark}
+\begin{solution}
+    将最后一列减到其余各列上：
+    \begin{eq1}
+        D_n = 
+        \begin{vmatrix}
+        \frac{b_n - b_1}{(a_1 + b_1)(a_1 + b_n)} & \frac{b_n - b_2}{(a_1 + b_2)(a_1 + b_n)} & \cdots & \frac{b_n - b_{n-1}}{(a_1 + b_{n-1})(a_1 + b_n)}  & \frac{1}{a_1 + b_n} \\[12pt]
+        \frac{b_n - b_1}{(a_2 + b_1)(a_2 + b_n)} & \frac{b_n - b_2}{(a_2 + b_2)(a_2 + b_n)} & \cdots & \frac{b_{n} - b_{n-1}}{(a_2 + b_{n-1})(a_2 + b_n)}  & \frac{1}{a_2 + b_n} \\[12pt]
+        \vdots & \vdots & ~ & \vdots  \\[6pt]
+        \frac{b_n - b_1}{(a_n + b_1)(a_n + b_n)} & \frac{b_n - b_2}{(a_n + b_2)(a_n + b_n)} & \cdots & \frac{b_{n} - b_{n-1}}{(a_n + b_{n-1})(a_n + b_n)}  & \frac{1}{a_n + b_n} \\[12pt]
+    \end{vmatrix}_{n}  \end{eq1} 
+
+    从每个第$i$行$(1 \le i \le n)$中提取公因式$\frac{1}{a_i + b_n}$，
+    从每个第$j$列$(1 \le j \le n-1)$中提取公因式$b_n  - b_j$，得到：
+
+    \begin{eq1}
+        D_n = \frac{\prod_{1 \le j \le n-1}(b_n - b_j)}{\prod_{1 \le i \le n}(a_i + b_n)}
+        \begin{vmatrix}
+        \frac{1}{a_1 + b_1} & \frac{1}{a_1 + b_2} & \cdots & \frac{1}{a_1 + b_{n-1}}  & 1\\[12pt]
+        \frac{1}{a_2 + b_1} & \frac{1}{a_2 + b_2} & \cdots & \frac{1}{a_2 + b_{n-1}}  & 1 \\[12pt]
+        \vdots & \vdots & ~ & \vdots & \vdots \\[6pt]
+        \frac{1}{a_n + b_1} & \frac{1}{a_n + b_2} & \cdots & \frac{1}{a_n + b_{n-1}}  & 1 \\[12pt]
+    \end{vmatrix}_{n}  \end{eq1} 
+
+    将最后一行减到其余各行上：
+    \begin{eq1}
+        D_n = \frac{\prod_{1 \le j \le n-1}(b_n - b_j)}{\prod_{1 \le i \le n}(a_i + b_n)}
+        \begin{vmatrix}
+        \frac{a_n - a_1}{(a_1 + b_1)(a_n + b_1)} & \frac{a_n - a_1}{(a_1 + b_2)(a_n + b_2)} & \cdots & \frac{a_n - a_1}{(a_1 + b_{n-1})(a_n + b_{n-1})}  & 0\\[12pt]
+        \frac{a_n - a_2}{(a_2 + b_1)(a_n + b_1)} & \frac{a_n - a_2}{(a_2 + b_2)(a_n + b_2)} & \cdots & \frac{a_n - a_2}{(a_2 + b_{n-1})(a_n + b_{n-1})}  & 0 \\[12pt]
+        \vdots & \vdots & ~ & \vdots  \\[6pt]
+        \frac{1}{a_n + b_1} & \frac{1}{a_n + b_2} & \cdots & \frac{1}{a_n + b_{n-1}}  & 1 
+    \end{vmatrix}_{n}  \end{eq1} 
+
+    从每个第$j$行$(1 \le j \le n-1)$中提取公因式$a_n - a_j$，
+    从每个第$i$列$(1 \le i \le n )$中提取公因式$\frac{1}{a_n + b_i}$，
+    得到：
+    \begin{eq1}
+        D_n = \frac{\prod_{1 \le j \le n-1}(b_n - b_j)(a_n - a_j)}{\prod_{1 \le i \le n}(a_i + b_n)(a_n + b_i)}
+        \begin{vmatrix}
+        \frac{1}{(a_1 + b_1)} & \frac{1}{(a_1 + b_2)} & \cdots & \frac{1}{(a_1 + b_{n-1})}  & 0\\[12pt]
+        \frac{1}{(a_2 + b_1)} & \frac{1}{(a_2 + b_2)} & \cdots & \frac{1}{(a_2 + b_{n-1})}  & 0 \\[12pt]
+        \vdots & \vdots & ~ & \vdots  \\[6pt]
+        1 & 1 & \cdots & 1 & 1 
+    \end{vmatrix}_{n}  \end{eq1} 
+
+    按最后一列展开，并观察代数余子式的形式，
+    就得到递推公式：
+    \begin{eq1}
+        D_n = \frac{\prod_{1 \le j \le n-1}(b_n - b_j)(a_n - a_j)}{\prod_{1 \le i \le n}(a_i + b_n)(a_n + b_i)}
+        D_{n-1} \end{eq1}
+
+    而$D_{n-1}$中不再含有$a_n$和$b_n$相关的元素.
+    通过观察规律，
+    可以发现如果不断用同样方法对$D_{n-1},D_{n-2}$继续降阶，
+    最终会得到：
+    \begin{eq1}
+        D_n = \frac{\prod_{1 \le i < j \le n}(a_i - a_j)(b_i - b_j) }{\prod_{1 \le i,j \le n}(a_i + b_j)} \end{eq1} 
+    \qed 
+\end{solution}
+
+\bigskip
+
+\subsubsection{建立递推公式}
+
+以下例题中的三对角行列式是一个经典形状，
+可以通过建立递推公式求解.
+这里我们求解最一般的情形（三条对角线分别是任意常数$a,b,c$）.
+注意建立递推公式本身并不困难，
+但是如何从递推公式得到通项公式则需要特定的技巧.
+
+\begin{example}
+    计算$n$阶行列式：
     \begin{eq1}
         D_n =  
     \begin{vmatrix}
-        1 & 1 & 0 & \cdots & 0 & 0 \\[2pt]
-        -1 & 1 & 1 & \cdots  & 0 & 0 \\[2pt]
-        0 & -1 & 1 & \cdots & 0 & 0 \\[2pt]
+        a & c & 0 & \cdots & 0 & 0 \\[2pt]
+        b & a & c & \cdots  & 0 & 0 \\[2pt]
+        0 & b & a & \cdots & 0 & 0 \\[2pt]
         \vdots & \vdots & \vdots & \ddots & \vdots &\vdots \\[2pt]
-        0 & 0 & 0 & \cdots & 1 & 1 \\[2pt]
-        0 & 0 & 0 & \cdots  & -1 & 1 
+        0 & 0 & 0 & \cdots & a & c \\[2pt]
+        0 & 0 & 0 & \cdots  & b & a 
     \end{vmatrix}
     \end{eq1}
 \end{example}
-
+\smallskip
 \begin{solution}
-    按第$1$行展开，得到递推公式：
+    按第$1$行展开：
     \begin{eq1}
-        D_n = 1 \cdot D_{n-1} - 1 \cdot (-1) \cdot D_{n-2} = D_{n-1} + D_{n-2}
+    D_n 
+    &= 
+        a \cdot 
+        \begin{vmatrix}
+        a & c & \cdots  & 0 & 0 \\[2pt]
+        b & a & \cdots & 0 & 0 \\[2pt]
+        \vdots & \vdots & \ddots & \vdots &\vdots \\[2pt]
+        0 & 0 & \cdots & a & c \\[2pt]
+        0 & 0 & \cdots  & b & a 
+        \end{vmatrix}_{n-1} 
+        - c \cdot 
+        \begin{vmatrix}
+        b  & c & \cdots  & 0 & 0 \\[2pt]
+        0  & a & \cdots & 0 & 0 \\[2pt]
+        \vdots  & \vdots & \ddots & \vdots &\vdots \\[2pt]
+        0  & 0 & \cdots & a & c \\[2pt]
+        0 & 0 & \cdots  & b & a 
+    \end{vmatrix}_{n-1} 
+    = a \cdot D_{n-1} - bc \cdot D_{n-2}
     \end{eq1}
 
-    初始条件：$D_1 = 1$，$D_2 = \begin{vmatrix} 1 & 1 \\ -1 & 1 \end{vmatrix} = 2$.
+    这是一个$2$阶线性递推公式.
+    显然前两项分别为$D_1 = 1$，$D_2 = a^2 - bc$.
+    为了后续推导方便，
+    设$D_0 = 1$，
+    这也是符合递推公式的.
+    我们据此推导$D_n$的通项公式.
 
-    这正是斐波那契数列的递推关系，
-    且$D_1 = F_2 = 1$，$D_2 = F_3 = 2$，
-    故$D_n = F_{n+1}$，
-    其中$F_n$是第$n$个斐波那契数（$F_1=F_2=1$，$F_n=F_{n-1}+F_{n-2}$）. \qed
+    我们想要将递推公式整理成形如$D_n - \lambda_1  D_{n-1} = \lambda_2  (D_{n-1} - \lambda_1  D_{n-2})$的形式.
+    这样，数列$\{ D_n - \lambda_1  D_{n-1} \}$就是公比为$\lambda_2$的等比数列.
+    与原来的递推公式比较系数，得到：
+    \begin{eq1}
+        \begin{cases}
+            \lambda_1 +\lambda_2  = a \\[2pt]
+            \lambda_1 \lambda_2 = bc
+        \end{cases}
+    \end{eq1}
+
+    可以看出$\lambda_1 ,\lambda_2 $是如下特征方程的解：
+    \begin{eq1}
+        \lambda^2 - a \lambda + bc = 0
+    \end{eq1}
+
+    数列$\{ D_n - \lambda_1  D_{n-1} \}$的通项公式：
+    \begin{eq1}
+        D_{n} - \lambda_1 D_{n-1} = (D_1 - \lambda_1 D_0) \cdot \lambda_2 ^{n-1} = (1 - \lambda_1) \cdot \lambda_2^{n-1}
+    \end{eq1}
+
+    如果$\lambda_1 = 0$，
+    那么$D_n$通项公式已经得到了（实际上此时题目是更简单的两对角行列式）.
+    否则，
+    将等式两边同时除以$\lambda_1^{n}$：
+
+    \begin{eq1}
+        \frac{D_n}{\lambda_1^n} - \frac{D_{n-1}}{\lambda_1^{n-1}}
+        = \frac{1 - \lambda_1}{\lambda_1^n} \cdot \lambda_2^{n-1}
+        = \frac{1 - \lambda_1}{\lambda_2} \cdot  (\frac{\lambda_2}{\lambda_1})^n
+    \end{eq1}
+
+    该公式对$n$进行累加，
+    可以得到：
+    \begin{eq1}
+        \frac{D_n}{\lambda_1^n} - \frac{D_0}{\lambda_1^0}
+        = \sum_{k=1}^n \left( \frac{D_k}{\lambda_1^k} - \frac{D_{k-1}}{\lambda_1^{k-1}} \right) 
+        &= \frac{1 - \lambda_1}{\lambda_2} \cdot \sum_{k=1}^{n} (\frac{\lambda_2}{\lambda_1})^k
+    \end{eq1}
+
+    注意等号右侧是个等比数列求和.
+    需要分两种情况讨论：
+    \smallskip
+    
+    (i)~若$\lambda_1 \ne \lambda_2$.
+    根据等比数列求和公式，
+    我们有：
+    \begin{eq1}
+        \frac{D_n}{\lambda_1^n} - 1
+        = \frac{1-\lambda_1}{\lambda_2} 
+        \cdot \frac{\lambda_2}{\lambda_1}
+        \cdot   \frac{1- (\lambda_2 / \lambda_1)^n }{1 - \lambda_2 / \lambda_1}
+    \end{eq1}
+
+    经过整理，得到：
+    \begin{eq1}
+        D_n = \frac{1 - \lambda_2}{\lambda_1 - \lambda_2} \cdot \lambda_1^n +
+        \frac{\lambda_1 - 1}{\lambda_1 - \lambda_2} \cdot \lambda_2^n
+    \end{eq1}
+
+    \smallskip
+
+     (ii)~若$\lambda_1 = \lambda_2$，
+     则有：
+     \begin{eq1}
+        \frac{D_n}{\lambda_1^n} - 1
+        = \frac{1 - \lambda_1}{\lambda_2} \cdot n
+    \end{eq1}
+
+    即：
+    \begin{eq1}
+        D_n = \left( \frac{1 - \lambda_1}{\lambda_2} \cdot n + 1 \right) \cdot \lambda_1^n
+    \end{eq1} \qed
+
+
 \end{solution}
-
-~\par
-
+\smallskip
 \begin{example}
     证明$n$阶行列式：
     \begin{eq1}
@@ -1145,46 +1359,72 @@ $x_2$的求解同理（左上）.
     = \cos n \alpha
     \end{eq1}
 \end{example}
+\begin{remark}
+    本题的形状类似三对角行列式，
+    但对角线上的第一个元素与其他的不同.
+    为了建立递推公式，
+    需要在展开时去寻找$D_{n-1}$.
+    按第$1$行（或第$1$列）展开达不到这个目的，
+    应该按最后一行（或最后列展开）.
 
+    因为这是道证明题，
+    不必费劲从递推公式计算通项公式，
+    可以用数学归纳法去证明.
+\end{remark}
 \begin{pf}
     对$n$做数学归纳法.
 
+    \smallskip
+    (i)~
     当$n=1$时，$D_1 = \cos\alpha$，结论成立.
 
-    当$n=2$时，
+    \smallskip
+    (ii)~   当$n=2$时：
     \begin{eq1}
         D_2 = \begin{vmatrix} \cos\alpha & 1 \\ 1 & 2\cos\alpha \end{vmatrix}
         = 2\cos^2\alpha - 1 = \cos 2\alpha
     \end{eq1}
     结论成立.
+    \smallskip
 
-    假设对$k < n$均有$D_k = \cos k\alpha$.
-    当$n$时，将$D_n$按第$1$行展开：
+    (iii)~ 
+    假设对$2 < k < n$，均有$D_k = \cos k\alpha$.
+    当$k=n$时，将$D_n$按第$1$行展开：
     \begin{eq1}
-        D_n = \cos\alpha \cdot D_{n-1} - 1 \cdot M_{12}
+        D_n 
+        &= 2 \cos \alpha \cdot 
+        \begin{vmatrix}
+        \cos \alpha & 1 & 0 & \cdots & 0  \\[2pt]
+        1 & 2\cos \alpha & 1 & \cdots  & 0  \\[2pt]
+        0 & 1 & 2\cos \alpha & \cdots & 0  \\[2pt]
+        \vdots & \vdots & \vdots & \ddots & \vdots  \\[2pt]
+        0 & 0 & 0 & \cdots & 2\cos \alpha 
+    \end{vmatrix}_{n-1}
+    - \begin{vmatrix}
+        \cos \alpha & 1  & \cdots & 0 & 0  \\[2pt]
+        1 & 2\cos \alpha  & \cdots  & 0 & 0  \\[2pt]
+        \vdots & \vdots  & \ddots & \vdots &\vdots  \\[2pt]
+        0 & 0  & \cdots & 1 & 1   \\[2pt]
+        0 & 0  & \cdots  & 0 & 1 
+    \end{vmatrix}_{n-1} \\[6pt]
+    &= 2 \cos \alpha \cdot  D_{n-1} - D_{n-2}
     \end{eq1}
 
-    其中$M_{12}$的第$1$列为$(1,0,\cdots,0)^T$，
-    按第$1$列展开得$M_{12} = D_{n-2}$.
-    故：
+    由归纳假设：
     \begin{eq1}
-        D_n = 2\cos\alpha \cdot D_{n-1} - D_{n-2}
+        D_n &= 2 \cos \alpha \cdot \cos (n-1)\alpha -
+        \cos (n-2)\alpha \\[2pt]
+        &= \cos n\alpha + \cos (n-2) \alpha - \cos (n-2)\alpha \\[2pt]
+        &= \cos n \alpha
     \end{eq1}
+    \smallskip
 
-    由归纳假设代入：
-    \begin{eq1}
-        D_n = 2\cos\alpha\cos(n-1)\alpha - \cos(n-2)\alpha
-    \end{eq1}
-
-    利用积化和差公式：
-    \begin{eq1}
-        D_n = \cos n\alpha + \cos(n-2)\alpha - \cos(n-2)\alpha = \cos n\alpha
-    \end{eq1}
-
-    归纳完成. \qed
+    综合(i)(ii)(iii)可知结论成立.     \qed
 \end{pf}
 
-~\par
+\bigskip
+
+\subsubsection{范德蒙德行列式}
 
 \begin{example}
     证明$n$阶范德蒙德行列式：
@@ -1194,45 +1434,61 @@ $x_2$的求解同理（左上）.
         1 & 1 & 1 & \cdots  & 1 \\[2pt]
         a_1 & a_2 & a_3 & \cdots  & a_n \\[2pt]
         a_1^2 & a_2^2 & a_3^2 & \cdots  & a_n^2 \\[2pt]
-        \vdots & \vdots & \vdots & ~ & \vdots  \\[2pt]
+        \vdots & \vdots & \vdots & \ddots & \vdots  \\[2pt]
         a_1^{n-2} & a_2^{n-2} & a_3^{n-2} & \cdots  & a_n^{n-2} \\[2pt]
         a_1^{n-1} & a_2^{n-1} & a_3^{n-1} & \cdots  & a_n^{n-1} \\[2pt]
     \end{vmatrix}_{n}
     = \prod_{1 \le j < i \le n} (a_i  - a_j)
     \end{eq1}
 \end{example}
+\smallskip
 \begin{pf}
-    对$n$做数学归纳法.
+    对$n$做数学归纳法：
 
-    当$n=2$时，$D_2 = a_2 - a_1$，结论成立.
+    (i)~当$n=2$时，$D_2 = a_2 - a_1$，结论成立.
 
-    假设$n-1$阶范德蒙德行列式结论成立.
-    对$n$阶行列式，从最后一行开始逐行减去前一行的$a_1$倍：
-    $r_k \leftarrow r_k - a_1r_{k-1}$（$k=n,n-1,\cdots,2$），
+    (ii)~假设$n-1$阶范德蒙德行列式符合该结论.
+    对于$n$阶范德蒙德行列式，
+    从最后一行开始逐行减去前一行的$a_1$倍，
     得：
     \begin{eq1}
         D_n =
         \begin{vmatrix}
             1 & 1 & \cdots & 1 \\[2pt]
             0 & a_2-a_1 & \cdots & a_n-a_1 \\[2pt]
-            \vdots & \vdots & ~ & \vdots \\[2pt]
+            \vdots & \vdots & \ddots & \vdots \\[2pt]
             0 & a_2^{n-2}(a_2-a_1) & \cdots & a_n^{n-2}(a_n-a_1)
         \end{vmatrix}
     \end{eq1}
 
     按第$1$列展开，并提取每列公因子$(a_j-a_1)$：
     \begin{eq1}
-        D_n = \prod_{j=2}^{n}(a_j-a_1) \cdot V(a_2,\cdots,a_n)
+        D_n = 
+        \prod_{j=2}^{n}(a_j-a_1)
+        \begin{vmatrix}
+            1 & 1  & \cdots  & 1 \\[2pt]
+            a_2 & a_3  & \cdots  & a_n \\[2pt]
+            \vdots & \vdots  & \ddots & \vdots  \\[2pt]
+            a_1^{n-2} & a_2^{n-2}  & \cdots  & a_n^{n-2} 
+        \end{vmatrix}_{n-1}
     \end{eq1}
 
-    由归纳假设即得结论. \qed
-\end{pf}
-
-~\par
-\begin{example}
-    计算行列式：【答案：$8 \prod_{1 \le j < i \le 4} (\cos \theta _1 - \cos \theta _ j)$】
+    注意等号右侧的行列式是一个$n-1$阶范德蒙德行列式.
+    代入归纳假设：
     \begin{eq1}
         D_n = 
+        \prod_{j=2}^{n}(a_j-a_1) \cdot \prod_{2 \leq j < i \leq n}(a_i-a_j)
+        =  \prod_{2 \leq j < i \leq n}(a_i-a_j)
+    \end{eq1}
+    
+    综合(i)(ii)可知结论成立.
+    \qed
+\end{pf}
+\smallskip
+\begin{example}
+    计算行列式：
+    \begin{eq1}
+        D = 
     \begin{vmatrix}
         1 & \cos \theta_1 & \cos 2 \theta_1 & \cos 3 \theta_1 \\[2pt]
         1 & \cos \theta_2 & \cos 2 \theta_2 & \cos 3 \theta_2  \\[2pt]
@@ -1241,32 +1497,41 @@ $x_2$的求解同理（左上）.
     \end{vmatrix}
     \end{eq1}
 \end{example}
+\smallskip
 \begin{solution}
     令$x_i = \cos\theta_i$.
-    利用切比雪夫多项式：
+    利用二倍角和三倍角公式：
     \begin{eq1}
         \cos 2\theta_i = 2x_i^2 - 1, \quad
         \cos 3\theta_i = 4x_i^3 - 3x_i
     \end{eq1}
 
-    代入行列式并作列变换$c_3 \leftarrow c_3+c_1$，$c_4 \leftarrow c_4+3c_2$，
-    消除低次项后提取公因子：
+    代入行列式，做列变换整理之后，可以利用范德蒙德行列式的结论：
     \begin{eq1}
-        D_4 = 8
+        D &=
+        \begin{vmatrix}
+            1 & x_1 & 2x_1^2 - 1 & 4x_1^3 - 3x_1 \\[2pt]
+            1 & x_2 & 2x_2^2 - 1 & 4x_2^3 - 3x_2 \\[2pt]
+            1 & x_3 & 2x_3^2 - 1 & 4x_3^3 - 3x_3 \\[2pt]
+            1 & x_4 & 2x_4^2 - 1 & 4x_4^3 - 3x_4
+        \end{vmatrix}
+        \xrightarrow{c_3 + c_1;~c_4 + 3 \cdot c_2}
+        8
         \begin{vmatrix}
             1 & x_1 & x_1^2 & x_1^3 \\[2pt]
             1 & x_2 & x_2^2 & x_2^3 \\[2pt]
             1 & x_3 & x_3^2 & x_3^3 \\[2pt]
             1 & x_4 & x_4^2 & x_4^3
-        \end{vmatrix}
-        = 8 \prod_{1 \leqslant j < i \leqslant 4}(x_i-x_j)
-        = 8 \prod_{1 \leqslant j < i \leqslant 4}(\cos\theta_i-\cos\theta_j) \qed
-    \end{eq1}
+        \end{vmatrix}\\[6pt]
+        &= 8 \prod_{1 \leqslant j < i \leqslant 4}(x_i-x_j)
+        = 8 \prod_{1 \leqslant j < i \leqslant 4}(\cos\theta_i-\cos\theta_j) 
+    \end{eq1}\qed
 \end{solution}
 
 \bigskip
+
 \begin{example}
-    计算$n$阶行列式：【答案：$\sum_{k=1}^{n}a_k \prod_{1 \le j < i \le n} (a_i - a_j)$】
+    计算$n$阶行列式：
     \begin{eq1}
         D_n = 
     \begin{vmatrix}
@@ -1321,103 +1586,21 @@ $x_2$的求解同理（左上）.
     
     容易根据此式写出$x^{n-1}$的系数是：
     \begin{eq1}
-        A_{n+1,n} &= (-a_1 - a_2 - \cdots - a_n) \prod_{1 \le j < i \le n}(a_i - a_j) \\
-        &= -\sum_{k=1}^{n} a_k \cdot \prod_{1 \le j < i \le n}(a_i - a_j) 
+        A_{n+1,n} = (-a_1 - a_2 - \cdots - a_n) \prod_{1 \le j < i \le n}(a_i - a_j)
+        = -\sum_{k=1}^{n} a_k \cdot \prod_{1 \le j < i \le n}(a_i - a_j) 
     \end{eq1}
 
     所以$D_n = -A_{n+1,n} = \sum_{k=1}^{n} a_k \cdot \prod_{1 \le j < i \le n}(a_i - a_j)$ \qed \par
 \end{solution}
-
-~\par
-
-
-\begin{example}
-    计算$n$阶行列式：【答案：$\frac{\prod_{1 \le i < j \le n}(a_i - a_j)(b_i - b_j) }{\prod_{1 \le i,j \le n}(a_i + b_j)}$】
-    \begin{eq1}
-        D_n = 
-    \begin{vmatrix}
-        \frac{1}{a_1 + b_1} & \frac{1}{a_1 + b_2} & \cdots  & \frac{1}{a_1 + b_n} \\[12pt]
-        \frac{1}{a_2 + b_1} & \frac{1}{a_2 + b_2} & \cdots  & \frac{1}{a_2 + b_n} \\[12pt]
-        \vdots & \vdots & ~ & \vdots  \\[6pt]
-        \frac{1}{a_n + b_1} & \frac{1}{a_n + b_2} & \cdots  & \frac{1}{a_n + b_n} \\[12pt]
-    \end{vmatrix}_{n} \end{eq1}
-\end{example}
-
-\begin{remark}
-    虽然行列式的每个元素都是分式，
-    计算困难，
-    但是元素之间仍有规律，
-    通过初等行变换可以提取出公因式，
-    进而通过消消乐化简.
-\end{remark}
-
-\begin{solution}
-    将最后一列减到其余各列上：
-    \begin{eq1}
-        D_n = 
-        \begin{vmatrix}
-        \frac{b_n - b_1}{(a_1 + b_1)(a_1 + b_n)} & \frac{b_n - b_2}{(a_1 + b_2)(a_1 + b_n)} & \cdots & \frac{b_n - b_{n-1}}{(a_1 + b_{n-1})(a_1 + b_n)}  & \frac{1}{a_1 + b_n} \\[12pt]
-        \frac{b_n - b_1}{(a_2 + b_1)(a_2 + b_n)} & \frac{b_n - b_2}{(a_2 + b_2)(a_2 + b_n)} & \cdots & \frac{b_{n} - b_{n-1}}{(a_2 + b_{n-1})(a_2 + b_n)}  & \frac{1}{a_2 + b_n} \\[12pt]
-        \vdots & \vdots & ~ & \vdots  \\[6pt]
-        \frac{b_n - b_1}{(a_n + b_1)(a_n + b_n)} & \frac{b_n - b_2}{(a_n + b_2)(a_n + b_n)} & \cdots & \frac{b_{n} - b_{n-1}}{(a_n + b_{n-1})(a_n + b_n)}  & \frac{1}{a_n + b_n} \\[12pt]
-    \end{vmatrix}_{n}  \end{eq1} 
-
-    从每个第$i$行$(1 \le i \le n)$中提取公因式$\frac{1}{a_i + b_n}$，
-    从每个第$j$列$(1 \le j \le n-1)$中提取公因式$b_n  - b_j$，得到：
-    \begin{eq1}
-        D_n = \frac{\prod_{1 \le j \le n-1}(b_n - b_j)}{\prod_{1 \le i \le n}(a_i + b_n)}
-        \begin{vmatrix}
-        \frac{1}{a_1 + b_1} & \frac{1}{a_1 + b_2} & \cdots & \frac{1}{a_1 + b_{n-1}}  & 1\\[12pt]
-        \frac{1}{a_2 + b_1} & \frac{1}{a_2 + b_2} & \cdots & \frac{1}{a_2 + b_{n-1}}  & 1 \\[12pt]
-        \vdots & \vdots & ~ & \vdots  \\[6pt]
-        \frac{1}{a_n + b_1} & \frac{1}{a_n + b_2} & \cdots & \frac{1}{a_n + b_{n-1}}  & 1 \\[12pt]
-    \end{vmatrix}_{n}  \end{eq1} 
-
-    将最后一行减到其余各行上：
-    \begin{eq1}
-        D_n = \frac{\prod_{1 \le j \le n-1}(b_n - b_j)}{\prod_{1 \le i \le n}(a_i + b_n)}
-        \begin{vmatrix}
-        \frac{a_n - a_1}{(a_1 + b_1)(a_n + b_1)} & \frac{a_n - a_1}{(a_1 + b_2)(a_n + b_2)} & \cdots & \frac{a_n - a_1}{(a_1 + b_{n-1})(a_n + b_{n-1})}  & 0\\[12pt]
-        \frac{a_n - a_2}{(a_2 + b_1)(a_n + b_1)} & \frac{a_n - a_2}{(a_2 + b_2)(a_n + b_2)} & \cdots & \frac{a_n - a_2}{(a_2 + b_{n-1})(a_n + b_{n-1})}  & 0 \\[12pt]
-        \vdots & \vdots & ~ & \vdots  \\[6pt]
-        \frac{1}{a_n + b_1} & \frac{1}{a_n + b_2} & \cdots & \frac{1}{a_n + b_{n-1}}  & 1 
-    \end{vmatrix}_{n}  \end{eq1} 
-
-    从每个第$j$行$(1 \le j \le n-1)$中提取公因式$a_n - a_j$，
-    从每个第$i$列$(1 \le i \le n )$中提取公因式$\frac{1}{a_n + b_i}$，
-    得到：
-    \begin{eq1}
-        D_n = \frac{\prod_{1 \le j \le n-1}(b_n - b_j)(a_n - a_j)}{\prod_{1 \le i \le n}(a_i + b_n)(a_n + b_i)}
-        \begin{vmatrix}
-        \frac{1}{(a_1 + b_1)} & \frac{1}{(a_1 + b_2)} & \cdots & \frac{1}{(a_1 + b_{n-1})}  & 0\\[12pt]
-        \frac{1}{(a_2 + b_1)} & \frac{1}{(a_2 + b_2)} & \cdots & \frac{1}{(a_2 + b_{n-1})}  & 0 \\[12pt]
-        \vdots & \vdots & ~ & \vdots  \\[6pt]
-        1 & 1 & \cdots & 1 & 1 
-    \end{vmatrix}_{n}  \end{eq1} 
-
-    按最后一列展开，并观察代数余子式的形式，
-    就得到递推公式：
-    \begin{eq1}
-        D_n = \frac{\prod_{1 \le j \le n-1}(b_n - b_j)(a_n - a_j)}{\prod_{1 \le i \le n}(a_i + b_n)(a_n + b_i)}
-        D_{n-1} \end{eq1}
-
-    而$D_{n-1}$中不再含有$a_n$和$b_n$相关的元素.
-    通过观察规律，
-    可以发现如果不断用同样方法对$D_{n-1},D_{n-2}$继续降阶，
-    最终会得到：
-    \begin{eq1}
-        D_n = \frac{\prod_{1 \le i < j \le n}(a_i - a_j)(b_i - b_j) }{\prod_{1 \le i,j \le n}(a_i + b_j)} \end{eq1} 
-
-    可以用数学归纳法，通过递推公式证明这个结论是正确的. \qed \par
-
-\end{solution}
+\smallskip
 
 
-~\par
+\subsubsection{代数余子式}
 
 \begin{example}
     求以下行列式中所有元素的代数余子式之和：
     \begin{eq1}
+        D = 
     \begin{vmatrix}
         1 & 0 & 0 & 0 & 0 \\[2pt]
         1 & 1 & 0 & 0 & 0 \\[2pt]
@@ -1427,28 +1610,28 @@ $x_2$的求解同理（左上）.
     \end{vmatrix}
     \end{eq1}
 \end{example}
+
+\begin{remark}
+    运用以下结论：
+    将行列式的第$j$列所有元素替换为$1$，
+    则替换后行列式的值就是第$j$列所有元素的代数余子式之和.
+\end{remark}
+
 \begin{solution}
-    记题中$5$阶方阵为$A$.
-    由于$A$是下三角矩阵且对角元全为$1$，
-    故$|A|=1$，且$A^* = A^{-1}$.
+    若将行列式的第$j$列的所有元素替换为$1$，
+    将替换后的行列式记为$D_j$，
+    则$D_j$就是第$j$列所有元素的代数余子式之和.
+    整个行列式所有元素代数余子式之和即为$D_1 + D_2 + D_3 + D_4 + D_5$.
 
-    求$A^{-1}$：
-    由$AA^{-1}=I$逐列求解，
-    可得$A^{-1}$是双对角矩阵：
-    对角元为$1$，第一条次对角元为$-1$，其余为$0$.
-
-    所有代数余子式之和等于$A^{-1}$中所有元素之和：
-    \begin{eq1}
-        \sum_{i,j} A_{ij} = 5 \times 1 + 4 \times (-1) = 1
-    \end{eq1} \qed
+    注意行列式的第$1$列全都是$1$，
+    因此$D_1 = 1,~D_2 = D_3 = D_4 = D_5 = 0$.
+    因此所有元素代数余子式之和为$1$.
 \end{solution}
-
-~\par
+\bigskip
 \begin{example}
     证明：若$n$阶方阵$A$每一行元素之和与每一列元素之和全都为$0$，
     则$A$的所有代数余子式相等.
 \end{example}
-
 \begin{pf}
     设$n$阶方阵$A = (a_{ij})_n$.
     它的$(i,j)$元的代数余子式记为$A_{ij}$.
@@ -1469,6 +1652,7 @@ $x_2$的求解同理（左上）.
     将第$a_{r1}~(r \ne i)$所在的行以外的各行都加到这一行上来，
     并且利用$A$的每一列元素之和为$0$，
     得到：
+
     \begin{eq1}
         A_{ij}
         = (-1)^{i+j}
@@ -1523,7 +1707,9 @@ $x_2$的求解同理（左上）.
     综合这两个结论，可知$A$中所有元素的代数余子式相同. \qed 
 \end{pf}
 
+\bigskip
 
+\subsubsection{克拉默法则}
 
 \begin{example}
     当$a,b$取什么值时，下述线性方程组有唯一解？无解？无穷多解？
@@ -1534,7 +1720,6 @@ $x_2$的求解同理（左上）.
             x_1 + 2bx_2 + x_3 = 2 
         \end{cases} \end{eq1} 
 \end{example}
-
 \begin{remark}
     本题可以用克拉默法则.
     分类讨论时应保证不重复讨论，也不遗漏情况.

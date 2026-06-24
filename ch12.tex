@@ -474,14 +474,14 @@ $\Vert \bm{x} \Vert^2 = \sum_{i=1}^{\infty} | (\bm{x},\bm{e}_i) |^2$，即帕塞
         \frac{1}{\sin t} = \frac{1}{t} + \sum_{n=1}^{\infty} (-1)^n \left( \frac{1}{t+n\pi} + \frac{1}{t-n\pi} \right)
     \end{eq1} \qed \par
 \end{solution}
-~\par
-
+\smallskip
 \begin{example}
     {2(2022)}{
         设 \( f : \mathbb{R} \rightarrow \mathbb{R} \) 是周期为 \( 2\pi \) 的函数，\( f(x) \) 在 \((-\pi, \pi]\) 上等于 \( e^x \).
         求 \( f(x) \) 的傅里叶级数，以及此傅里叶级数在 \( x = \pi \) 处的收敛值.
     }
 \end{example}
+\smallskip
 \begin{solution}
     $n=0$：
     \begin{eq1}
@@ -512,135 +512,30 @@ $\Vert \bm{x} \Vert^2 = \sum_{i=1}^{\infty} | (\bm{x},\bm{e}_i) |^2$，即帕塞
     在$x = \pi$处，
     $f(x)$的傅里叶级数的收敛值是$\frac{e^{-\pi} + e^{\pi}}{2}$. \qed \par
 \end{solution}
-~\par
-
+\smallskip
 \begin{example}
     {3(2023)}{
         设 \( 2\pi \) 周期函数$\vphantom{\ss}$ \( f(x) \) 在 \([-\pi, \pi]\) 上的表达式为 \( f(x) = x^2 \)，求 \( f(x) \) 所对应的 Fourier 级数及其和函数，
         并给出级数$\sum_{n=1}^{\infty} \frac{1}{n^2}, \quad \sum_{n=1}^{\infty} \frac{(-1)^n}{n^2}, \quad \sum_{n=1}^{\infty} \frac{1}{n^4}$的值.
     }
-\end{example}\medskip
-
+\end{example}
+\smallskip
 \begin{solution}
     
     (1)由于 \( f(x) = x^2 \) 是偶函数，故 \( b_n = 0 \).
     只需计算 \( a_0 \) 和 \( a_n \).
 \end{solution}
-
-
-    计算 \( a_0 \)：
-    \begin{eq1}
-    a_0 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2  ~\d x 
-    = \frac{2}{\pi} \int_{0}^{\pi} x^2  ~\d x 
-    = \frac{2}{\pi} \left[ \frac{x^3}{3} \right]_0^{\pi} = \frac{2}{\pi} \cdot \frac{\pi^3}{3} = \frac{2\pi^2}{3}
-    \end{eq1}
-    
-    计算 \( a_n \) (\( n \geq1 1 \))：
-    \begin{eq1}
-        a_n = 
-        \frac{1}{\pi} \int_{-\pi}^{\pi} x^2 \cos(nx) ~\d x 
-        = \frac{2}{\pi} \int_{0}^{\pi} x^2 \cos(nx)  ~\d x
-    \end{eq1}
-
-    使用分部积分法：
-    \begin{eq1}
-        \int x^2 \cos(nx)  ~\d x 
-        &= \frac{x^2 \sin(nx)}{n} - \frac{2}{n} \int x \sin(nx)  ~\d x \\
-        &= \frac{x^2 \sin(nx)}{n} - \frac{2}{n} \left( -\frac{x \cos(nx)}{n} + \frac{1}{n} \int \cos(nx)  ~\d x \right) \\
-        &= \frac{x^2 \sin(nx)}{n} + \frac{2x \cos(nx)}{n^2} - \frac{2 \sin(nx)}{n^3}
-    \end{eq1}
-
-    代入积分限：
-    \begin{eq1}
-        \int_{0}^{\pi} x^2 \cos(nx)  ~\d x 
-        &= \left[ \frac{x^2 \sin(nx)}{n} + \frac{2x \cos(nx)}{n^2} - \frac{2 \sin(nx)}{n^3} \right]_0^{\pi} \\
-        &= \frac{\pi^2 \sin(n\pi)}{n} + \frac{2\pi \cos(n\pi)}{n^2} - \frac{2 \sin(n\pi)}{n^3} \\
-        &= \frac{2\pi (-1)^n}{n^2}
-    \end{eq1}
-
-    所以：
-    \begin{eq1}
-    a_n = \frac{2}{\pi} \cdot \frac{2\pi (-1)^n}{n^2} = \frac{4(-1)^n}{n^2}
-    \end{eq1}
-    
-    傅里叶级数为：
-    \begin{eq1}
-        f(x) \sim \frac{a_0}{2} + \sum_{n=1}^{\infty} a_n \cos(nx) = \frac{\pi^2}{3} + \sum_{n=1}^{\infty} \frac{4(-1)^n}{n^2} \cos(nx)
-    \end{eq1}
-
-    由于 \( f(x) = x^2 \) 在 \([-\pi, \pi]\) 上连续且满足 Dirichlet 条件，其傅里叶级数在 \([-\pi, \pi]\) 上收敛于 \( x^2 \).
-    在端点 \( x = \pm\pi \) 处，级数收敛于：
-    \begin{eq1}
-    \frac{f(\pi^-) + f(-\pi^+)}{2} = \frac{\pi^2 + \pi^2}{2} = \pi^2
-    \end{eq1}
-    因此，和函数$S(x)$为：
-    \begin{eq1}
-    S(x) = f(x) = (x-2k\pi)^2 ,\quad k \in \mathbb{Z}
-    \end{eq1}
-    
-    (2)~~
-    求 \( \sum_{n=1}^{\infty} \frac{1}{n^2} \)：
-    取 \( x = \pi \)，代入傅里叶级数：
-    \begin{eq1}
-        S(\pi) = \pi^2 = \frac{\pi^2}{3} + \sum_{n=1}^{\infty} \frac{4(-1)^n}{n^2} \cos(n\pi) = \frac{\pi^2}{3} + \sum_{n=1}^{\infty} \frac{4(-1)^n}{n^2} (-1)^n = \frac{\pi^2}{3} + 4 \sum_{n=1}^{\infty} \frac{1}{n^2}
-    \end{eq1}
-  
-    解得：
-    \begin{eq1}
-    4 \sum_{n=1}^{\infty} \frac{1}{n^2} = \pi^2 - \frac{\pi^2}{3} = \frac{2\pi^2}{3} \implies \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}
-    \end{eq1}
-
-    (3)~~
-    求 \( \sum_{n=1}^{\infty} \frac{(-1)^n}{n^2} \)：
-    取 \( x = 0 \)，代入傅里叶级数：
-    \begin{eq1}
-        S(0) = 0^2 = 0 = \frac{\pi^2}{3} + \sum_{n=1}^{\infty} \frac{4(-1)^n}{n^2} \cos(0) = \frac{\pi^2}{3} + 4 \sum_{n=1}^{\infty} \frac{(-1)^n}{n^2}
-    \end{eq1}
-
-    解得：
-    \begin{eq1}
-    4 \sum_{n=1}^{\infty} \frac{(-1)^n}{n^2} = -\frac{\pi^2}{3} \implies \sum_{n=1}^{\infty} \frac{(-1)^n}{n^2} = -\frac{\pi^2}{12}
-    \end{eq1}
-
-    (4)~~
-    求 \( \sum_{n=1}^{\infty} \frac{1}{n^4} \)：
-    使用 Parseval 恒等式：
-    \begin{eq1}
-        \frac{1}{\pi} \int_{-\pi}^{\pi} [f(x)]^2  dx = \frac{a_0^2}{2} + \sum_{n=1}^{\infty} a_n^2
-    \end{eq1}
-    
-    左边：
-    \begin{eq1}
-    \frac{1}{\pi} \int_{-\pi}^{\pi} x^4  ~\d x = 
-    \frac{2}{\pi} \left[ \frac{x^5}{5} \right]_0^{\pi} 
-    = \frac{2\pi^4}{5}
-    \end{eq1}
-
-    右边：
-    \begin{eq1}
-    \frac{1}{2} \left( \frac{2\pi^2}{3} \right)^2 + \sum_{n=1}^{\infty} \left( \frac{4(-1)^n}{n^2} \right)^2 = \frac{1}{2} \cdot \frac{4\pi^4}{9} + \sum_{n=1}^{\infty} \frac{16}{n^4} = \frac{2\pi^4}{9} + 16 \sum_{n=1}^{\infty} \frac{1}{n^4}
-    \end{eq1}
-
-    联立方程：
-    \begin{eq1}
-    \frac{2\pi^4}{5} = \frac{2\pi^4}{9} + 16 \sum_{n=1}^{\infty} \frac{1}{n^4}
-    \end{eq1}
-
-    解得：
-    \begin{eq1}
-    16 \sum_{n=1}^{\infty} \frac{1}{n^4} = \frac{2\pi^4}{5} - \frac{2\pi^4}{9} = \frac{8\pi^4}{45} \implies \sum_{n=1}^{\infty} \frac{1}{n^4} = \frac{\pi^4}{90}
-    \end{eq1} \qed \par
-
-    ~\par
-
+\smallskip
 \begin{example}
     {4}{
         计算下列函数的傅里叶级数（周期为$2\pi$）：$f(x) = \sin^4 x$.
     }
 \end{example}
+\smallskip
 \begin{remark}
     不要真的去算积分.
 \end{remark}
+\smallskip
 \begin{solution}
     \begin{eq1}
         \sin^4 x &= \left( \frac{1-\cos 2x}{2} \right)^2 
@@ -648,14 +543,14 @@ $\Vert \bm{x} \Vert^2 = \sum_{i=1}^{\infty} | (\bm{x},\bm{e}_i) |^2$，即帕塞
         &= \frac{1}{4} - \frac{1}{2}\cos 2x + \frac{1+\cos 4x}{8} \\
         &= \frac{3}{8} - \frac{1}{2} \cos 2x + \frac{1}{8}\cos 4x
     \end{eq1}
-\end{solution} \qed \par
-~\par
-
+\end{solution}
+\smallskip
 \begin{example}
     {5}{
         计算下列函数的傅里叶级数（周期为$2\pi$）：$f(x) = \frac{1-r^2}{1-2r\cos x + r^2} ~(|r|<1)$.
     }
-\end{example}\medskip
+\end{example}
+\smallskip
 \begin{solution}
     注意到$f(x)$是偶函数，可以展开成余弦级数.设为：$f(x) \sim \sum_{n=0}^{\infty} a_n \cos nx$.
     又因为$f(x)$在$\mathbb{R}$上连续，
